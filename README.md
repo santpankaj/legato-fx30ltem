@@ -171,3 +171,4 @@ To uninstall Legato from your development PC:
 * * *
 _Copyright (C) Sierra Wireless Inc. _
 # legato-fx30ltem
+FIrmware Release Version: R9.1.1.013
