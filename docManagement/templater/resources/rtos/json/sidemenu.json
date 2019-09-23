@@ -1,0 +1,11 @@
+{
+     "links": [
+          {
+               "title": "Placeholder (edit rtos/sidemenu.json)",
+               "href": "/",
+               "check": false
+          }
+     ],
+     "innerHTML": "<a href=\"{0}\"{1}>{2}</a>",
+     "template": "sidemenu.html"
+}

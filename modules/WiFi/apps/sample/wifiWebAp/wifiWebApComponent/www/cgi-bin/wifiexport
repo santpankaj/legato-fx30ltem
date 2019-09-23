@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# PATH
+export PATH=/legato/systems/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+
+# Interfaces configuration
+export ITF_LAN="wlan0" # WiFi? access point interface
+# Select either 3G/4G or ethernet as WLAN interface
+ifconfig -a | grep -q "rmnet_data0"
+if [ $? -eq 0 ]; then
+    export ITF_WAN="rmnet_data0" # 3G/4G interface as WLAN interface
+else
+    export ITF_WAN="rmnet0" # 3G/4G interface as WLAN interface
+fi
+echo "ITF_WAN =" $ITF_WAN
+#export ITF_WAN="eth0" # ethernet interface as WLAN interface
+
+# Logging file
+export LOG_MSG_FILE=/tmp/wifi_http.log
+export LOG_CMD_FILE=/tmp/wifiWebAp.log
+
+# WiFi tool
+export WIFITOOL=/legato/systems/current/apps/wifi/read-only/bin/wifi
+
+# DHCP config file
+export DHCP_CFG_FILE=dnsmasq.wlan.conf
+

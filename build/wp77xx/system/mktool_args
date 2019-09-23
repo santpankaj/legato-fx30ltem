@@ -1,0 +1,11 @@
+mksys
+-t
+wp77xx
+-w
+build/wp77xx/system
+-o
+build/wp77xx
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/modules/WiFi/wifi.sdef
+-d
+build/wp77xx/debug
+--cflags=-O2 -fno-omit-frame-pointer

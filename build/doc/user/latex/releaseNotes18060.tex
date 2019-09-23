@@ -1,0 +1,92 @@
+Release Date\+: July 11, 2018
+
+See \hyperlink{aboutLicenses}{Licenses} to view Legato AF Licensing Information.
+
+The following provides a summary of changes that have been made in the 18.\+06 Legato AF Release.
+
+{\bfseries  Download the \hyperlink{aboutReleaseInfo}{source code} and get started with \hyperlink{basicBuild}{building Legato AF}. }\hypertarget{releaseNotes18060_rn1806_Patches}{}\section{18.\+06.\+01 Fixes}\label{releaseNotes18060_rn1806_Patches}
+The following issues have been patched in 18.\+06.\+1\+:
+
+
+\begin{DoxyItemize}
+\item A bug is fixed that caused a data corruption issue when performing a system update. If the update created a secure storage entry that was more then 4k in size the bug caused the last byte to be silently dropped.
+\end{DoxyItemize}\hypertarget{releaseNotes18060_rn1806_Features}{}\section{New Features}\label{releaseNotes18060_rn1806_Features}
+The following are the list of new features that have been added into the 18.\+06 Release\+:\hypertarget{releaseNotes18060_rn1806_Features_SAR}{}\subsection{Modem Radio Control A\+PI}\label{releaseNotes18060_rn1806_Features_SAR}
+\hyperlink{c_mrc_le_mrc_sar}{S\+AR (Specific Absorption Rate)} is a measure of RF energy absorption by the human body. Users can dynamically select a pre-\/configured S\+AR backoff state in the modem so they can adjust the S\+AR depending on their needs.
+
+The following functions have been added to the Modem Radio Control A\+PI\+:
+\begin{DoxyItemize}
+\item \hyperlink{le__mrc__interface_8h_adc99580fe5d419451e452cfcc805509d}{le\+\_\+mrc\+\_\+\+Set\+Sar\+Backoff\+State()} to set a new S\+AR backoff state.
+\item \hyperlink{le__mrc__interface_8h_a8543cc2e58f0ddfcccca0942afda743a}{le\+\_\+mrc\+\_\+\+Get\+Sar\+Backoff\+State()} to get the current S\+AR backoff state.
+\end{DoxyItemize}\hypertarget{releaseNotes18060_rn1806_Features_eCall}{}\subsection{e\+Call A\+PI}\label{releaseNotes18060_rn1806_Features_eCall}
+In test mode developers are able to retrieve and set the interval where the I\+VS remains registered in the network after the completion of the transmission of the test results to the System Operator. The default time value is set to 120 seconds.
+\begin{DoxyItemize}
+\item \hyperlink{le__ecall__interface_8h_aaaba61357cfe615e90246c16f710a804}{le\+\_\+ecall\+\_\+\+Get\+Era\+Glonass\+Post\+Test\+Registration\+Time()}
+\item \hyperlink{le__ecall__interface_8h_a184d79d22654450606130bb84b6907b1}{le\+\_\+ecall\+\_\+\+Set\+Era\+Glonass\+Post\+Test\+Registration\+Time()}
+\end{DoxyItemize}
+
+The Psap Number functions now return values for L\+E\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+ED and L\+E\+\_\+\+O\+V\+E\+R\+F\+L\+OW
+\begin{DoxyItemize}
+\item \hyperlink{le__ecall__interface_8h_a959c53f03bb85f1071fcf7cb58e3067e}{le\+\_\+ecall\+\_\+\+Get\+Psap\+Number()} Add return values for L\+E\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+ED and L\+E\+\_\+\+O\+V\+E\+R\+F\+L\+OW
+\item \hyperlink{le__ecall__interface_8h_abf9c09914c55cdbe72df1433f60f6e51}{le\+\_\+ecall\+\_\+\+Set\+Psap\+Number()} Add return value for L\+E\+\_\+\+U\+N\+S\+U\+P\+P\+O\+R\+T\+ED
+\end{DoxyItemize}\hypertarget{releaseNotes18060_rn1806_Features_gnss}{}\subsection{G\+N\+S\+S A\+PI}\label{releaseNotes18060_rn1806_Features_gnss}
+A new function \hyperlink{le__gnss__interface_8h_af32fd94e35e4df94b65c84740c5dbf42}{le\+\_\+gnss\+\_\+\+Convert\+Data\+Coordinate\+System()} can be called to convert a location data value from a coordinate system to another. Currently it is possible to convert the following data types\+:
+\begin{DoxyItemize}
+\item Latitude
+\item Longitude
+\item Altitude
+\end{DoxyItemize}\hypertarget{releaseNotes18060_rn1806_BFeatures}{}\section{Beta Features}\label{releaseNotes18060_rn1806_BFeatures}
+The following features have been added to the 18.\+06 Release and are feature complete but are still in a testing phase. Please provide feedback for these features on our \href{https://forum.legato.io/}{\tt forums}.\hypertarget{releaseNotes18060_rn1806_BFeatures_KernelModules}{}\subsection{Kernel Modules}\label{releaseNotes18060_rn1806_BFeatures_KernelModules}
+\hyperlink{conceptsKernelModule}{Kernel Modules} functionality has been added to support dependencies between kernel modules and dependencies between kernel modules and apps/components. We have also included functionality into the kernel module feature to \hyperlink{defFilesMdef_defFilesMdef_bundles}{bundle} other files with the kernel module sources and provide \hyperlink{defFilesMdef_defFilesMdef_scripts}{scripts} to load and unload the kernel module from your target.
+
+\begin{DoxyNote}{Note}
+Before building kernel modules into your Legato System you may have to perform some extra \hyperlink{basicBuildToolchain_basicBuildLegato_ToolchainSWI_KO}{toolchain setup steps}.
+\end{DoxyNote}
+\hypertarget{releaseNotes18060_rn1806_AFeatures}{}\section{Alpha Features}\label{releaseNotes18060_rn1806_AFeatures}
+The following are the list of features that have been added into the 18.\+06 Release but are still being developed and should not be used on production targets. Please provide feedback for these features on our \href{https://forum.legato.io/}{\tt forums}\+:\hypertarget{releaseNotes18060_rn1806_Features_SIM}{}\subsection{Multiple S\+I\+M Support}\label{releaseNotes18060_rn1806_Features_SIM}
+The framework now contains support for \hyperlink{c_sim_le_sim_profile_switch}{multiple embedded S\+IM profiles} and the ability to switch between the multiple S\+I\+Ms and be managed by a subscription management server such as Air\+Vantage.\hypertarget{releaseNotes18060_rn1806_Fixes}{}\section{Fixed Issues}\label{releaseNotes18060_rn1806_Fixes}
+All development work is tagged in Git\+Hub as \char`\"{}18.\+06.\+0\char`\"{}. The list of changes and commit messages can be found on Git\+Hub.
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/legatoproject/legato-af/commits/18.06.0}{\tt Legato AF 18.\+06.\+0 Fixes}
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+This is only the list of fixes for the Application Framework and Platform Services, for the list of changes in the Platform Adapters and A\+VC Service view the commits under the tag 18.\+06.\+0 in the individual repositories on Git\+Hub.
+\end{DoxyNote}
+\hypertarget{releaseNotes18060_rn1806_KnownIssues}{}\section{Known Issues}\label{releaseNotes18060_rn1806_KnownIssues}
+\hypertarget{releaseNotes18060_rn1806_Constraints}{}\subsection{Constraints and Limitations}\label{releaseNotes18060_rn1806_Constraints}
+\hypertarget{releaseNotes18060_rn1806_ConstraintsLinuxSupport}{}\subsubsection{Dev Machine Linux Version}\label{releaseNotes18060_rn1806_ConstraintsLinuxSupport}
+To develop applications within the Legato Application Framework, a current supported \href{https://www.ubuntu.com/info/release-end-of-life}{\tt Long Term Support version of Ubuntu Linux} is required on your dev machine (or running in a virtual box on Windows). Ubuntu 16.\+04 is the current {\bfseries recommended} version to use on your dev machine.\hypertarget{releaseNotes18060_rn1806_ConstECMUSB}{}\subsubsection{E\+C\+M-\/\+U\+S\+B modem manager issue}\label{releaseNotes18060_rn1806_ConstECMUSB}
+Ubuntu 15.\+10 and newer has Modem Manager version {\ttfamily 1.\+4.\+12-\/1ubuntu1} installed by default which conflicts with the E\+C\+M-\/\+U\+SB driver when connecting a target. Modem manager may cause the Ubuntu Network Manager to crash on your host and/or your target device to become unavailable over U\+SB.
+
+{\bfseries Symptoms\+:} 
+\begin{DoxyItemize}
+\item Network\+Manager crashing when plugging into your device over U\+SB, or
+\item The target device becomes inaccessible after 30 seconds.
+\end{DoxyItemize}
+
+{\bfseries Recommended} {\bfseries Work} {\bfseries Around\+:} 
+\begin{DoxyItemize}
+\item Uninstall {\ttfamily modemmanager} from Ubuntu or
+\item \href{http://packages.ubuntu.com/trusty/modemmanager}{\tt Downgrade {\ttfamily modemmanager} to version 1.\+0.\+0-\/2ubuntu1}
+\end{DoxyItemize}\hypertarget{releaseNotes18060_rn1806_ConstraintsTC}{}\subsubsection{Sierra Wireless Toolchain Install}\label{releaseNotes18060_rn1806_ConstraintsTC}
+There is currently an error with setting up the W\+P76\+XX and W\+P77\+XX toolchain and the toolchain only partially installs. The part of the script to install and setup the kernel headers does not run and produces the following errors\+:
+
+\begin{DoxyVerb}scripts/kconfig/Makefile:36: recipe for target 'silentoldconfig' failed
+make[2]: *** [silentoldconfig] Error 1
+Makefile:546: recipe for target 'silentoldconfig' failed
+make[1]: *** [silentoldconfig] Error 2
+make: *** No rule to make target 'include/config/auto.conf', needed by 'scripts'.  Stop.
+\end{DoxyVerb}
+
+
+To resolve this remove the installed toolchain and reinstall with {\ttfamily sudo} privileges.
+
+Example of setting up the toolchain for a 64bit dev machine and a W\+P76 module with product release 9\+: \begin{DoxyVerb}$ rm -rf /opt/swi/y22-ext
+$ sudo poky-swi-ext-glibc-x86_64-meta-toolchain-swi-ext-armv7a-neon-toolchain-swi-ext-2.2.3.sh
+\end{DoxyVerb}
+
+
+Copyright (C) Sierra Wireless Inc. 

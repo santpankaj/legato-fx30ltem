@@ -1,0 +1,9 @@
+pa_secStore_Copy
+pa_secStore_CopyMetaTo
+pa_secStore_Delete
+pa_secStore_GetEntries
+pa_secStore_GetSize
+pa_secStore_GetTotalSpace
+pa_secStore_Move
+pa_secStore_Read
+pa_secStore_Write

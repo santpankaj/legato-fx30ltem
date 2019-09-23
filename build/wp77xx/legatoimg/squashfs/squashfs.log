@@ -1,0 +1,27 @@
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/legato.squashfs, block size 131072.
+[===============================================================-] 294/294 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+	compressed data, compressed metadata, compressed fragments, compressed xattrs
+	duplicates are removed
+Filesystem size 3798.46 Kbytes (3.71 Mbytes)
+	31.51% of uncompressed filesystem size (12053.79 Kbytes)
+Inode table size 4478 bytes (4.37 Kbytes)
+	32.40% of uncompressed inode table size (13819 bytes)
+Directory table size 4234 bytes (4.13 Kbytes)
+	41.95% of uncompressed directory table size (10094 bytes)
+Number of duplicate files found 21
+Number of inodes 387
+Number of files 234
+Number of fragments 31
+Number of symbolic links  34
+Number of device nodes 0
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 119
+Number of ids (unique uids + gids) 1
+Number of uids 1
+	root (0)
+Number of gids 1
+	root (0)

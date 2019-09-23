@@ -1,0 +1,13 @@
+mkapp
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/tools/devMode.adef
+-i
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato
+-o
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/tools
+-w
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/tools/devMode
+-t
+wp77xx
+-d
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug
+--cflags= -O2 -fno-omit-frame-pointer

@@ -1,0 +1,18 @@
+# Beginning of the file
+[ req ]
+default_bits = 2048
+distinguished_name = req_distinguished_name
+prompt = no
+string_mask = utf8only
+x509_extensions = v3_usr
+[ req_distinguished_name ]
+organizationName = Acme Corporation
+organizationalUnitName = Acme Labs
+commonName = www.example.com
+emailAddress = brain@example.com
+[ v3_usr ]
+basicConstraints=critical,CA:FALSE
+keyUsage=digitalSignature
+subjectKeyIdentifier=hash
+authorityKeyIdentifier=keyid
+# EOF

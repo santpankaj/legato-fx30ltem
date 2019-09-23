@@ -1,0 +1,26 @@
+sources:
+{
+    pa_ecall_qmi.c
+    componentInit.c
+}
+
+cflags:
+{
+    -I$LEGATO_ROOT/components/modemServices/platformAdaptor/inc
+    -I$LEGATO_QMI_MODEM_PA_SRC_FILES
+    -I$LEGATO_QMI_UTIL_SRC_FILES
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc/framework
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc/services
+}
+
+requires:
+{
+    api:
+    {
+        le_mdmDefs.api  [types-only]
+        le_ecall.api    [types-only]
+    }
+
+    component: { $LEGATO_MODEM_PA }
+}

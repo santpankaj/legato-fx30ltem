@@ -1,0 +1,30 @@
+provides:
+{
+    api:
+    {
+        le_cfg.api [async]
+        le_cfgAdmin.api [async]
+        configTreeWdog = watchdog/frameworkWdog.api
+    }
+}
+
+sources:
+{
+    configTree.c
+    configTreeApi.c
+    configTreeAdminApi.c
+    dynamicString.c
+    requestQueue.c
+    nodeIterator.c
+    treeIterator.c
+    treePath.c
+    treeUser.c
+    internalConfig.c
+    treeDb.c
+    ../common/frameworkWdog.c
+}
+
+cflags:
+{
+    -DFRAMEWORK_WDOG_NAME=configTreeWdog
+}

@@ -1,0 +1,16 @@
+# ninja log v5
+0	161	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/logCtrlDaemon/component/18ab3ad5a7daeb164a34a2f5872ddcc0/obj/_componentMain.c.o	c194896224bd94e4
+0	229	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/logCtrlDaemon/obj/logCtrlDaemon/_main.c.o	a5941fe9e575dbd
+0	373	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/logCtrlDaemon/api/45eaf0d718b1cd816adf04250e307575/server/le_limit_server.h	76c0b507f7d2f4ab
+1	442	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/logCtrlDaemon/api/37f6a7c6edbe6720bebf241146796263/server/logDaemonWdog_server.c	6bf1a7a1b64a15b
+1	442	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/logCtrlDaemon/api/37f6a7c6edbe6720bebf241146796263/server/logDaemonWdog_server.h	6bf1a7a1b64a15b
+1	442	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/logCtrlDaemon/api/37f6a7c6edbe6720bebf241146796263/server/logDaemonWdog_messages.h	6bf1a7a1b64a15b
+0	504	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/logCtrlDaemon/api/3e734296116d8b8b746dd6745f69dd7f/server/logFd_server.c	b078973fa9463155
+0	504	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/logCtrlDaemon/api/3e734296116d8b8b746dd6745f69dd7f/server/logFd_server.h	b078973fa9463155
+0	504	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/logCtrlDaemon/api/3e734296116d8b8b746dd6745f69dd7f/server/logFd_messages.h	b078973fa9463155
+442	537	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/logCtrlDaemon/api/37f6a7c6edbe6720bebf241146796263/server/logDaemonWdog_server.o	31c222e812b0b843
+504	625	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/logCtrlDaemon/component/18ab3ad5a7daeb164a34a2f5872ddcc0/obj/62659622046452ddb8043a74787b95d3.o	60ad9b585710771d
+504	647	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/logCtrlDaemon/api/3e734296116d8b8b746dd6745f69dd7f/server/logFd_server.o	62387914a01b0dec
+504	712	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/logCtrlDaemon/component/18ab3ad5a7daeb164a34a2f5872ddcc0/obj/209b7e29d224541b7335b0af67a9e663.o	b1156ce975acc8f
+712	753	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib/libComponent_logDaemon.so	8d1f4f2350af9cd7
+753	792	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/bin/logCtrlDaemon	9bafe25076434c55

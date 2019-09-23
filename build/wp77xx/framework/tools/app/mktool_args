@@ -1,0 +1,19 @@
+mkexe
+-o
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/bin/app
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/tools/target/linux/appCtrl
+-i
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/supervisor
+-i
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato
+-i
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato/linux
+-l
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib
+-w
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app
+-t
+wp77xx
+-d
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug
+--cflags= -O2 -fno-omit-frame-pointer

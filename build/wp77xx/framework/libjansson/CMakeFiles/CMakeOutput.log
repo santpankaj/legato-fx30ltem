@@ -1,0 +1,816 @@
+The target system is: Linux - 1 - 
+The host system is: Linux - 4.15.0-62-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc 
+Build flags: -DSIERRA;-O2;-pipe;-g;-feliminate-unused-debug-types;
+Id flags: -c
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is GNU, found in "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.o"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bc56a/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_bc56a.dir/build.make CMakeFiles/cmTC_bc56a.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bc56a.dir/testCCompiler.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types      --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_bc56a.dir/testCCompiler.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_bc56a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc56a.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types     --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_bc56a.dir/testCCompiler.c.o  -o cmTC_bc56a -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c5554/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c5554.dir/build.make CMakeFiles/cmTC_c5554.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c5554.dir/CMakeCCompilerABI.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types      --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_c5554.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_c5554
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5554.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types     --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -v CMakeFiles/cmTC_c5554.dir/CMakeCCompilerABI.c.o  -o cmTC_c5554 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc
+COLLECT_LTO_WRAPPER=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/lto-wrapper
+Target: arm-poky-linux-gnueabi
+Configured with: ../../../../../../work-shared/gcc-6.2.0-r0/gcc-6.2.0/configure --build=x86_64-linux --host=x86_64-pokysdk-linux --target=arm-poky-linux-gnueabi --prefix=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr --exec_prefix=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr --bindir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi --sbindir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi --libexecdir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi --datadir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/share --sysconfdir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/etc --sharedstatedir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/com --localstatedir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/var --libdir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi --includedir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/include --oldincludedir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/include --infodir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/share/info --mandir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/work/build_src/tmp/sysroots/x86_64-nativesdk-pokysdk-linux --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-poky-linux-gnueabi- --without-local-prefix --enable-lto --enable-libssp --enable-libitm --disable-bootstrap --disable-libmudflap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/6.2.0 --with-build-time-tools=/work/build_src/tmp/sysroots/x86_64-linux/usr/arm-poky-linux-gnueabi/bin --with-sysroot=/not/exist --with-build-sysroot=/work/build_src/tmp/sysroots/swi-mdm9x28-wp --without-long-double-128 --enable-poison-system-directories --with-mpfr=/work/build_src/tmp/sysroots/x86_64-nativesdk-pokysdk-linux --with-mpc=/work/build_src/tmp/sysroots/x86_64-nativesdk-pokysdk-linux --disable-static --enable-nls --enable-initfini-array --with-arch=armv7-a
+Thread model: posix
+gcc version 6.2.0 (GCC) 
+COMPILER_PATH=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/
+LIBRARY_PATH=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/lib/:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/6.2.0/:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/
+COLLECT_GCC_OPTIONS='--sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi' '-D' 'SIERRA' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_c5554' '-rdynamic' '-march=armv7-a' '-mtls-dialect=gnu'
+ /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/collect2 -plugin /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/liblto_plugin.so -plugin-opt=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccobm9lj.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi --build-id --eh-frame-hdr --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux.so.3 -X -m armelf_linux_eabi -o cmTC_c5554 /opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/crt1.o /opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/crti.o /opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/6.2.0/crtbegin.o -L/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0 -L/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/lib -L/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/6.2.0 -L/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib CMakeFiles/cmTC_c5554.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/6.2.0/crtend.o /opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/crtn.o
+COLLECT_GCC_OPTIONS='--sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi' '-D' 'SIERRA' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_c5554' '-rdynamic' '-march=armv7-a' '-mtls-dialect=gnu'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(arm-poky-linux-gnueabi-ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_c5554/fast"]
+  ignore line: [make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_c5554.dir/build.make CMakeFiles/cmTC_c5554.dir/build]
+  ignore line: [make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_c5554.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types      --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_c5554.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_c5554]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5554.dir/link.txt --verbose=1]
+  ignore line: [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types     --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -v CMakeFiles/cmTC_c5554.dir/CMakeCCompilerABI.c.o  -o cmTC_c5554 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/lto-wrapper]
+  ignore line: [Target: arm-poky-linux-gnueabi]
+  ignore line: [Configured with: ../../../../../../work-shared/gcc-6.2.0-r0/gcc-6.2.0/configure --build=x86_64-linux --host=x86_64-pokysdk-linux --target=arm-poky-linux-gnueabi --prefix=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr --exec_prefix=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr --bindir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi --sbindir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi --libexecdir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi --datadir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/share --sysconfdir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/etc --sharedstatedir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/com --localstatedir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/var --libdir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi --includedir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/include --oldincludedir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/include --infodir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/share/info --mandir=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/share/man --disable-silent-rules --disable-dependency-tracking --with-libtool-sysroot=/work/build_src/tmp/sysroots/x86_64-nativesdk-pokysdk-linux --with-gnu-ld --enable-shared --enable-languages=c,c++ --enable-threads=posix --enable-multilib --enable-c99 --enable-long-long --enable-symvers=gnu --enable-libstdcxx-pch --program-prefix=arm-poky-linux-gnueabi- --without-local-prefix --enable-lto --enable-libssp --enable-libitm --disable-bootstrap --disable-libmudflap --with-system-zlib --with-linker-hash-style=gnu --enable-linker-build-id --with-ppl=no --with-cloog=no --enable-checking=release --enable-cheaders=c_global --without-isl --with-gxx-include-dir=/not/exist/usr/include/c++/6.2.0 --with-build-time-tools=/work/build_src/tmp/sysroots/x86_64-linux/usr/arm-poky-linux-gnueabi/bin --with-sysroot=/not/exist --with-build-sysroot=/work/build_src/tmp/sysroots/swi-mdm9x28-wp --without-long-double-128 --enable-poison-system-directories --with-mpfr=/work/build_src/tmp/sysroots/x86_64-nativesdk-pokysdk-linux --with-mpc=/work/build_src/tmp/sysroots/x86_64-nativesdk-pokysdk-linux --disable-static --enable-nls --enable-initfini-array --with-arch=armv7-a]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 6.2.0 (GCC) ]
+  ignore line: [COMPILER_PATH=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/]
+  ignore line: [LIBRARY_PATH=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/lib/:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/6.2.0/:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='--sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi' '-D' 'SIERRA' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_c5554' '-rdynamic' '-march=armv7-a' '-mtls-dialect=gnu']
+  link line: [ /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/collect2 -plugin /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/liblto_plugin.so -plugin-opt=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccobm9lj.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi --build-id --eh-frame-hdr --hash-style=gnu -export-dynamic -dynamic-linker /lib/ld-linux.so.3 -X -m armelf_linux_eabi -o cmTC_c5554 /opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/crt1.o /opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/crti.o /opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/6.2.0/crtbegin.o -L/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0 -L/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/lib -L/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/6.2.0 -L/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib CMakeFiles/cmTC_c5554.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/6.2.0/crtend.o /opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/crtn.o]
+    arg [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccobm9lj.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux.so.3] ==> ignore
+    arg [-X] ==> ignore
+    arg [-m] ==> ignore
+    arg [armelf_linux_eabi] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_c5554] ==> ignore
+    arg [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/crt1.o] ==> ignore
+    arg [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/crti.o] ==> ignore
+    arg [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/6.2.0/crtbegin.o] ==> ignore
+    arg [-L/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0] ==> dir [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0]
+    arg [-L/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/lib] ==> dir [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/lib]
+    arg [-L/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/6.2.0] ==> dir [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/6.2.0]
+    arg [-L/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib] ==> dir [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib]
+    arg [CMakeFiles/cmTC_c5554.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/6.2.0/crtend.o] ==> ignore
+    arg [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0] ==> [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0]
+  collapse library dir [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/lib] ==> [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/lib]
+  collapse library dir [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/6.2.0] ==> [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/6.2.0]
+  collapse library dir [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib] ==> [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/lib/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0;/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/lib;/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib/arm-poky-linux-gnueabi/6.2.0;/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_20211/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_20211.dir/build.make CMakeFiles/cmTC_20211.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_20211.dir/feature_tests.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types      --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -std=c11 -o CMakeFiles/cmTC_20211.dir/feature_tests.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/feature_tests.c
+Linking C executable cmTC_20211
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20211.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types     --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_20211.dir/feature_tests.c.o  -o cmTC_20211 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ed0a0/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_ed0a0.dir/build.make CMakeFiles/cmTC_ed0a0.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ed0a0.dir/feature_tests.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types      --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -std=c99 -o CMakeFiles/cmTC_ed0a0.dir/feature_tests.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/feature_tests.c
+Linking C executable cmTC_ed0a0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed0a0.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types     --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_ed0a0.dir/feature_tests.c.o  -o cmTC_ed0a0 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_77fab/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_77fab.dir/build.make CMakeFiles/cmTC_77fab.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_77fab.dir/feature_tests.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types      --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -std=c90 -o CMakeFiles/cmTC_77fab.dir/feature_tests.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/feature_tests.c
+Linking C executable cmTC_77fab
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77fab.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types     --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_77fab.dir/feature_tests.c.o  -o cmTC_77fab -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if files endian.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_73a7f/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_73a7f.dir/build.make CMakeFiles/cmTC_73a7f.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_73a7f.dir/CheckIncludeFiles.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_73a7f.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_73a7f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73a7f.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_73a7f.dir/CheckIncludeFiles.c.o  -o cmTC_73a7f -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_883b0/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_883b0.dir/build.make CMakeFiles/cmTC_883b0.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_883b0.dir/CheckIncludeFiles.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_883b0.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_883b0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_883b0.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_883b0.dir/CheckIncludeFiles.c.o  -o cmTC_883b0 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files sched.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c13b0/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c13b0.dir/build.make CMakeFiles/cmTC_c13b0.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c13b0.dir/CheckIncludeFiles.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_c13b0.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_c13b0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c13b0.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_c13b0.dir/CheckIncludeFiles.c.o  -o cmTC_c13b0 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files unistd.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a20d1/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a20d1.dir/build.make CMakeFiles/cmTC_a20d1.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a20d1.dir/CheckIncludeFiles.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_a20d1.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_a20d1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a20d1.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_a20d1.dir/CheckIncludeFiles.c.o  -o cmTC_a20d1 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/param.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_20890/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_20890.dir/build.make CMakeFiles/cmTC_20890.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_20890.dir/CheckIncludeFiles.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_20890.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_20890
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20890.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_20890.dir/CheckIncludeFiles.c.o  -o cmTC_20890 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/stat.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f90b6/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f90b6.dir/build.make CMakeFiles/cmTC_f90b6.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f90b6.dir/CheckIncludeFiles.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_f90b6.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_f90b6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f90b6.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_f90b6.dir/CheckIncludeFiles.c.o  -o cmTC_f90b6 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/time.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_91740/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_91740.dir/build.make CMakeFiles/cmTC_91740.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_91740.dir/CheckIncludeFiles.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_91740.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_91740
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91740.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_91740.dir/CheckIncludeFiles.c.o  -o cmTC_91740 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/time.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ff941/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_ff941.dir/build.make CMakeFiles/cmTC_ff941.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ff941.dir/CheckIncludeFiles.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_ff941.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_ff941
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff941.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_ff941.dir/CheckIncludeFiles.c.o  -o cmTC_ff941 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function close exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_58a07/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_58a07.dir/build.make CMakeFiles/cmTC_58a07.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_58a07.dir/CheckFunctionExists.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=close --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_58a07.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_58a07
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58a07.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=close --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_58a07.dir/CheckFunctionExists.c.o  -o cmTC_58a07 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function getpid exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_66348/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_66348.dir/build.make CMakeFiles/cmTC_66348.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_66348.dir/CheckFunctionExists.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=getpid --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_66348.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_66348
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_66348.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=getpid --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_66348.dir/CheckFunctionExists.c.o  -o cmTC_66348 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gettimeofday exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_17567/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_17567.dir/build.make CMakeFiles/cmTC_17567.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_17567.dir/CheckFunctionExists.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=gettimeofday --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_17567.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_17567
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17567.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=gettimeofday --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_17567.dir/CheckFunctionExists.c.o  -o cmTC_17567 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function open exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_973db/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_973db.dir/build.make CMakeFiles/cmTC_973db.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_973db.dir/CheckFunctionExists.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=open --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_973db.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_973db
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_973db.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=open --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_973db.dir/CheckFunctionExists.c.o  -o cmTC_973db -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function read exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7392c/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7392c.dir/build.make CMakeFiles/cmTC_7392c.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7392c.dir/CheckFunctionExists.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=read --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_7392c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7392c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7392c.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=read --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_7392c.dir/CheckFunctionExists.c.o  -o cmTC_7392c -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function sched_yield exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9de84/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_9de84.dir/build.make CMakeFiles/cmTC_9de84.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9de84.dir/CheckFunctionExists.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=sched_yield --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_9de84.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9de84
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9de84.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=sched_yield --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_9de84.dir/CheckFunctionExists.c.o  -o cmTC_9de84 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files stdint.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c1033/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c1033.dir/build.make CMakeFiles/cmTC_c1033.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c1033.dir/CheckIncludeFiles.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_c1033.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_c1033
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c1033.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_c1033.dir/CheckIncludeFiles.c.o  -o cmTC_c1033 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_aec11/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_aec11.dir/build.make CMakeFiles/cmTC_aec11.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aec11.dir/CheckIncludeFile.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_aec11.dir/CheckIncludeFile.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_aec11
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aec11.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_aec11.dir/CheckIncludeFile.c.o  -o cmTC_aec11 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of int64_t passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8da70/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_8da70.dir/build.make CMakeFiles/cmTC_8da70.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8da70.dir/INT64_T.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_8da70.dir/INT64_T.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/INT64_T.c
+Linking C executable cmTC_8da70
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8da70.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_8da70.dir/INT64_T.c.o  -o cmTC_8da70 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of long long passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_69eeb/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_69eeb.dir/build.make CMakeFiles/cmTC_69eeb.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_69eeb.dir/LONG_LONG_INT.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_69eeb.dir/LONG_LONG_INT.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/LONG_LONG_INT.c
+Linking C executable cmTC_69eeb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69eeb.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_69eeb.dir/LONG_LONG_INT.c.o  -o cmTC_69eeb -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of int32_t passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cfb99/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_cfb99.dir/build.make CMakeFiles/cmTC_cfb99.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cfb99.dir/INT32_T.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_cfb99.dir/INT32_T.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/INT32_T.c
+Linking C executable cmTC_cfb99
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfb99.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_cfb99.dir/INT32_T.c.o  -o cmTC_cfb99 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of long passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bb1df/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_bb1df.dir/build.make CMakeFiles/cmTC_bb1df.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bb1df.dir/LONG_INT.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_bb1df.dir/LONG_INT.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/LONG_INT.c
+Linking C executable cmTC_bb1df
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb1df.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_bb1df.dir/LONG_INT.c.o  -o cmTC_bb1df -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of int passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f938a/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f938a.dir/build.make CMakeFiles/cmTC_f938a.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f938a.dir/INT.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_f938a.dir/INT.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/INT.c
+Linking C executable cmTC_f938a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f938a.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_f938a.dir/INT.c.o  -o cmTC_f938a -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned long passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_11af1/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_11af1.dir/build.make CMakeFiles/cmTC_11af1.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_11af1.dir/UNSIGNED_LONG_INT.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_11af1.dir/UNSIGNED_LONG_INT.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/UNSIGNED_LONG_INT.c
+Linking C executable cmTC_11af1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11af1.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_11af1.dir/UNSIGNED_LONG_INT.c.o  -o cmTC_11af1 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned int passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c7bbc/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c7bbc.dir/build.make CMakeFiles/cmTC_c7bbc.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c7bbc.dir/UNSIGNED_INT.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_c7bbc.dir/UNSIGNED_INT.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/UNSIGNED_INT.c
+Linking C executable cmTC_c7bbc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c7bbc.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_c7bbc.dir/UNSIGNED_INT.c.o  -o cmTC_c7bbc -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_88653/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_88653.dir/build.make CMakeFiles/cmTC_88653.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_88653.dir/UNSIGNED_SHORT.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_88653.dir/UNSIGNED_SHORT.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/UNSIGNED_SHORT.c
+Linking C executable cmTC_88653
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88653.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_88653.dir/UNSIGNED_SHORT.c.o  -o cmTC_88653 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint32_t passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_21507/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_21507.dir/build.make CMakeFiles/cmTC_21507.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_21507.dir/UINT32_T.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_21507.dir/UINT32_T.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/UINT32_T.c
+Linking C executable cmTC_21507
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21507.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_21507.dir/UINT32_T.c.o  -o cmTC_21507 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint16_t passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bc2ed/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_bc2ed.dir/build.make CMakeFiles/cmTC_bc2ed.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bc2ed.dir/UINT16_T.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_bc2ed.dir/UINT16_T.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/UINT16_T.c
+Linking C executable cmTC_bc2ed
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc2ed.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_bc2ed.dir/UINT16_T.c.o  -o cmTC_bc2ed -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint8_t passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_998cc/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_998cc.dir/build.make CMakeFiles/cmTC_998cc.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_998cc.dir/UINT8_T.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_998cc.dir/UINT8_T.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/UINT8_T.c
+Linking C executable cmTC_998cc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_998cc.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_998cc.dir/UINT8_T.c.o  -o cmTC_998cc -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of ssize_t passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fa962/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_fa962.dir/build.make CMakeFiles/cmTC_fa962.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fa962.dir/SSIZE_T.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_fa962.dir/SSIZE_T.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/SSIZE_T.c
+Linking C executable cmTC_fa962
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa962.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_fa962.dir/SSIZE_T.c.o  -o cmTC_fa962 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strtoll exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_96782/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_96782.dir/build.make CMakeFiles/cmTC_96782.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_96782.dir/CheckFunctionExists.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=strtoll --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_96782.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_96782
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96782.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=strtoll --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_96782.dir/CheckFunctionExists.c.o  -o cmTC_96782 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strtoq exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a4d79/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a4d79.dir/build.make CMakeFiles/cmTC_a4d79.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a4d79.dir/CheckFunctionExists.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=strtoq --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_a4d79.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a4d79
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4d79.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=strtoq --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_a4d79.dir/CheckFunctionExists.c.o  -o cmTC_a4d79 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files locale.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e26cf/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_e26cf.dir/build.make CMakeFiles/cmTC_e26cf.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e26cf.dir/CheckIncludeFiles.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_e26cf.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_e26cf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e26cf.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_e26cf.dir/CheckIncludeFiles.c.o  -o cmTC_e26cf -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function localeconv exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_edd8c/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_edd8c.dir/build.make CMakeFiles/cmTC_edd8c.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_edd8c.dir/CheckFunctionExists.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=localeconv --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_edd8c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_edd8c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_edd8c.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=localeconv --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_edd8c.dir/CheckFunctionExists.c.o  -o cmTC_edd8c -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function setlocale exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_588de/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_588de.dir/build.make CMakeFiles/cmTC_588de.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_588de.dir/CheckFunctionExists.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=setlocale --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_588de.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_588de
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_588de.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=setlocale --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_588de.dir/CheckFunctionExists.c.o  -o cmTC_588de -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test HAVE_INLINE succeeded with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_06b34/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_06b34.dir/build.make CMakeFiles/cmTC_06b34.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_06b34.dir/src.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE_INLINE --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_06b34.dir/src.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_06b34
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06b34.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE_INLINE --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_06b34.dir/src.c.o  -o cmTC_06b34 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+Source file was:
+inline void func(); void func() { } int main() { func(); return 0; }
+Performing C SOURCE FILE Test HAVE___INLINE succeeded with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6b010/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_6b010.dir/build.make CMakeFiles/cmTC_6b010.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6b010.dir/src.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE___INLINE --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_6b010.dir/src.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6b010
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b010.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE___INLINE --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_6b010.dir/src.c.o  -o cmTC_6b010 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+Source file was:
+__inline void func(); void func() { } int main() { func(); return 0; }
+Performing C SOURCE FILE Test HAVE___INLINE__ succeeded with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6be76/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_6be76.dir/build.make CMakeFiles/cmTC_6be76.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6be76.dir/src.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE___INLINE__ --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_6be76.dir/src.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6be76
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6be76.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE___INLINE__ --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_6be76.dir/src.c.o  -o cmTC_6be76 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+Source file was:
+__inline__ void func(); void func() { } int main() { func(); return 0; }
+Performing C SOURCE FILE Test HAVE_SYNC_BUILTINS succeeded with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7c9af/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_7c9af.dir/build.make CMakeFiles/cmTC_7c9af.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7c9af.dir/src.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE_SYNC_BUILTINS --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_7c9af.dir/src.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_7c9af
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7c9af.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE_SYNC_BUILTINS --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_7c9af.dir/src.c.o  -o cmTC_7c9af -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { unsigned long val; __sync_bool_compare_and_swap(&val, 0, 1); return 0; } 
+Performing C SOURCE FILE Test HAVE_ATOMIC_BUILTINS succeeded with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2aea4/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_2aea4.dir/build.make CMakeFiles/cmTC_2aea4.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2aea4.dir/src.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE_ATOMIC_BUILTINS --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_2aea4.dir/src.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_2aea4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2aea4.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE_ATOMIC_BUILTINS --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_2aea4.dir/src.c.o  -o cmTC_2aea4 -rdynamic 
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { char l; unsigned long v; __atomic_test_and_set(&l, __ATOMIC_RELAXED); __atomic_store_n(&v, 1, __ATOMIC_RELEASE); __atomic_load_n(&v, __ATOMIC_ACQUIRE); return 0; }

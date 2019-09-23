@@ -1,0 +1,4 @@
+# ninja log v5
+0	112	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/tools/log/obj/log/_main.c.o	1cb8bdd5af2c65c5
+0	175	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/tools/log/obj/b84f0a3c0d6bcc1767269b750749c7cd.o	a85640b08a2baec8
+175	214	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/bin/log	3ab26aef21e1c650

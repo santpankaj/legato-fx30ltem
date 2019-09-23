@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" data-context="%%%CONTEXT%%%">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Legato - Documentation</title>
+    <meta name="description" content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" />
+    <meta name="keywords" content="legato, iot" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="resources/images/legato.ico">
+    <link rel="icon" href="resources/images/legato.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="resources/images/legato.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="resources/images/legato.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="resources/css/font-awesome.css">
+    <!--[if IE]>
+        <script src="resources/js/html5shiv.js"></script>
+        <script src="resources/js/respond.js"></script>
+        <![endif]-->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="resources/js/main.js"></script>
+    <script src="%%%TOCFILE%%%"></script>
+</head>
+
+<body>
+    <noscript>
+        <input type="checkbox" class="modal-closing-trick" id="modal-closing-trick">
+        <div id="nojs">
+            <label for="modal-closing-trick">
+                <span>You seem to not have Javascript <a href="http://enable-javascript.com">enabled</a>, so site functionality like the search and navigation tree won't work.</span>
+            </label>
+        </div>
+    </noscript>
+    <div class="wrapper">
+        <div id="menu-trigger" class="fa fa-bars documentation"></div>
+        <div id="top">
+            %%%SIDEMENU%%%
+        </div>
+        %%%HEADER%%%
+        <div id="resizable">
+            <div id="left">
+                <div id="tree1"></div>
+            </div>
+        </div>
+        <div class="content">
+            {content}
+            <br clear="left" />
+        </div>
+    </div>
+
+    <link rel="stylesheet" type="text/css" href="resources/css/jqtree.css">
+    <script type="text/javascript" src="resources/js/tree.jquery.js"></script>
+    <script src="resources/js/jquery.cookie.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="resources/css/perfect-scrollbar.min.css" />
+    <script src="resources/js/perfect-scrollbar.jquery.min.js"></script>
+</body>
+
+</html>

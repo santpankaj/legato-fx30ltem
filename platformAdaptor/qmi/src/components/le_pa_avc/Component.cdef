@@ -1,0 +1,31 @@
+
+requires:
+{
+    api:
+    {
+        airVantage/le_avc.api  [types-only]
+    }
+
+    component:
+    {
+        $LEGATO_UTIL_PA
+        $LEGATO_FWUPDATE_PA
+    }
+}
+
+sources:
+{
+    pa_avc_qmi.c
+}
+
+cflags:
+{
+    $LEGATO_FEATURE_AVMS_CONFIG
+    $LEGATO_FEATURE_OBSERVE
+    -I$LEGATO_ROOT/components/airVantage/platformAdaptor/inc
+    -I$LEGATO_ROOT/components/fwupdate/platformAdaptor/inc
+    -I$LEGATO_QMI_UTIL_SRC_FILES
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc/framework
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc/services
+}

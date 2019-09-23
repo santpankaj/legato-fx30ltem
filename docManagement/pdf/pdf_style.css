@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,300italic,400,400italic,500,500italic,');
+
+pre {
+    overflow: visible !important;
+}
+p.copyright {
+    display: none !important;
+}
+.fake-h {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-size: 24px;
+    padding: 15px 0px 10px 0px;
+    display: block;
+}
+.headertitle .fake-h1{
+   font-family: 'Open Sans', arial, sans-serif;
+    font-size: 30px;
+    font-weight:600;
+    color: #00677A;
+}
+.fake-h1 {
+    color: #00677A;
+}
+.fake-h2 {
+    color: #F7781E;
+    padding-bottom: 15px;
+}
+.fake-h3 {
+    font-family: 'Open Sans', arial, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: #00677A;
+}
+.hide-hack {
+    position: absolute;
+    left: -10000px;
+}
+.contents {
+    max-width: 100% !important;
+    font-size: 18px;
+}

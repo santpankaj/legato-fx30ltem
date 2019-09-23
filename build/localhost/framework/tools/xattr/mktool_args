@@ -1,0 +1,15 @@
+mkexe
+-o
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/bin/xattr
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/tools/target/linux/xattr/xattr.c
+-i
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato
+-l
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib
+-w
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/tools/xattr
+-t
+localhost
+-d
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/debug
+--cflags= -O2 -fno-omit-frame-pointer

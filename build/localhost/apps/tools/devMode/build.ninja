@@ -1,0 +1,200 @@
+# Build script for application 'devMode'
+
+# == Auto-generated file.  Do not edit. ==
+
+builddir =/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/tools/devMode
+
+cFlags =  -O2 -fno-omit-frame-pointer -I /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/tools/devMode -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/include -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/tools
+
+cxxFlags = -I /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/tools/devMode -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/include -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/tools
+
+ldFlags =
+
+target = localhost
+
+ifgenFlags =  --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/include --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/tools
+
+rule CompileC
+  description = Compiling C source
+  depfile = $out.d
+  command =  /usr/bin//gcc --sysroot=/ -MMD -MF $out.d -c $in -o $out -DLE_FILENAME=`basename $in` -Wall -fPIC -Werror -fvisibility=hidden -DMK_TOOLS_BUILD -g $cFlags
+
+rule CompileCxx
+  description = Compiling C++ source
+  depfile = $out.d
+  command =  /usr/bin//g++ --sysroot=/ -MMD -MF $out.d -c $in -o $out -DLE_FILENAME=`basename $in` -Wall -fPIC -Werror -fvisibility=hidden  -DMK_TOOLS_BUILD -g $cxxFlags
+
+rule LinkCLib
+  description = Linking C library
+  command =  /usr/bin//gcc --sysroot=/ -Wl,--build-id -g -shared -o $out $in $ldFlags $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/debug $out
+
+rule LinkCxxLib
+  description = Linking C++ library
+  command =  /usr/bin//g++ --sysroot=/ -Wl,--build-id -g -shared -o $out $in $ldFlags $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/debug $out
+
+rule LinkCExe
+  description = Linking C executable
+  command =  /usr/bin//gcc --sysroot=/ -Wl,--build-id -g -fPIE -pie -o $out $in $ldFlags -g $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/debug $out
+
+rule LinkCxxExe
+  description = Linking C++ executable
+  command =  /usr/bin//g++ --sysroot=/ -Wl,--build-id -g -fPIE -pie -o $out $in $ldFlags -g $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/debug $out
+
+rule CompileJava
+  description = Compiling Java source
+  command = javac -cp $classPath -d `dirname $out` $in && touch $out
+
+rule MakeJar
+  description = Making JAR file
+  command = INDIR=`dirname $in`; find $$INDIR -name '*.class' -printf "-C $$INDIR\n%P\n"|xargs jar -cf $out
+
+rule MakeKernelModule
+  description = Build kernel driver module
+  depfile = $out.d
+  command = make -C $in
+
+rule BuildExternal
+  description = Running external build step
+  command = cd $builddir/$workingdir && $
+            export CFLAGS="--sysroot=/ $cFlags" $
+            CXXFLAGS="--sysroot=/ $cxxFlags" $
+            LDFLAGS="--sysroot=/ $ldFlags" $
+            PATH="$${LEGATO_ROOT}/bin:/usr/bin/:$$PATH" $
+            && $
+            $externalCommand
+
+rule GenInterfaceCode
+  description = Generating IPC interface code
+  command = ifgen --output-dir $outputDir $ifgenFlags $in
+
+rule GenPyApiCExtension
+  description = Generating Python API C Extension
+  command = cextgenerator.py $in -o $workDir > /dev/null
+rule CopyFile
+  description = Copying file
+  command = cp -d -f -T $in $out
+
+rule RegenNinjaScript
+  description = Regenerating build script
+  generator = 1
+  command = mkapp --dont-run-ninja "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/tools/devMode.adef" "-i" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato" "-o" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/tools" "-w" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/tools/devMode" "-t" "localhost" "-d" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/debug" "--cflags= -O2 -fno-omit-frame-pointer"
+
+rule BundleFile
+  description = Bundling file
+  command = legato-install -m $modeFlags $in $out
+
+rule MakeAppInfoProperties
+  description = Creating info.properties
+  command = rm -f $out && $
+            md5=$$( ( cd $workingDir/staging && $
+                      find -P -print0 |LC_ALL=C sort -z && $
+                      find -P -type f -print0 |LC_ALL=C sort -z |xargs -0 md5sum && $
+                      find -P -type l -print0 |LC_ALL=C sort -z |xargs -0 -r -n 1 readlink $
+                    ) | md5sum) && $
+            md5=$${md5%% *} && $
+            ( echo "app.name=$name" && $
+              echo "app.md5=$$md5" && $
+              echo "app.version=$version" && $
+              echo "legato.version=`cat $$LEGATO_ROOT/version`" $
+            ) > $out
+
+rule PackApp
+  description = Packaging app
+  command = $
+            mtime=`stat -c %Y $adefPath` && $
+            find $workingDir/staging -exec touch --no-dereference --date=@$$mtime {} \; && $
+            (cd $workingDir/staging && find . -print0 | LC_ALL=C sort -z |tar --no-recursion --null -T - -cjf - ) > $workingDir/$name.$target && $
+            tarballSize=`stat -c '%s' $workingDir/$name.$target` && $
+            md5=`grep '^app.md5=' $in | sed 's/^app.md5=//'` && $
+            ( printf '{\n' && $
+              printf '"command":"updateApp",\n' && $
+              printf '"name":"$name",\n' && $
+              printf '"version":"$version",\n' && $
+              printf '"md5":"%s",\n' "$$md5" && $
+              printf '"size":%s\n' "$$tarballSize" && $
+              printf '}' && $
+              cat $workingDir/$name.$target $
+            ) > $out
+
+rule BinPackApp
+  description = Packaging app for distribution.
+  command = cp -r $stagingDir/* $workingDir/ && $
+            rm $workingDir/info.properties $workingDir/root.cfg && $
+            mtime=`stat -c %Y $adefPath` && $
+            find $workingDir -exec touch  --no-dereference --date=@$$mtime {} \; && $
+            (cd $workingDir/ && find . -print0 |LC_ALL=C sort -z  |tar --no-recursion --null -T - -cjf - ) > $out
+
+build $builddir/api/45eaf0d718b1cd816adf04250e307575/client/le_limit_interface.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_limit.api |
+  outputDir = $builddir/api/45eaf0d718b1cd816adf04250e307575/client
+  ifgenFlags = --gen-interface $ifgenFlags
+
+build $builddir/api/3b65159d8f4180eecf13223943d6f3c3/client/le_pm_client.c.o: CompileC $builddir/api/3b65159d8f4180eecf13223943d6f3c3/client/le_pm_client.c | $builddir/api/3b65159d8f4180eecf13223943d6f3c3/client/le_pm_messages.h $builddir/api/3b65159d8f4180eecf13223943d6f3c3/client/le_pm_interface.h
+  cFlags = $cFlags
+
+build $builddir/api/3b65159d8f4180eecf13223943d6f3c3/client/le_pm_client.c $builddir/api/3b65159d8f4180eecf13223943d6f3c3/client/le_pm_interface.h $builddir/api/3b65159d8f4180eecf13223943d6f3c3/client/le_pm_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_pm.api |
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix le_pm $ifgenFlags
+  outputDir = $builddir/api/3b65159d8f4180eecf13223943d6f3c3/client
+
+build $builddir/api/839b4824b3ad196d16d4aea8e139f9d5/client/le_updateCtrl_client.c.o: CompileC $builddir/api/839b4824b3ad196d16d4aea8e139f9d5/client/le_updateCtrl_client.c | $builddir/api/839b4824b3ad196d16d4aea8e139f9d5/client/le_updateCtrl_messages.h $builddir/api/839b4824b3ad196d16d4aea8e139f9d5/client/le_updateCtrl_interface.h
+  cFlags = $cFlags
+
+build $builddir/api/839b4824b3ad196d16d4aea8e139f9d5/client/le_updateCtrl_client.c $builddir/api/839b4824b3ad196d16d4aea8e139f9d5/client/le_updateCtrl_interface.h $builddir/api/839b4824b3ad196d16d4aea8e139f9d5/client/le_updateCtrl_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_updateCtrl.api |
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix le_updateCtrl $ifgenFlags
+  outputDir = $builddir/api/839b4824b3ad196d16d4aea8e139f9d5/client
+
+build $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_client.c.o: CompileC $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_client.c | $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_messages.h $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_interface.h $builddir/api/45eaf0d718b1cd816adf04250e307575/client/le_limit_interface.h
+  cFlags = $cFlags -I$builddir/api/45eaf0d718b1cd816adf04250e307575/client
+
+build $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_client.c $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_interface.h $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_instStat.api | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_limit.api
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix le_instStat $ifgenFlags
+  outputDir = $builddir/api/b4da49502a09c3a97191d210f2aaee06/client
+
+build $builddir/api/853be94218ff9e24341413a4c193383c/client/le_framework_client.c.o: CompileC $builddir/api/853be94218ff9e24341413a4c193383c/client/le_framework_client.c | $builddir/api/853be94218ff9e24341413a4c193383c/client/le_framework_messages.h $builddir/api/853be94218ff9e24341413a4c193383c/client/le_framework_interface.h
+  cFlags = $cFlags
+
+build $builddir/api/853be94218ff9e24341413a4c193383c/client/le_framework_client.c $builddir/api/853be94218ff9e24341413a4c193383c/client/le_framework_interface.h $builddir/api/853be94218ff9e24341413a4c193383c/client/le_framework_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_framework.api |
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix le_framework $ifgenFlags
+  outputDir = $builddir/api/853be94218ff9e24341413a4c193383c/client
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/tools/devMode/staging/read-only/lib/libComponent_devMode.so: LinkCLib $builddir/component/cb9b1c27d9cb4c59dccd9d550926a110/obj/fb8fb8aa4d180cbbe4083f64bd84ea00.o $builddir/api/3b65159d8f4180eecf13223943d6f3c3/client/le_pm_client.c.o $builddir/api/839b4824b3ad196d16d4aea8e139f9d5/client/le_updateCtrl_client.c.o $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_client.c.o $builddir/api/853be94218ff9e24341413a4c193383c/client/le_framework_client.c.o $builddir/component/cb9b1c27d9cb4c59dccd9d550926a110/obj/_componentMain.c.o | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib/liblegato.so
+  ldFlags =  -L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/tools/devMode/staging/read-only/lib -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib:$$LEGATO_BUILD/framework/lib" "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -lm
+
+build $builddir/component/cb9b1c27d9cb4c59dccd9d550926a110/obj/fb8fb8aa4d180cbbe4083f64bd84ea00.o: CompileC /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/components/devMode/devMode/devMode.c || $builddir/api/3b65159d8f4180eecf13223943d6f3c3/client/le_pm_interface.h $builddir/api/3b65159d8f4180eecf13223943d6f3c3/client/le_pm_messages.h $builddir/api/839b4824b3ad196d16d4aea8e139f9d5/client/le_updateCtrl_interface.h $builddir/api/839b4824b3ad196d16d4aea8e139f9d5/client/le_updateCtrl_messages.h $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_interface.h $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_messages.h $builddir/api/853be94218ff9e24341413a4c193383c/client/le_framework_interface.h $builddir/api/853be94218ff9e24341413a4c193383c/client/le_framework_messages.h $builddir/api/45eaf0d718b1cd816adf04250e307575/client/le_limit_interface.h 
+  cFlags = $cFlags -I$builddir/component/cb9b1c27d9cb4c59dccd9d550926a110/src -I$builddir/api/3b65159d8f4180eecf13223943d6f3c3/client -I$builddir/api/839b4824b3ad196d16d4aea8e139f9d5/client -I$builddir/api/b4da49502a09c3a97191d210f2aaee06/client -I$builddir/api/853be94218ff9e24341413a4c193383c/client -I$builddir/api/45eaf0d718b1cd816adf04250e307575/client -DLE_COMPONENT_NAME=devMode -DLE_LOG_SESSION=devMode_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=devMode_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _devMode_COMPONENT_INIT()"
+
+build $builddir/component/cb9b1c27d9cb4c59dccd9d550926a110/obj/_componentMain.c.o: CompileC $builddir/component/cb9b1c27d9cb4c59dccd9d550926a110/src/_componentMain.c
+  cFlags = $cFlags -I$builddir/component/cb9b1c27d9cb4c59dccd9d550926a110/src -I$builddir/api/3b65159d8f4180eecf13223943d6f3c3/client -I$builddir/api/839b4824b3ad196d16d4aea8e139f9d5/client -I$builddir/api/b4da49502a09c3a97191d210f2aaee06/client -I$builddir/api/853be94218ff9e24341413a4c193383c/client -I$builddir/api/45eaf0d718b1cd816adf04250e307575/client -DLE_COMPONENT_NAME=devMode -DLE_LOG_SESSION=devMode_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=devMode_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _devMode_COMPONENT_INIT()"
+
+build $builddir/app/devMode/obj/devMode/_main.c.o: CompileC /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/tools/devMode/app/devMode/src/devMode/_main.c
+  cFlags = $cFlags -DLE_COMPONENT_NAME=devMode_exe -DLE_LOG_SESSION=devMode_exe_LogSession -DLE_LOG_LEVEL_FILTER_PTR=devMode_exe_LogLevelFilterPtr 
+
+build $builddir/app/devMode/obj/devMode/devMode: LinkCExe $builddir/app/devMode/obj/devMode/_main.c.o | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/tools/devMode/staging/read-only/lib/libComponent_devMode.so /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib/liblegato.so /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/$target/framework/lib/liblegato.so
+  ldFlags = -rdynamic -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib:$$LEGATO_BUILD/framework/lib" -L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/tools/devMode/staging/read-only/lib "-L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/tools/devMode/staging/read-only/lib" -lComponent_devMode "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -ldl -lm $ldFlags
+
+build $builddir/app/devMode/staging/read-only/bin/gdbserver : BundleFile //usr/bin/gdbserver
+  modeFlags = u+rw+x,g+r+x,o+x+r-w
+build $builddir/app/devMode/staging/read-only/bin/strace : BundleFile //usr/bin/strace
+  modeFlags = u+rw+x,g+r+x,o+x+r-w
+build $builddir/app/devMode/staging/read-only/lib/libComponent_devMode.so : BundleFile /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/tools/devMode/staging/read-only/lib/libComponent_devMode.so
+  modeFlags = u+rw+x,g+r+x,o+x+r-w
+
+build $builddir/app/devMode/staging/read-only/bin/devMode : BundleFile $builddir/app/devMode/obj/devMode/devMode
+  modeFlags = u+rw+x,g+r+x,o+x+r-w
+
+build $builddir/app/devMode/staging/info.properties : MakeAppInfoProperties | $builddir/app/devMode/staging/read-only/bin/gdbserver $builddir/app/devMode/staging/read-only/bin/strace $builddir/app/devMode/staging/read-only/lib/libComponent_devMode.so $builddir/app/devMode/staging/read-only/bin/devMode $builddir/app/devMode/staging/root.cfg
+  name = devMode
+  version = 
+  workingDir = $builddir/app/devMode
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/tools/devMode.$target.update: PackApp $builddir/app/devMode/staging/info.properties
+  name = devMode
+  adefPath = /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/tools/devMode.adef
+  version = 
+  workingDir = $builddir/app/devMode
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/tools/devMode/build.ninja: RegenNinjaScript | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/components/devMode/devMode/Component.cdef /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_framework.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_instStat.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_limit.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_pm.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_updateCtrl.api
+

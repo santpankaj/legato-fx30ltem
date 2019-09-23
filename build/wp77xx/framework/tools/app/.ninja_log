@@ -1,0 +1,27 @@
+# ninja log v5
+0	309	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/obj/app/_main.c.o	313e46a75cac1c4
+0	393	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/component/14b68743eed48d6159106640e8eb2df9/obj/_componentMain.c.o	e5cba21aedce3d9e
+0	551	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/45eaf0d718b1cd816adf04250e307575/client/le_limit_interface.h	cceb4295df9b904a
+1	681	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_client.c	49db198a21ca4d7b
+1	681	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_interface.h	49db198a21ca4d7b
+1	681	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_messages.h	49db198a21ca4d7b
+1	798	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/853be94218ff9e24341413a4c193383c/client/le_framework_client.c	e4bca92131eb568a
+1	798	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/853be94218ff9e24341413a4c193383c/client/le_framework_interface.h	e4bca92131eb568a
+1	798	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/853be94218ff9e24341413a4c193383c/client/le_framework_messages.h	e4bca92131eb568a
+310	974	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/66a22b4697d3209215670cccbbabc881/client/le_appInfo_client.c	5d0621a9638e5ab7
+310	974	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/66a22b4697d3209215670cccbbabc881/client/le_appInfo_interface.h	5d0621a9638e5ab7
+310	974	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/66a22b4697d3209215670cccbbabc881/client/le_appInfo_messages.h	5d0621a9638e5ab7
+0	1048	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/c3097288baa975e4903fef432f21ddee/client/le_appCtrl_client.c	bb702f038363d36c
+0	1048	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/c3097288baa975e4903fef432f21ddee/client/le_appCtrl_interface.h	bb702f038363d36c
+0	1048	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/c3097288baa975e4903fef432f21ddee/client/le_appCtrl_messages.h	bb702f038363d36c
+394	1267	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/f7e9605c796dcccd636175b7bbc38232/client/le_appProc_client.c	5330588c2b4a312e
+394	1267	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/f7e9605c796dcccd636175b7bbc38232/client/le_appProc_interface.h	5330588c2b4a312e
+394	1267	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/f7e9605c796dcccd636175b7bbc38232/client/le_appProc_messages.h	5330588c2b4a312e
+798	1272	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/853be94218ff9e24341413a4c193383c/client/le_framework_client.c.o	6c09a56f8628e87c
+974	1767	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/66a22b4697d3209215670cccbbabc881/client/le_appInfo_client.c.o	687a852d9d39d529
+1048	1847	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/c3097288baa975e4903fef432f21ddee/client/le_appCtrl_client.c.o	59cdfb4ed4d8b5bd
+1267	2119	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/component/14b68743eed48d6159106640e8eb2df9/obj/172e8cddea9826d741ac82bb6d02dfd4.o	a29c712efb1636fb
+1267	2130	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/f7e9605c796dcccd636175b7bbc38232/client/le_appProc_client.c.o	8158e798f5bbfccd
+681	2479	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/app/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_client.c.o	b059eef477208345
+2479	2539	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib/libComponent_appCtrl.so	332f1f31c5edcd0
+2539	2587	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/bin/app	2fb9be5b88a97797

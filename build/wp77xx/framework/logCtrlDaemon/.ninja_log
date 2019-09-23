@@ -1,0 +1,16 @@
+# ninja log v5
+1	261	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/logCtrlDaemon/component/18ab3ad5a7daeb164a34a2f5872ddcc0/obj/_componentMain.c.o	fbaba61ebc8939b8
+0	279	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/logCtrlDaemon/obj/logCtrlDaemon/_main.c.o	ac0ea843c5b8f1e2
+1	384	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/logCtrlDaemon/api/45eaf0d718b1cd816adf04250e307575/server/le_limit_server.h	13a66c3c3de4210c
+1	478	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/logCtrlDaemon/api/37f6a7c6edbe6720bebf241146796263/server/logDaemonWdog_server.c	cfa109dfdece3e5b
+1	478	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/logCtrlDaemon/api/37f6a7c6edbe6720bebf241146796263/server/logDaemonWdog_server.h	cfa109dfdece3e5b
+1	478	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/logCtrlDaemon/api/37f6a7c6edbe6720bebf241146796263/server/logDaemonWdog_messages.h	cfa109dfdece3e5b
+1	497	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/logCtrlDaemon/api/3e734296116d8b8b746dd6745f69dd7f/server/logFd_server.c	a50ddfbe7fdfe269
+1	497	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/logCtrlDaemon/api/3e734296116d8b8b746dd6745f69dd7f/server/logFd_server.h	a50ddfbe7fdfe269
+1	497	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/logCtrlDaemon/api/3e734296116d8b8b746dd6745f69dd7f/server/logFd_messages.h	a50ddfbe7fdfe269
+497	642	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/logCtrlDaemon/component/18ab3ad5a7daeb164a34a2f5872ddcc0/obj/62659622046452ddb8043a74787b95d3.o	76ff89fc6b22c3b1
+478	653	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/logCtrlDaemon/api/37f6a7c6edbe6720bebf241146796263/server/logDaemonWdog_server.o	3cdbdde0026577f4
+497	694	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/logCtrlDaemon/api/3e734296116d8b8b746dd6745f69dd7f/server/logFd_server.o	9d2f3c73d8d52bee
+497	768	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/logCtrlDaemon/component/18ab3ad5a7daeb164a34a2f5872ddcc0/obj/209b7e29d224541b7335b0af67a9e663.o	3587618f1fc52203
+768	803	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib/libComponent_logDaemon.so	3ddfa13523021d0a
+803	840	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/bin/logCtrlDaemon	f8d860fdddcd42fc

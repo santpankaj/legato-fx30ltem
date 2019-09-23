@@ -1,0 +1,209 @@
+#!/bin/sh
+
+source wifiexport
+
+get_var()
+{
+    s='s/^.*'${1}'=\([^&]*\).*$/\1/p'
+    echo ${2} | sed -n $s | sed "s/%20/ /g"
+}
+
+# PARSING example:  SSID=TestSSID&security=1&secu=0&passphraseorpsk=passphrase&maxclients=5&apvisible=1&channel=1
+# Note that the sed search is "gready" so match is with the next member as well.
+# The order is important.
+
+### Erase the file and create it again to avoid error issued from the readlogfile script
+###rm ${LOG_MSG_FILE} && touch ${LOG_MSG_FILE}
+
+if [ "$REQUEST_METHOD" = "POST" ]; then
+    if [ "$CONTENT_LENGTH" -gt 0 ]; then
+        while read -n $CONTENT_LENGTH POST_DATA <&0
+        do
+            echo -n "Parsing: $POST_DATA"
+            echo -n "Parsing: $POST_DATA\n" > ${LOG_CMD_FILE}
+            date > ${LOG_CMD_FILE}
+            echo -en "<br>\r\n"
+            WIFIAPSSID=$(get_var "SSID" ${POST_DATA})
+            WIFIAPSECURITY=$(get_var "secu" ${POST_DATA})
+            WIFIAPKEYTYPE=$(get_var "keyType" ${POST_DATA})
+            WIFIAPKEY=$(get_var "keyValue" ${POST_DATA})
+            WIFIAPMAXCLIENTS=$(get_var "maxclients" ${POST_DATA})
+            WIFIAPVISIBLE=$(get_var "apvisible" ${POST_DATA})
+            WIFIAPCHANNEL=$(get_var "channel" ${POST_DATA})
+            WIFIAPIP=$(get_var "ipAP" ${POST_DATA})
+            WIFIAPMASK=$(get_var "ipMask" ${POST_DATA})
+            WIFIAPSTART=$(get_var "ipStart" ${POST_DATA})
+            WIFIAPSTOP=$(get_var "ipStop" ${POST_DATA})
+         done
+    fi
+fi
+
+
+if [ -n "${WIFIAPSSID}" ]; then
+    echo -en "<font color=\"black\" >$(date "+%T"):</font> Setting SSID to ${WIFIAPSSID}  <br>\r\n" >> ${LOG_MSG_FILE}
+    ${WIFITOOL} ap setssid ${WIFIAPSSID} >> ${LOG_CMD_FILE}
+else
+    echo -en "<font color=\"black\" >$(date "+%T"):</font> ERROR SSID not found<br>\r\n" >> ${LOG_MSG_FILE}
+fi
+
+
+if [ -n "${WIFIAPMAXCLIENTS}" ]; then
+    echo -en "<font color=\"black\" >$(date "+%T"):</font> Setting MaxClients to ${WIFIAPMAXCLIENTS}  <br>\r\n" >> ${LOG_MSG_FILE}
+    ${WIFITOOL} ap setmaxclients ${WIFIAPMAXCLIENTS} >> ${LOG_CMD_FILE}
+else
+    echo -en "<font color=\"black\" >$(date "+%T"):</font> ERROR MaxClients not found<br>\r\n" >> ${LOG_MSG_FILE}
+fi
+
+
+if [ -n "${WIFIAPSECURITY}" ]; then
+    echo -en "<font color=\"black\" >$(date "+%T"):</font> Setting Security to ${WIFIAPSECURITY}  <br>\r\n" >> ${LOG_MSG_FILE}
+    ${WIFITOOL} ap setsecurityproto ${WIFIAPSECURITY} >> ${LOG_CMD_FILE}
+else
+    echo -en "<font color=\"black\" >$(date "+%T"):</font> ERROR Security not found<br>\r\n" >> ${LOG_MSG_FILE}
+fi
+
+
+# secu = 1 -> WPA2
+if [ "${WIFIAPSECURITY}" = "1" ]; then
+
+    if [ "${WIFIAPKEYTYPE}" = "psk" ]; then
+        echo -en "<font color=\"black\" >$(date "+%T"):</font> keytype PSK found :${WIFIAPKEYTYPE}<br>\r\n" >> ${LOG_MSG_FILE}
+        if [ -n "${WIFIAPKEY}" ]; then
+            echo -en "<font color=\"black\" >$(date "+%T"):</font> Setting PSK to ${WIFIAPKEY}  <br>\r\n" >> ${LOG_MSG_FILE}
+            ${WIFITOOL} ap setpsk ${WIFIAPKEY} >> ${LOG_CMD_FILE}
+        else
+            echo -en "<font color=\"black\" >$(date "+%T"):</font> ERROR PassPhrase or PSK not found<br>\r\n" >> ${LOG_MSG_FILE}
+        fi
+    else
+    # passphrase
+        echo -en "<font color=\"black\" >$(date "+%T"):</font> keytype assumed passphrase found :${WIFIAPKEYTYPE}<br>\r\n" >> ${LOG_MSG_FILE}
+        if [ -n "${WIFIAPKEY}" ]; then
+            echo -en "<font color=\"black\" >$(date "+%T"):</font> Setting PassPhrase to ${WIFIAPKEY}  <br>\r\n" >> ${LOG_MSG_FILE}
+            ${WIFITOOL} ap setpassphrase ${WIFIAPKEY} >> ${LOG_CMD_FILE}
+        else
+            echo -en "<font color=\"black\" >$(date "+%T"):</font> ERROR PassPhrase or PSK not found<br>\r\n" >> ${LOG_MSG_FILE}
+        fi
+    fi
+fi
+
+if [ -n "${WIFIAPVISIBLE}" ]; then
+    echo -en "<font color=\"black\" >$(date "+%T"):</font> Setting visibility to ${WIFIAPVISIBLE} <br>\r\n" >> ${LOG_MSG_FILE}
+    ${WIFITOOL} ap setdiscoverable ${WIFIAPVISIBLE} >> ${LOG_CMD_FILE}
+else
+    echo -en "<font color=\"black\" >$(date "+%T"):</font> ERROR visibility not found<br>\r\n" >> ${LOG_MSG_FILE}
+fi
+
+if [ -n "${WIFIAPCHANNEL}" ]; then
+    echo -en "<font color=\"black\" >$(date "+%T"):</font> Setting channel to ${WIFIAPCHANNEL} <br>\r\n" >> ${LOG_MSG_FILE}
+    ${WIFITOOL} ap setchannel ${WIFIAPCHANNEL} >> ${LOG_CMD_FILE}
+else
+    echo -en "<font color=\"black\" >$(date "+%T"):</font> ERROR channel not found<br>\r\n" >> ${LOG_MSG_FILE}
+fi
+
+echo -en "<font color=\"black\" >$(date "+%T"):</font> Starting Wifi Access Point (this will take a little while) <br>\r\n" >> ${LOG_MSG_FILE}
+${WIFITOOL} ap start >> ${LOG_CMD_FILE}
+
+# @echo -en "Started Wifi Accesss Point<br>\r\n" >> /legato/systems/current/apps/wifiWebAp/read-only ${LOG_MSG_FILE}
+
+##############################
+### Configure the WLAN interface
+echo -ne "<font color=\"black\" >$(date "+%T"):</font> Mounting of ${ITF_LAN}... <br>\r\n" >> ${LOG_MSG_FILE}
+ifconfig ${ITF_LAN} ${WIFIAPIP} netmask ${WIFIAPMASK} up >> ${LOG_CMD_FILE}
+
+### Start the relay interface: rmnet0/ppp0 | eth0
+### WARNING: For rmnet interface, PINless code SIM must be used
+echo -ne "<font color=\"black\" >$(date "+%T"):</font> Mounting the relay interface ${ITF_WAN}...<br>\r\n" >> ${LOG_MSG_FILE}
+case "${ITF_WAN}" in
+    eth*)
+        ifconfig ${ITF_WAN} up
+        ;;
+    rmnet* | ppp*)
+        echo -ne "<font color=\"black\" >$(date "+%T"):</font> Enabling the radio on ${ITF_WAN}...<br>\r\n" >> ${LOG_MSG_FILE}
+        cm radio on
+        sleep 1
+        echo -ne "<font color=\"black\" >$(date "+%T"):</font> Enabling the data connection on ${ITF_WAN}...<br>\r\n" >> ${LOG_MSG_FILE}
+        cm data connect &
+        sleep 1
+        echo -ne "<font color=\"black\" >$(date "+%T"):</font> Waiting for data connection on ${ITF_WAN}...<br>\r\n" >> ${LOG_MSG_FILE}
+        ;;
+esac
+
+RETRY=0
+while [ ${RETRY} -lt 30 ] ; do
+    ITF_WAN_ADDR=$(ifconfig ${ITF_WAN} | grep "inet addr" | cut -d ':' -f 2 | cut -d ' ' -f 1)
+    if [ "${ITF_WAN_ADDR}" == "" ]; then
+        sleep 1
+        RETRY=$((${RETRY} + 1))
+    else
+        break
+    fi
+done
+if [ "${ITF_WAN_ADDR}" == "" ]; then
+    echo -ne "<font color=\"black\" >$(date "+%T"):</font> Mounting of relay interface ${ITF_WAN} failed...<br>\r\n" >> ${LOG_MSG_FILE}
+else
+    echo -ne "<font color=\"black\" >$(date "+%T"):</font> Relay interface ${ITF_WAN} IP address is ${ITF_WAN_ADDR}<br>\r\n" >> ${LOG_MSG_FILE}
+    route add default gw ${ITF_WAN_ADDR} ${ITF_WAN}
+fi
+
+### Turn on IP forwarding
+echo -ne "<font color=\"black\" >$(date "+%T"):</font> Enabling IP forwarding...<br>\r\n" >> ${LOG_MSG_FILE}
+echo 1 > /proc/sys/net/ipv4/ip_forward
+### Configure the NAT
+echo -ne "<font color=\"black\" >$(date "+%T"):</font> Configuring the NAT...<br>\r\n" >> ${LOG_MSG_FILE}
+modprobe ipt_MASQUERADE
+
+SUBNET=`ifconfig wlan0 | grep "inet addr:" | cut -d ':' -f 2 | sed 's/  *.*$//' | cut -d '.' -f -3`".0/24"
+
+iptables -I POSTROUTING -t nat -o ${ITF_WAN} -j MASQUERADE
+[ $? -ne 0 ] && \
+    echo -ne "<font color=\"red\" >$(date "+%T"): FAILED ! iptables -I POSTROUTING -t nat -o ${ITF_WAN} -j MASQUERADE</font><br>\r\n" >> ${LOG_MSG_FILE}
+
+iptables -I FORWARD --match state --state RELATED,ESTABLISHED --jump ACCEPT
+[ $? -ne 0 ] && \
+    echo -ne "<font color=\"red\" >$(date "+%T"): FAILED ! iptables -I FORWARD --match state --state RELATED,ESTABLISHED --jump ACCEPT</font><br>\r\n" >> ${LOG_MSG_FILE}
+
+iptables -I FORWARD -i ${ITF_LAN} --destination ${SUBNET} --match state --state NEW --jump ACCEPT
+[ $? -ne 0 ] && \
+    echo -ne "<font color=\"red\" >$(date "+%T"): FAILED ! iptables -I FORWARD -i ${ITF_LAN} --destination ${SUBNET} --match state --state NEW --jump ACCEPT</font><br>\r\n" >> ${LOG_MSG_FILE}
+
+iptables -I INPUT -s ${SUBNET} --jump ACCEPT
+[ $? -ne 0 ] && \
+    echo -ne "<font color=\"red\" >$(date "+%T"): FAILED ! iptables -I INPUT -s ${SUBNET} --jump ACCEPT</font><br>\r\n" >> ${LOG_MSG_FILE}
+
+iptables -I FORWARD -i ${ITF_WAN} --jump ACCEPT
+[ $? -ne 0 ] && \
+    echo -ne "<font color=\"red\" >$(date "+%T"): FAILED ! iptables -I FORWARD -i ${ITF_WAN} --jump ACCEPT</font><br>\r\n" >> ${LOG_MSG_FILE}
+
+iptables -I FORWARD -o ${ITF_WAN} --jump ACCEPT
+[ $? -ne 0 ] && \
+    echo -ne "<font color=\"red\" >$(date "+%T"): FAILED ! iptables -I FORWARD -o ${ITF_WAN} --jump ACCEPT</font><br>\r\n" >> ${LOG_MSG_FILE}
+
+### Stop the DHCP server
+echo -ne "<font color=\"black\" >$(date "+%T"):</font> Reconfiguring the DHCP server...<br>\r\n" >> ${LOG_MSG_FILE}
+/etc/init.d/dnsmasq stop
+sleep 1
+pidof dnsmasq && (kill -9 `pidof dnsmasq` || echo -ne ">>>>>>>>>>>>>>>>>>> UNABLE TO STOP THE DHCP server\n" >> ${LOG_CMD_FILE})
+
+### Configure the IP addresses range for DHCP (dnsmasq)
+test -L /etc/dnsmasq.d/${DHCP_CFG_FILE} || ln -s /tmp/${DHCP_CFG_FILE} /etc/dnsmasq.d/${DHCP_CFG_FILE}
+
+echo -ne "<font color=\"black\" >$(date "+%T"):</font> Generating the configuration file for the DHCP server...<br>\r\n" >> ${LOG_MSG_FILE}
+echo -ne "dhcp-range=wlan0,${WIFIAPSTART},${WIFIAPSTOP},24h\nserver=8.8.8.8\n" >> /tmp/${DHCP_CFG_FILE}
+### Start the DHCP server
+echo -ne "<font color=\"black\" >$(date "+%T"):</font> Restarting the DHCP server...<br>\r\n" >> ${LOG_MSG_FILE}
+/etc/init.d/dnsmasq start  || echo -ne ">>>>>>>>>>>>>>>>>>> UNABLE TO START THE DHCP server\n" >> ${LOG_CMD_FILE}
+# /etc/init.d/dnsmasq restart
+
+### AP should be now up & running
+echo -ne "<font color=\"black\" >$(date "+%T"):</font> Access Point is now up and running.<br>\r\n" >> ${LOG_MSG_FILE}
+echo -ne "<font color=\"black\" >$(date "+%T"):</font> Waiting for connections...<br>\r\n" >> ${LOG_MSG_FILE}
+##############################
+
+### DHCP server that the AP gives out a IP number.
+### @echo -en "DHCP handling for demonstration.\r\n" >> /legato/systems/current/apps/wifiWebAp/read-only${LOG_MSG_FILE}
+### /sbin/ifconfig wlan0 192.168.7.1 up >> ${LOG_CMD_FILE}
+### /etc/init.d/udhcpd start >> ${LOG_CMD_FILE}
+
+###echo -en "<br>\r\n" >> ${LOG_MSG_FILE}
+###echo -en "<FORM><INPUT Type=\"button\" VALUE=\"Back\" onClick=\"history.go(-1);return true;\"></FORM>\r\n" >> ${LOG_MSG_FILE}
+###echo -en "<br>(end of output<br>\r\n" >> ${LOG_MSG_FILE}

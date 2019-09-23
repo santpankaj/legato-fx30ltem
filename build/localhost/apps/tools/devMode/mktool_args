@@ -1,0 +1,13 @@
+mkapp
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/tools/devMode.adef
+-i
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato
+-o
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/tools
+-w
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/tools/devMode
+-t
+localhost
+-d
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/debug
+--cflags= -O2 -fno-omit-frame-pointer

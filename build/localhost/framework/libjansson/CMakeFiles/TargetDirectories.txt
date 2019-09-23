@@ -1,0 +1,7 @@
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/install.dir
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/list_install_components.dir
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/rebuild_cache.dir
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/jansson.dir
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/install/strip.dir
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/install/local.dir
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/edit_cache.dir

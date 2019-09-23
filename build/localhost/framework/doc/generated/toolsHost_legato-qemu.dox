@@ -1,0 +1,29 @@
+/** @page toolsHost_legato-qemu legato-qemu
+@verbatim
+
+NAME
+	legato-qemu - launch qemu
+
+DESCRIPTION
+	Prepare an launch qemu to host an instance of Legato.
+	Also fetches qemu images from official servers and check for updates.
+
+ENVIRONMENT
+	This script is parametrized through environment variables.
+		ONLY_PREPARE: Do not run qemu, only prepare the environment
+		RESTART_ON_ERROR: If 1 (default), relaunch qemu on errors
+		OPT_LEGATO_IMG: Path to a Legato image
+		OPT_TARGET: Platform to emulate
+		OPT_PERSIST: Make changes to the image persistant or not
+		OPT_KMESG: Kernel messages to console
+		OPT_GDB: Launch GDB server to qemu
+		OPT_KVM: Enable Hardware Acceleration (KVM)
+		OPT_SERIAL: Bearer for serial port
+		            - (blank, default) = Serial to console
+		            - telnet = Serial to telnet
+		OPT_NET: Networking interface
+		         - user (default) = simulated internal qemu networking
+		         - tap = Uses a tap interface (requires priviledges)
+		OPT_IMA: Enable IMA (Integrity Measurement Architecture)
+@endverbatim
+**/

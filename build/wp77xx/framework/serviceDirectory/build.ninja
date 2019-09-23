@@ -1,0 +1,102 @@
+# Build script for executable 'serviceDirectory'
+
+# == Auto-generated file.  Do not edit. ==
+
+builddir = /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/serviceDirectory
+
+cFlags =  -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato/linux -DNO_LOG_CONTROL -DLE_RUNTIME_DIR=/tmp/legato// -DLE_SVCDIR_SERVER_SOCKET_NAME=/tmp/legato/serviceDirectoryServer -DLE_SVCDIR_CLIENT_SOCKET_NAME=/tmp/legato/serviceDirectoryClient -I /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/serviceDirectory -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/include -I.
+
+cxxFlags =  -I /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/serviceDirectory -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/include -I.
+
+ldFlags = 
+
+target = wp77xx
+
+ifgenFlags =  --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/include --import-dir .
+
+rule CompileC
+  description = Compiling C source
+  depfile = $out.d
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -MMD -MF $out.d -c $in -o $out -DLE_FILENAME=`basename $in` -Wall -fPIC -Werror -fvisibility=hidden -DMK_TOOLS_BUILD  -DLEGATO_EMBEDDED -g $cFlags
+
+rule CompileCxx
+  description = Compiling C++ source
+  depfile = $out.d
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++ --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -MMD -MF $out.d -c $in -o $out -DLE_FILENAME=`basename $in` -Wall -fPIC -Werror -fvisibility=hidden  -DMK_TOOLS_BUILD  -DLEGATO_EMBEDDED -g $cxxFlags
+
+rule LinkCLib
+  description = Linking C library
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -Wl,--build-id -g -shared -o $out $in $ldFlags $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug $out
+
+rule LinkCxxLib
+  description = Linking C++ library
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++ --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -Wl,--build-id -g -shared -o $out $in $ldFlags $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug $out
+
+rule LinkCExe
+  description = Linking C executable
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -Wl,--build-id -g -fPIE -pie -o $out $in $ldFlags -g $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug $out
+
+rule LinkCxxExe
+  description = Linking C++ executable
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++ --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -Wl,--build-id -g -fPIE -pie -o $out $in $ldFlags -g $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug $out
+
+rule CompileJava
+  description = Compiling Java source
+  command = javac -cp $classPath -d `dirname $out` $in && touch $out
+
+rule MakeJar
+  description = Making JAR file
+  command = INDIR=`dirname $in`; find $$INDIR -name '*.class' -printf "-C $$INDIR\n%P\n"|xargs jar -cf $out
+
+rule MakeKernelModule
+  description = Build kernel driver module
+  depfile = $out.d
+  command = make -C $in
+
+rule BuildExternal
+  description = Running external build step
+  command = cd $builddir/$workingdir && $
+            export CFLAGS="--sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi $cFlags" $
+            CXXFLAGS="--sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi $cxxFlags" $
+            LDFLAGS="--sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi $ldFlags" $
+            PATH="$${LEGATO_ROOT}/bin:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/bin:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/sbin:$$PATH" $
+            && $
+            $externalCommand
+
+rule GenInterfaceCode
+  description = Generating IPC interface code
+  command = ifgen --output-dir $outputDir $ifgenFlags $in
+
+rule GenPyApiCExtension
+  description = Generating Python API C Extension
+  command = cextgenerator.py $in -o $workDir > /dev/null
+rule CopyFile
+  description = Copying file
+  command = cp -d -f -T $in $out
+
+rule RegenNinjaScript
+  description = Regenerating build script
+  generator = 1
+  command = mkexe --dont-run-ninja "-o" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/bin/serviceDirectory" "-t" "wp77xx" "-w" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/serviceDirectory" "-l" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib" "-d" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/daemons/linux/serviceDirectory" "--cflags=-I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato" "--cflags=-I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato/linux" "--cflags=-DNO_LOG_CONTROL" "--cflags=-DLE_RUNTIME_DIR=/tmp/legato//" "--cflags=-DLE_SVCDIR_SERVER_SOCKET_NAME=/tmp/legato/serviceDirectoryServer" "--cflags=-DLE_SVCDIR_CLIENT_SOCKET_NAME=/tmp/legato/serviceDirectoryClient"
+
+build $builddir/obj/serviceDirectory/_main.c.o: CompileC /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/serviceDirectory/src/serviceDirectory/_main.c
+  cFlags = $cFlags -DLE_COMPONENT_NAME=serviceDirectory_exe -DLE_LOG_SESSION=serviceDirectory_exe_LogSession -DLE_LOG_LEVEL_FILTER_PTR=serviceDirectory_exe_LogLevelFilterPtr 
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/bin/serviceDirectory: LinkCExe $builddir/obj/serviceDirectory/_main.c.o | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib/libComponent_serviceDirectory.so /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib/liblegato.so /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/$target/framework/lib/liblegato.so
+  ldFlags = -rdynamic -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib" -L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib "-L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib" -lComponent_serviceDirectory "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -ldl -lm $ldFlags
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib/libComponent_serviceDirectory.so: LinkCLib $builddir/component/bef5b4352f4c0e40a091242ece4d7fc6/obj/b3e189c970e5f4939060a203cf5d47aa.o $builddir/component/bef5b4352f4c0e40a091242ece4d7fc6/obj/_componentMain.c.o | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib/liblegato.so
+  ldFlags =  -L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib" "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -lm
+
+build $builddir/component/bef5b4352f4c0e40a091242ece4d7fc6/obj/b3e189c970e5f4939060a203cf5d47aa.o: CompileC /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/daemons/linux/serviceDirectory/serviceDirectory.c
+  cFlags = $cFlags -I$builddir/component/bef5b4352f4c0e40a091242ece4d7fc6/src -DLE_COMPONENT_NAME=serviceDirectory -DLE_LOG_SESSION=serviceDirectory_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=serviceDirectory_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _serviceDirectory_COMPONENT_INIT()"
+
+build $builddir/component/bef5b4352f4c0e40a091242ece4d7fc6/obj/_componentMain.c.o: CompileC $builddir/component/bef5b4352f4c0e40a091242ece4d7fc6/src/_componentMain.c
+  cFlags = $cFlags -I$builddir/component/bef5b4352f4c0e40a091242ece4d7fc6/src -DLE_COMPONENT_NAME=serviceDirectory -DLE_LOG_SESSION=serviceDirectory_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=serviceDirectory_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _serviceDirectory_COMPONENT_INIT()"
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/serviceDirectory/build.ninja: RegenNinjaScript | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/tools/mk /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/daemons/linux/serviceDirectory/Component.cdef
+

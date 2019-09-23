@@ -1,0 +1,6 @@
+# ninja log v5
+0	122	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/serviceDirectory/component/bef5b4352f4c0e40a091242ece4d7fc6/obj/_componentMain.c.o	fd822208c83db91d
+0	138	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/serviceDirectory/obj/serviceDirectory/_main.c.o	aaa7160c9e95be6
+1	216	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/serviceDirectory/component/bef5b4352f4c0e40a091242ece4d7fc6/obj/b3e189c970e5f4939060a203cf5d47aa.o	fa8bc30ae524d0f1
+216	265	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib/libComponent_serviceDirectory.so	49ea459bf4a61c33
+265	313	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/bin/serviceDirectory	8a82c0d90192425b

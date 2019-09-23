@@ -1,0 +1,14 @@
+# ninja log v5
+1	278	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/config/component/69ec8eb8ca7786c4a4e9ec9b08891af2/obj/_componentMain.c.o	7219838e413154a9
+0	283	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/config/obj/config/_main.c.o	c02b8701701a49e7
+1	573	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/config/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_interface.h	3764a6f05c36f2d
+1	627	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/config/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_client.c	604313519bc888b7
+1	627	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/config/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_messages.h	604313519bc888b7
+1	703	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/config/api/24e8cfc8f66000c529a447a4985d9032/client/le_cfgAdmin_client.c	ba56628834936e86
+1	703	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/config/api/24e8cfc8f66000c529a447a4985d9032/client/le_cfgAdmin_interface.h	ba56628834936e86
+1	703	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/config/api/24e8cfc8f66000c529a447a4985d9032/client/le_cfgAdmin_messages.h	ba56628834936e86
+703	1162	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/config/component/69ec8eb8ca7786c4a4e9ec9b08891af2/obj/5825ed66216a0c0658c429bbd4a49517.o	f7a90cace2d4c847
+704	1217	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/config/api/24e8cfc8f66000c529a447a4985d9032/client/le_cfgAdmin_client.c.o	b2dc61d8def17351
+627	1679	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/config/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_client.c.o	c01a6aac5101376c
+1679	1736	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib/libComponent_config.so	b261fad2d0d0ee47
+1736	1773	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/bin/config	e2a3d73cff7d7e5f

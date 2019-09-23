@@ -1,0 +1,4 @@
+# ninja log v5
+1	128	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/xattr/obj/xattr/_main.c.o	10c3f2f3242df1e0
+0	150	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/tools/xattr/obj/1e615f4f2b9d1bf98bed18df9043fb2c.o	aef35bdfeae8aa16
+150	198	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/bin/xattr	ad658960170ccf73

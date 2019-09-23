@@ -1,0 +1,26 @@
+sources:
+{
+    pa_secStore_qmi.c
+}
+
+cflags:
+{
+    -I$LEGATO_ROOT/components/secStore/platformAdaptor/inc
+    -I$LEGATO_QMI_UTIL_SRC_FILES
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc/framework
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc/services
+}
+
+requires:
+{
+    api:
+    {
+        secureStorage/secStoreAdmin.api       [types-only]
+    }
+
+    component:
+    {
+        $LEGATO_UTIL_PA
+    }
+}

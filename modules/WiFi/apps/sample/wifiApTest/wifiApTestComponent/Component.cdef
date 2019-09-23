@@ -1,0 +1,12 @@
+sources:
+{
+    wifiApTest.c
+}
+
+requires:
+{
+    api:
+    {
+        ${LEGATO_ROOT}/interfaces/wifi/le_wifiAp.api
+    }
+}

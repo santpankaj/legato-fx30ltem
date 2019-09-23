@@ -1,0 +1,3 @@
+ [default] pa_gnss_ConvertDataCoordinateSystem
+ [default] pa_gnss_GetMinElevation
+ [default] pa_gnss_SetMinElevation

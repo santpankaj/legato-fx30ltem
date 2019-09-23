@@ -1,0 +1,19 @@
+executables:
+{
+    atQmiLinker = (atQmiLinker)
+}
+
+processes:
+{
+    envVars:
+    {
+        LE_LOG_LEVEL = DEBUG
+    }
+
+    run:
+    {
+        (atQmiLinker)
+    }
+}
+
+sandboxed: false

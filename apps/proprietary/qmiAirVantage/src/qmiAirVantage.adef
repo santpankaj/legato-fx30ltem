@@ -1,0 +1,27 @@
+executables:
+{
+    qmiAirVantage = (qmiAirVantage)
+}
+
+processes:
+{
+    run:
+    {
+        (qmiAirVantage)
+    }
+    faultAction: restart
+}
+
+bindings:
+{
+    qmiAirVantage.qmiAirVantage.le_atServer -> atService.le_atServer
+    qmiAirVantage.qmiAirVantage.le_avc -> avcService.le_avc
+    qmiAirVantage.qmiAirVantage.le_mdc -> modemService.le_mdc
+    qmiAirVantage.qmiAirVantage.le_data -> dataConnectionService.le_data
+}
+
+sandboxed: false
+
+#if ${LEGATO_SERVICE_AVC_COMPAT_START} = 0
+    start: manual
+#endif

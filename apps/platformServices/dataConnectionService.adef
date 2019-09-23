@@ -1,0 +1,42 @@
+sandboxed: false
+
+executables:
+{
+    dcsDaemon = ( $LEGATO_ROOT/components/dataConnectionService/dcsDaemon )
+}
+
+processes:
+{
+    run:
+    {
+        (dcsDaemon)
+    }
+
+    faultAction: restart
+    #if ${LEGATO_SERVICES_WDOG_DISABLE} = 1
+        watchdogTimeout: never
+    #else
+        maxWatchdogTimeout: 120000
+    #endif
+}
+
+bindings:
+{
+    dcsDaemon.dcsDaemon.le_mdc -> modemService.le_mdc
+    dcsDaemon.dcsDaemon.le_mrc -> modemService.le_mrc
+    dcsDaemon.dcsDaemon.le_wifiClient -> <root>.le_wifiClient
+    dcsDaemon.watchdogChain.le_wdog -> <root>.le_wdog
+}
+
+requires:
+{
+    configTree:
+    {
+        [r] .
+    }
+}
+
+extern:
+{
+    dcsDaemon.dcsDaemon.le_data
+}

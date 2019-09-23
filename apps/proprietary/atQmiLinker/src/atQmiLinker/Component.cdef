@@ -1,0 +1,22 @@
+sources:
+{
+    utils/utils.c
+    ${LEGATO_TARGET}/atForward.c
+    atLinker.c
+}
+
+cflags:
+{
+    -I${CURDIR}
+    -I${LEGATO_PROPRIETARY_QCT_DIR}/inc
+    -I${LEGATO_PROPRIETARY_QCT_DIR}/inc/framework
+    -I${LEGATO_PROPRIETARY_QCT_DIR}/inc/services
+}
+
+ldflags:
+{
+    -lqmi
+    -lqmi_client_qmux
+    ${LEGATO_PROPRIETARY_QCT_DIR}/lib/libqmiservices.a
+    ${LEGATO_PROPRIETARY_QCT_DIR}/lib/libqmi_cci.a
+}

@@ -1,0 +1,8 @@
+libComponent_le_pa_audio.so
+libComponent_le_pa_dcs.so
+libComponent_le_pa_ecall.so
+libComponent_le_pa_fwupdate.so
+libComponent_le_pa_gnss.so
+libComponent_le_pa_secStore.so
+libComponent_le_pa.so
+libComponent_le_pa_uartMode.so

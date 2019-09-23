@@ -1,0 +1,26 @@
+sandboxed: false
+
+executables:
+{
+    avcTest = ( avcTestComp )
+}
+
+processes:
+{
+    envVars:
+    {
+        LE_LOG_LEVEL = DEBUG
+    }
+
+    run:
+    {
+        ( avcTest )
+    }
+}
+
+start: manual
+
+bindings:
+{
+    avcTest.avcTestComp.le_avc -> avcService.le_avc
+}

@@ -1,0 +1,18 @@
+requires:
+{
+    api:
+    {
+        le_dualsys.api  [types-only]
+    }
+}
+
+sources:
+{
+    pa_fwupdate_simu.c
+    pa_flash_simu.c
+}
+
+cflags:
+{
+    -I$LEGATO_ROOT/components/fwupdate/platformAdaptor/inc
+}

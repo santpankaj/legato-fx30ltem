@@ -1,0 +1,5 @@
+/** @page toolsHost_remoteDebug remoteDebug
+@verbatim
+Usage: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/tools/scripts/remoteDebug appName processName [targetIp] [targetType]
+@endverbatim
+**/

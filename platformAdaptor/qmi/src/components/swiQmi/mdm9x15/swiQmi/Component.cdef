@@ -1,0 +1,23 @@
+sources:
+{
+    $LEGATO_QMI_UTIL_SRC_FILES/swiQmi.c
+    $LEGATO_QMI_UTIL_SRC_FILES/componentInit.c
+}
+
+ldflags:
+{
+    ${LEGATO_PROPRIETARY_QCT_DIR}/lib/libsierra_qapi.a
+    ${LEGATO_PROPRIETARY_QCT_DIR}/lib/libsierra_qcsi.a
+    ${LEGATO_PROPRIETARY_QCT_DIR}/lib/libqmiservices.a
+    ${LEGATO_PROPRIETARY_QCT_DIR}/lib/libqmi_cci.a
+    ${LEGATO_PROPRIETARY_QCT_DIR}/lib/libloc_api.a
+    -lqmi
+}
+
+cflags:
+{
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc/framework
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc/services
+}
+

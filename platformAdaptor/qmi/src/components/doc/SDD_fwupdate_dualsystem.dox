@@ -1,0 +1,619 @@
+/** @page c_SDD_fwupdate_DualSys FW update on Dual System SDD
+
+The FW update APIs handle FW update and dual system management
+
+@section le_fwupdate_Download le_fwupdate_Download
+
+@startuml{le_fwupdate_Download_sdd.png}
+hide footbox
+skinparam sequenceParticipantBackgroundColor white
+
+participant "SWI downloader or\nOCU3 downloader" as Application
+box "fwupdateDaemon" #lightBlue
+participant "fwupdateServer.c" as fwupdateServer
+participant "pa_fwupdate.c" as pa_fwupdate
+participant "pa_fwupdate_qmi.c" as pa_fwupdate_qmi
+end box
+Participant Flash
+Participant Modem
+
+Application -> fwupdateServer: ""le_fwupdate_Download(fd)""
+fwupdateServer -> pa_fwupdate: ""pa_fwupdate_Download(fd)""
+
+pa_fwupdate -> pa_fwupdate: Check if fd is positive
+pa_fwupdate ->pa_fwupdate_qmi: ""pa_fwupdate_DualSysGetSyncState()""
+pa_fwupdate_qmi -> Modem: QMI SSDATA READ message
+Modem --> pa_fwupdate_qmi: ""LE_OK""
+pa_fwupdate_qmi --> pa_fwupdate: ""LE_OK"" with synchronization state
+
+pa_fwupdate -> pa_fwupdate: Check that the OoS is set to ""Sync""
+alt Sub systems are not synchronous
+pa_fwupdate --> fwupdateServer: ""LE_NOT_POSSIBLE""
+fwupdateServer --> Application: ""LE_NOT_POSSIBLE""
+else Sub systems are synchronous: follow the treatment
+end
+
+group loop until whole package is read
+group loop until component image header is read (not a composite)
+group loop until a whole CWE header is read
+pa_fwupdate -> Application: Read 400 bytes\n(CWE header length)
+Application --> pa_fwupdate: Returns read length
+end
+
+
+group ""HeaderLoad""
+pa_fwupdate -> pa_fwupdate: Parse the header
+note left
+The pa_fwupdate keeps in RAM the header details
+end note
+pa_fwupdate -> pa_fwupdate: Check if the CWE header concerns\na composite image
+pa_fwupdate -> pa_fwupdate: Check if the CWE header validity\n(product, PSB CRC, ...)
+end
+
+alt Error on CWE header check
+pa_fwupdate --> fwupdateServer: ""LE_FAULT""
+fwupdateServer --> Application: ""LE_FAULT""
+else CWE header is valid follow the treatment
+end
+end
+
+group A CWE header linked to a component image was read\nLoop until all component image data are read
+pa_fwupdate -> Application: Read up to 64kB of\ncomponent image data\n or remaining component image data
+Application --> pa_fwupdate: Returns read length
+
+pa_fwupdate -> pa_fwupdate: If length not 0: Provide data\n""WriteData""
+
+group ""WriteData""
+pa_fwupdate -> pa_fwupdate: Check the corresponding partition in flash
+pa_fwupdate -> Flash: Erase the corresponding partition
+Flash --> pa_fwupdate : ""LE_OK""
+pa_fwupdate -> Flash: Write data
+Flash --> pa_fwupdate : ""LE_OK""
+end
+
+pa_fwupdate -> pa_fwupdate_qmi: For 1st write:  ""pa_fwupdate_SetUnsyncState""
+pa_fwupdate_qmi -> Modem: QMI SSDATA WRITE to update the OoS field
+Modem --> pa_fwupdate_qmi: ""LE_OK""
+pa_fwupdate_qmi --> pa_fwupdate: ""LE_OK""
+
+
+end
+
+pa_fwupdate -> pa_fwupdate: CRC check
+alt Error on CRC check
+pa_fwupdate --> fwupdateServer: ""LE_FAULT""
+fwupdateServer --> Application: ""LE_FAULT""
+else CRC is correct: follow the treatment
+end
+
+end
+pa_fwupdate --> fwupdateServer: ""LE_OK""
+fwupdateServer --> Application: ""LE_OK""
+
+@enduml
+
+@section le_fwupdate_DualSysSwap le_fwupdate_DualSysSwap
+
+@startuml{le_fwupdate_DualSysSwap_sdd.png}
+
+hide footbox
+skinparam sequenceParticipantBackgroundColor white
+
+participant "SWI downloader or\nOCU3 downloader" as Application
+box "fwupdateDaemon" #lightBlue
+participant "fwupdateServer.c" as fwupdateServer
+participant "pa_fwupdate.c" as pa_fwupdate
+participant "pa_fwupdate_qmi.c" as pa_fwupdate_qmi
+end box
+Participant Modem
+
+Application -> fwupdateServer: ""le_fwupdate_DualSysSwap()""
+note over fwupdateServer
+Do not need to check if
+the sub systems  are synchronized
+end note
+fwupdateServer -> pa_fwupdate_qmi: ""pa_fwupdate_DualSysSwap()""
+pa_fwupdate_qmi -> pa_fwupdate: ""pa_fwupdate_GetBootSystem()""
+pa_fwupdate -> Flash: Get the current sub system
+Flash --> pa_fwupdate: sub system number
+pa_fwupdate --> pa_fwupdate_qmi: sub system number
+pa_fwupdate_qmi -> Modem: QMI SSDATA WRITE to write:\n*the other sub system\n*the update reason
+Modem --> pa_fwupdate_qmi: ""LE_OK""
+pa_fwupdate_qmi --> fwupdateServer: ""LE_OK""
+fwupdateServer --> pa_fwupdate: ""pa_fwupdate_Reset()""
+pa_fwupdate -> pa_fwupdate: reboot
+note left
+The device reboots: no returned code to
+""le_fwupdate_DualSysSwap""
+end note
+
+@enduml
+
+@section le_fwupdate_DualSysSyncState le_fwupdate_DualSysSyncState
+
+@startuml{le_fwupdate_DualSysSyncState_sdd.png}
+
+hide footbox
+skinparam sequenceParticipantBackgroundColor white
+
+participant "SWI downloader or\nOCU3 downloader" as Application
+box "fwupdateDaemon" #lightBlue
+participant "fwupdateServer.c" as fwupdateServer
+participant "pa_fwupdate_qmi" as pa_fwupdate_qmi
+end box
+
+Participant Modem
+
+Application -> fwupdateServer: ""le_fwupdate_DualSysSyncState()""
+fwupdateServer -> pa_fwupdate_qmi: ""pa_fwupdate_DualSysGetSyncState()""
+
+pa_fwupdate_qmi -> Modem: QMI SSDATA WRITE to read SSDATA
+pa_fwupdate_qmi -> pa_fwupdate_qmi: Check the OoS field
+Modem --> pa_fwupdate_qmi: ""LE_OK"" with synchronization status
+
+
+pa_fwupdate_qmi --> fwupdateServer : ""LE_OK"" with synchronization status
+fwupdateServer --> Application: ""LE_OK"" with synchronization status
+
+@enduml
+
+@section  le_fwupdate_DualSysSync le_fwupdate_DualSysSync
+
+@startuml{le_fwupdate_DualSysSync_sdd.png}
+
+hide footbox
+skinparam sequenceParticipantBackgroundColor white
+
+participant "SWI downloader or\nOCU3 downloader" as Application
+box "fwupdateDaemon" #lightBlue
+participant "fwupdateServer.c" as fwupdateServer
+participant "pa_fwupdate.c" as pa_fwupdate
+participant "pa_fwupdate_qmi.c" as pa_fwupdate_qmi
+end box
+
+Participant Flash
+Participant Modem
+
+Application -> fwupdateServer: ""le_fwupdate_DualSysSync()""
+fwupdateServer -> pa_fwupdate: ""pa_fwupdate_DualSysSync()""
+
+group pa_fwupdate_DualSysSync
+
+pa_fwupdate -> Flash: Get the current sub system
+Flash --> pa_fwupdate: sub system number
+
+
+pa_fwupdate -> pa_fwupdate_qmi: ""pa_fwupdate_SetState""
+pa_fwupdate_qmi -> Modem: SSDATA QMI WRITE command\nto update SW update state to SYNC
+Modem --> pa_fwupdate_qmi: ""LE_OK""
+pa_fwupdate_qmi --> pa_fwupdate: ""LE_OK""
+
+group loop until whole dual partitions are synchronized
+pa_fwupdate -> pa_fwupdate: Get MTD number linked to partition
+pa_fwupdate -> Flash: Erase destination partition and copy data
+Flash --> pa_fwupdate: ""rc OK""
+end
+
+alt All partitions were well updated
+pa_fwupdate -> pa_fwupdate_qmi: ""pa_fwupdate_SetSyncState""
+pa_fwupdate_qmi -> Modem: SSDATA QMI WRITE command\nto update OoS to Sync\nand SW update state to NORMAL
+Modem --> pa_fwupdate_qmi: ""LE_OK""
+pa_fwupdate_qmi --> pa_fwupdate: ""LE_OK""
+end
+
+end
+
+pa_fwupdate --> fwupdateServer: ""LE_OK""
+fwupdateServer --> Application: ""LE_OK""
+
+@enduml
+
+
+@section  le_fwupdate_DualSysSwapAndSync le_fwupdate_DualSysSwapAndSync
+
+
+@startuml{le_fwupdate_DualSysSwapAndSync_sdd.png}
+
+hide footbox
+skinparam sequenceParticipantBackgroundColor white
+
+participant "SWI downloader or\nOCU3 downloader" as Application
+box "fwupdateDaemon" #lightBlue
+participant "fwupdateServer.c" as fwupdateServer
+participant "pa_fwupdate.c" as pa_fwupdate
+participant "pa_fwupdate_qmi.c" as pa_fwupdate_qmi
+end box
+Participant Modem
+
+Application -> fwupdateServer: ""le_fwupdate_DualSysSwapAndSync()""
+note over fwupdateServer
+Do not need to check if
+the sub systems  are synchronized
+end note
+fwupdateServer -> pa_fwupdate_qmi: ""pa_fwupdate_DualSysSwap()""
+pa_fwupdate_qmi -> pa_fwupdate: ""pa_fwupdate_GetBootSystem()""
+pa_fwupdate -> Flash: Get the current sub system
+Flash --> pa_fwupdate: sub system number
+pa_fwupdate --> pa_fwupdate_qmi: sub system number
+pa_fwupdate_qmi -> Modem: QMI SSDATA WRITE to write:\n*the other sub system\n*the update reason\n*the SW update state to SYNC
+Modem --> pa_fwupdate_qmi: ""LE_OK""
+pa_fwupdate_qmi --> fwupdateServer: ""LE_OK""
+fwupdateServer --> pa_fwupdate: ""pa_fwupdate_Reset()""
+pa_fwupdate -> pa_fwupdate: reboot
+note left
+The device reboots: no returned code to
+""le_fwupdate_DualSysSwap""
+end note
+
+== FW update component init ==
+fwupdateServer -> fwupdateServer: ""le_event_QueueFunction""
+note left
+Wait for QMI initialization
+end note
+
+== QMI is ready ==
+fwupdateServer -> pa_fwupdate_qmi: ""pa_fwupdate_DualSysCheckSync()""
+pa_fwupdate_qmi -> Modem: QMI SSDATA READ
+Modem --> pa_fwupdate_qmi: ""LE_OK""
+pa_fwupdate_qmi -> pa_fwupdate_qmi: Check if SW update state is set to SYNC
+pa_fwupdate_qmi --> fwupdateServer: ""LE_OK""
+
+alt SW update state is set to SYNC
+fwupdateServer-> pa_fwupdate: ""pa_fwupdate_DualSysSync()""
+
+group pa_fwupdate_DualSysSync
+
+pa_fwupdate -> Flash: Get the current sub system
+Flash --> pa_fwupdate: sub system number
+
+group loop until whole dual partitions are synchronized
+pa_fwupdate -> pa_fwupdate: Get MTD number linked to partition
+pa_fwupdate -> Flash: Erase destination partition and copy data
+Flash --> pa_fwupdate: ""rc OK""
+
+end
+
+alt All partitions were well updated
+pa_fwupdate -> pa_fwupdate_qmi: ""pa_fwupdate_SetSyncState""
+pa_fwupdate_qmi -> Modem: SSDATA QMI WRITE command\nto update OoS to Sync\nand SW update state to NORMAL
+Modem --> pa_fwupdate_qmi: ""LE_OK""
+pa_fwupdate_qmi --> pa_fwupdate: ""LE_OK""
+end
+
+end
+
+pa_fwupdate --> fwupdateServer: ""LE_OK""
+
+else
+end
+
+@enduml
+
+
+@section  pa_fwupdate_Reset pa_fwupdate_Reset
+
+@startuml{pa_fwupdate_Reset_sdd.png}
+
+hide footbox
+skinparam sequenceParticipantBackgroundColor white
+
+participant "SWI downloader or\nOCU3 downloader" as Application
+box "fwupdateDaemon" #lightBlue
+participant "fwupdateServer.c" as fwupdateServer
+participant "pa_fwupdate.c" as pa_fwupdate
+end box
+
+fwupdateServer -> pa_fwupdate: ""pa_fwupdate_Reset()""
+pa_fwupdate -> pa_fwupdate: ""reboot(LINUX_REBOOT_CMD_RESTART);""
+
+note over pa_fwupdate
+The device reboots without
+returning error code for le_fwupdate_Reset
+end note
+
+@enduml
+
+
+@section  le_fwupdate_GetUpdateStatus le_fwupdate_GetUpdateStatus
+
+@startuml{pa_fwupdate_GetUpdateStatus1_sdd.png}
+
+title le_fwupdate_GetUpdateStatus
+
+start
+
+if (Stored status ?) then (yes)
+    :Read **status**;
+    :Check **status**;
+    if (Valid **status** ?) then (no)
+        :Erase stored **status**;
+        :**status** = LE_FWUPDATE_UPDATE_STATUS_UNKNOWN;
+    else (yes)
+        :Return **status id**;
+        note left: output parameter
+    endif
+else (no)
+    :Read SSDATA;
+    :Look for bad partition;
+    if (Find one ?) then (yes)
+        :Identify the partition;
+        :Return **partition id**;
+        note left: output parameter
+        :**status** = LE_FWUPDATE_UPDATE_STATUS_PARTITION_ERROR;
+    else (no)
+        :**status** = LE_FWUPDATE_UPDATE_STATUS_OK;
+        :Return **status id**;
+        note left: output parameter
+    endif
+endif
+
+:Return **status**;
+note right: output parameter
+
+stop
+
+@enduml
+
+
+@startuml{pa_fwupdate_GetUpdateStatus2_sdd.png}
+
+title Update status within the pa_fwupdate_Download function
+
+start
+
+:**status** = PA_FWUPDATE_INTERNAL_STATUS_DWL_ONGOING;
+
+if (error ?) then (yes)
+    :**status** = PA_FWUPDATE_INTERNAL_STATUS_DWL_FAILED;
+else (no)
+    if (timeout ?) then (yes)
+        :**status** = PA_FWUPDATE_INTERNAL_STATUS_DWL_TIMEOUT;
+    else (no)
+        if (on going ?) then (yes)
+            :**status** = PA_FWUPDATE_INTERNAL_STATUS_DWL_ONGOING;
+        else (no)
+            :**status** = PA_FWUPDATE_INTERNAL_STATUS_OK;
+            note left: Download is done.
+        endif
+    endif
+endif
+
+:Store **status**;
+note right
+    To be reset resilient, the **status** storage
+    is performed each time the **status** changes.
+end note
+
+stop
+
+@enduml
+
+
+@startuml{pa_fwupdate_GetUpdateStatus3_sdd.png}
+
+digraph fw_update_status {
+    node [
+        shape = record;
+    ];
+
+    graph [
+        rankdir="LR";
+        ranksep="1.0 equally";
+    ];
+
+
+    label = "Firmware update status ids\n \
+(Dual system internal PA codes)"
+
+    pa_codes [ label =
+        "<f00> PA_FWUPDATE_INTERNAL_STATUS_OK \l | \
+         <f01> PA_FWUPDATE_INTERNAL_STATUS_SBL \l | \
+         <f02> PA_FWUPDATE_INTERNAL_STATUS_MIBIB \l | \
+         <f03> PA_FWUPDATE_INTERNAL_STATUS_RESERVED1 \l | \
+         <f04> PA_FWUPDATE_INTERNAL_STATUS_SEDB \l | \
+         <f05> PA_FWUPDATE_INTERNAL_STATUS_RESERVED2 \l | \
+         <f06> PA_FWUPDATE_INTERNAL_STATUS_TZ1 \l | \
+         <f07> PA_FWUPDATE_INTERNAL_STATUS_TZ2 \l | \
+         <f08> PA_FWUPDATE_INTERNAL_STATUS_RPM1 \l | \
+         <f09> PA_FWUPDATE_INTERNAL_STATUS_RPM2 \l | \
+         <f10> PA_FWUPDATE_INTERNAL_STATUS_MODEM1 \l | \
+         <f11> PA_FWUPDATE_INTERNAL_STATUS_MODEM2 \l | \
+         <f12> PA_FWUPDATE_INTERNAL_STATUS_LK1 \l | \
+         <f13> PA_FWUPDATE_INTERNAL_STATUS_LK2 \l | \
+         <f14> PA_FWUPDATE_INTERNAL_STATUS_KERNEL1 \l | \
+         <f15> PA_FWUPDATE_INTERNAL_STATUS_KERNEL2 \l | \
+         <f16> PA_FWUPDATE_INTERNAL_STATUS_ROOT_FS1 \l | \
+         <f17> PA_FWUPDATE_INTERNAL_STATUS_ROOT_FS2 \l | \
+         <f18> PA_FWUPDATE_INTERNAL_STATUS_USER_DATA1 \l | \
+         <f19> PA_FWUPDATE_INTERNAL_STATUS_USER_DATA2 \l | \
+         <f20> PA_FWUPDATE_INTERNAL_STATUS_CUST_APP1 \l | \
+         <f21> PA_FWUPDATE_INTERNAL_STATUS_CUST_APP2 \l | \
+         <f22> PA_FWUPDATE_INTERNAL_STATUS_DWL_ONGOING \l | \
+         <f23> PA_FWUPDATE_INTERNAL_STATUS_DWL_FAILED \l | \
+         <f24> PA_FWUPDATE_INTERNAL_STATUS_DWL_TIMEOUT \l | \
+         <f25> PA_FWUPDATE_INTERNAL_STATUS_UNKNOWN \l"
+    ];
+
+    le_codes [ label =
+        "<f00> No bad image found \l | \
+         <f01> SBL(N/A) \l | \
+         <f02> MIBIB(N/A) \l | \
+         <f03> Reserved1 \l | \
+         <f04> SEDB(N/A) \l | \
+         <f05> Reserved2 \l | \
+         <f06> TZ(system 1) \l | \
+         <f07> TZ(system 2) \l | \
+         <f08> RPM(system 1) \l | \
+         <f09> RPM(system 2) \l | \
+         <f10> Modem(system 1) \l | \
+         <f11> Modem(system 2) \l | \
+         <f12> LK(system 1) \l | \
+         <f13> LK(system 2) \l | \
+         <f14> Kernel(system 1) \l | \
+         <f15> Kernel(system 2) \l | \
+         <f16> Root file system(system 1) \l | \
+         <f17> Root file system(system 2) \l | \
+         <f18> User data(system 1) \l | \
+         <f19> User data(system 2) \l | \
+         <f20> Customer application(system 1) \l | \
+         <f21> Customer application(system 2) \l | \
+         <f22> Download in progress \l | \
+         <f23> Download failed \l | \
+         <f24> Download timeout \l | \
+         <f25> Unknown status \l"
+    ];
+
+    subgraph cluster_intPA {
+        label = "Internal PA codes"
+        pa_codes
+    }
+
+    subgraph cluster_LE {
+        label = "LE status ids"
+        le_codes
+    }
+
+    pa_codes:f00 -> le_codes:f00 [color=green, penwidth=3.0]
+    pa_codes:f01 -> le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f02 -> le_codes:f02 [color=red,penwidth=3.0];
+    pa_codes:f03 -> le_codes:f03 [color=red,penwidth=3.0];
+    pa_codes:f04 -> le_codes:f04 [color=red,penwidth=3.0];
+    pa_codes:f05 -> le_codes:f05 [color=red,penwidth=3.0];
+    pa_codes:f06 -> le_codes:f06 [color=red,penwidth=3.0];
+    pa_codes:f07 -> le_codes:f07 [color=red,penwidth=3.0];
+    pa_codes:f08 -> le_codes:f08 [color=red,penwidth=3.0];
+    pa_codes:f09 -> le_codes:f09 [color=red,penwidth=3.0];
+    pa_codes:f10 -> le_codes:f10 [color=red,penwidth=3.0];
+    pa_codes:f11 -> le_codes:f11 [color=red,penwidth=3.0];
+    pa_codes:f12 -> le_codes:f12 [color=red,penwidth=3.0];
+    pa_codes:f13 -> le_codes:f13 [color=red,penwidth=3.0];
+    pa_codes:f14 -> le_codes:f14 [color=red,penwidth=3.0];
+    pa_codes:f15 -> le_codes:f15 [color=red,penwidth=3.0];
+    pa_codes:f16 -> le_codes:f16 [color=red,penwidth=3.0];
+    pa_codes:f17 -> le_codes:f17 [color=red,penwidth=3.0];
+    pa_codes:f18 -> le_codes:f18 [color=red,penwidth=3.0];
+    pa_codes:f19 -> le_codes:f19 [color=red,penwidth=3.0];
+    pa_codes:f20 -> le_codes:f20 [color=red,penwidth=3.0];
+    pa_codes:f21 -> le_codes:f21 [color=red,penwidth=3.0];
+    pa_codes:f22 -> le_codes:f22 [color=blue,penwidth=3.0];
+    pa_codes:f23 -> le_codes:f23 [color=blue,penwidth=3.0];
+    pa_codes:f24 -> le_codes:f24 [color=blue,penwidth=3.0];
+    pa_codes:f25 -> le_codes:f25 [penwidth=3.0];
+}
+
+@enduml
+
+
+@startuml{pa_fwupdate_GetUpdateStatus4_sdd.png}
+
+digraph fw_update_status {
+    node [
+        shape = record;
+    ];
+
+    graph [
+        rankdir="LR";
+        ranksep="2.0 equally";
+    ];
+
+
+    label = "Firmware update status codes processing\n \
+(Dual system internal PA codes)"
+
+    pa_codes [ label =
+        "<f00> PA_FWUPDATE_INTERNAL_STATUS_OK \l | \
+         <f01> PA_FWUPDATE_INTERNAL_STATUS_SBL \l | \
+         <f02> PA_FWUPDATE_INTERNAL_STATUS_MIBIB \l | \
+         <f03> PA_FWUPDATE_INTERNAL_STATUS_RESERVED1 \l | \
+         <f04> PA_FWUPDATE_INTERNAL_STATUS_SEDB \l | \
+         <f05> PA_FWUPDATE_INTERNAL_STATUS_RESERVED2 \l | \
+         <f06> PA_FWUPDATE_INTERNAL_STATUS_TZ1 \l | \
+         <f07> PA_FWUPDATE_INTERNAL_STATUS_TZ2 \l | \
+         <f08> PA_FWUPDATE_INTERNAL_STATUS_RPM1 \l | \
+         <f09> PA_FWUPDATE_INTERNAL_STATUS_RPM2 \l | \
+         <f10> PA_FWUPDATE_INTERNAL_STATUS_MODEM1 \l | \
+         <f11> PA_FWUPDATE_INTERNAL_STATUS_MODEM2 \l | \
+         <f12> PA_FWUPDATE_INTERNAL_STATUS_LK1 \l | \
+         <f13> PA_FWUPDATE_INTERNAL_STATUS_LK2 \l | \
+         <f14> PA_FWUPDATE_INTERNAL_STATUS_KERNEL1 \l | \
+         <f15> PA_FWUPDATE_INTERNAL_STATUS_KERNEL2 \l | \
+         <f16> PA_FWUPDATE_INTERNAL_STATUS_ROOT_FS1 \l | \
+         <f17> PA_FWUPDATE_INTERNAL_STATUS_ROOT_FS2 \l | \
+         <f18> PA_FWUPDATE_INTERNAL_STATUS_USER_DATA1 \l | \
+         <f19> PA_FWUPDATE_INTERNAL_STATUS_USER_DATA2 \l | \
+         <f20> PA_FWUPDATE_INTERNAL_STATUS_CUST_APP1 \l | \
+         <f21> PA_FWUPDATE_INTERNAL_STATUS_CUST_APP2 \l | \
+         <f22> PA_FWUPDATE_INTERNAL_STATUS_DWL_ONGOING \l | \
+         <f23> PA_FWUPDATE_INTERNAL_STATUS_DWL_FAILED \l | \
+         <f24> PA_FWUPDATE_INTERNAL_STATUS_DWL_TIMEOUT \l | \
+         <f25> PA_FWUPDATE_INTERNAL_STATUS_UNKNOWN \l"
+    ];
+
+    pa2le_codes [ label =
+        "<f00> PA_FWUPDATE_UPDATE_STATUS_OK \l | \
+         <f01> PA_FWUPDATE_UPDATE_STATUS_PARTITION_ERROR \l | \
+         <f02> PA_FWUPDATE_UPDATE_STATUS_DWL_ONGOING \l | \
+         <f03> PA_FWUPDATE_UPDATE_STATUS_DWL_FAILED \l | \
+         <f04> PA_FWUPDATE_UPDATE_STATUS_DWL_TIMEOUT \l | \
+         <f05> PA_FWUPDATE_UPDATE_STATUS_UNKNOWN \l"
+    ];
+
+    le_codes [ label =
+        "<f00> LE_FWUPDATE_UPDATE_STATUS_OK \l | \
+         <f01> LE_FWUPDATE_UPDATE_STATUS_PARTITION_ERROR \l | \
+         <f02> LE_FWUPDATE_UPDATE_STATUS_DWL_ONGOING \l | \
+         <f03> LE_FWUPDATE_UPDATE_STATUS_DWL_FAILED \l | \
+         <f04> LE_FWUPDATE_UPDATE_STATUS_DWL_TIMEOUT \l | \
+         <f05> LE_FWUPDATE_UPDATE_STATUS_UNKNOWN \l"
+    ];
+
+    subgraph cluster_intPA {
+        label = "Internal PA codes"
+        pa_codes
+    }
+
+    subgraph cluster_PA {
+        label = "PA codes"
+        pa2le_codes
+    }
+
+    subgraph cluster_LE {
+        label = "LE codes"
+        le_codes
+    }
+
+    pa_codes:f00 -> pa2le_codes:f00 -> le_codes:f00 [color=green, penwidth=3.0]
+    pa_codes:f01 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f02 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f03 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f04 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f05 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f06 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f07 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f08 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f09 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f10 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f11 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f12 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f13 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f14 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f15 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f16 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f17 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f18 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f19 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f20 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f21 -> pa2le_codes:f01 [color=red,penwidth=3.0];
+    pa2le_codes:f01 -> le_codes:f01 [color=red,penwidth=3.0];
+    pa_codes:f22 -> pa2le_codes:f02 -> le_codes:f02 [color=blue,penwidth=3.0];
+    pa_codes:f23 -> pa2le_codes:f03 -> le_codes:f03 [color=blue,penwidth=3.0];
+    pa_codes:f24 -> pa2le_codes:f04 -> le_codes:f04 [color=blue,penwidth=3.0];
+    pa_codes:f25 -> pa2le_codes:f05 -> le_codes:f05 [penwidth=3.0];
+}
+
+@enduml
+
+
+Copyright (C) Sierra Wireless Inc.
+
+**/

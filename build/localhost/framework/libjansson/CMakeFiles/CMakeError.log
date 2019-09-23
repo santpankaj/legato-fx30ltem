@@ -1,0 +1,413 @@
+Determining size of __int64 failed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a4185/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a4185.dir/build.make CMakeFiles/cmTC_a4185.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a4185.dir/__INT64.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_a4185.dir/__INT64.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__INT64.c
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__INT64.c:17:22: error: ‘__int64’ undeclared here (not in a function)
+ #define SIZE (sizeof(__int64))
+                      ^
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__INT64.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_a4185.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_a4185.dir/__INT64.c.o' failed
+make[4]: *** [CMakeFiles/cmTC_a4185.dir/__INT64.c.o] Error 1
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a4185/fast' failed
+make[3]: *** [cmTC_a4185/fast] Error 2
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__INT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__int64))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __int32 failed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a315d/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a315d.dir/build.make CMakeFiles/cmTC_a315d.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a315d.dir/__INT32.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_a315d.dir/__INT32.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__INT32.c
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__INT32.c:17:22: error: ‘__int32’ undeclared here (not in a function)
+ #define SIZE (sizeof(__int32))
+                      ^
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__INT32.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_a315d.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_a315d.dir/__INT32.c.o' failed
+make[4]: *** [CMakeFiles/cmTC_a315d.dir/__INT32.c.o] Error 1
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a315d/fast' failed
+make[3]: *** [cmTC_a315d/fast] Error 2
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__INT32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__int32))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __uint32 failed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_59b67/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_59b67.dir/build.make CMakeFiles/cmTC_59b67.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_59b67.dir/__UINT32.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_59b67.dir/__UINT32.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT32.c
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT32.c:17:22: error: ‘__uint32’ undeclared here (not in a function)
+ #define SIZE (sizeof(__uint32))
+                      ^
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT32.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_59b67.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_59b67.dir/__UINT32.c.o' failed
+make[4]: *** [CMakeFiles/cmTC_59b67.dir/__UINT32.c.o] Error 1
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_59b67/fast' failed
+make[3]: *** [cmTC_59b67/fast] Error 2
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__uint32))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __uint16 failed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f1d9d/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f1d9d.dir/build.make CMakeFiles/cmTC_f1d9d.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f1d9d.dir/__UINT16.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_f1d9d.dir/__UINT16.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT16.c
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT16.c:17:22: error: ‘__uint16’ undeclared here (not in a function)
+ #define SIZE (sizeof(__uint16))
+                      ^
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT16.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_f1d9d.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_f1d9d.dir/__UINT16.c.o' failed
+make[4]: *** [CMakeFiles/cmTC_f1d9d.dir/__UINT16.c.o] Error 1
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f1d9d/fast' failed
+make[3]: *** [cmTC_f1d9d/fast] Error 2
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT16.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__uint16))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __uint8 failed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fe8fe/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_fe8fe.dir/build.make CMakeFiles/cmTC_fe8fe.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fe8fe.dir/__UINT8.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_fe8fe.dir/__UINT8.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT8.c
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT8.c:17:22: error: ‘__uint8’ undeclared here (not in a function)
+ #define SIZE (sizeof(__uint8))
+                      ^
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT8.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_fe8fe.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_fe8fe.dir/__UINT8.c.o' failed
+make[4]: *** [CMakeFiles/cmTC_fe8fe.dir/__UINT8.c.o] Error 1
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_fe8fe/fast' failed
+make[3]: *** [cmTC_fe8fe/fast] Error 2
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT8.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__uint8))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of SSIZE_T failed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_81edd/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_81edd.dir/build.make CMakeFiles/cmTC_81edd.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_81edd.dir/UPPERCASE_SSIZE_T.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_81edd.dir/UPPERCASE_SSIZE_T.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/UPPERCASE_SSIZE_T.c
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/UPPERCASE_SSIZE_T.c:17:22: error: ‘SSIZE_T’ undeclared here (not in a function)
+ #define SIZE (sizeof(SSIZE_T))
+                      ^
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/UPPERCASE_SSIZE_T.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+CMakeFiles/cmTC_81edd.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_81edd.dir/UPPERCASE_SSIZE_T.c.o' failed
+make[4]: *** [CMakeFiles/cmTC_81edd.dir/UPPERCASE_SSIZE_T.c.o] Error 1
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_81edd/fast' failed
+make[3]: *** [cmTC_81edd/fast] Error 2
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/UPPERCASE_SSIZE_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(SSIZE_T))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function _strtoi64 exists failed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d2d09/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_d2d09.dir/build.make CMakeFiles/cmTC_d2d09.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d2d09.dir/CheckFunctionExists.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=_strtoi64 --sysroot=   --sysroot= -o CMakeFiles/cmTC_d2d09.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d2d09
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2d09.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=_strtoi64 --sysroot=  --sysroot=  CMakeFiles/cmTC_d2d09.dir/CheckFunctionExists.c.o  -o cmTC_d2d09 -rdynamic 
+CMakeFiles/cmTC_d2d09.dir/CheckFunctionExists.c.o: In function `main':
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:14: undefined reference to `_strtoi64'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d2d09.dir/build.make:97: recipe for target 'cmTC_d2d09' failed
+make[4]: *** [cmTC_d2d09] Error 1
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_d2d09/fast' failed
+make[3]: *** [cmTC_d2d09/fast] Error 2
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+

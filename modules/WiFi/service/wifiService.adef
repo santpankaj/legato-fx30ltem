@@ -1,0 +1,36 @@
+version: $LEGATO_WIFI_VERSION
+
+sandboxed: false
+
+executables:
+{
+    wifiService = ( ../service/daemon )
+}
+
+start: auto
+
+processes:
+{
+    envVars:
+    {
+        LE_LOG_LEVEL = DEBUG
+    }
+
+    run:
+    {
+        (wifiService)
+    }
+
+    faultAction: restart
+}
+
+requires:
+{
+    configTree: { [r] system }
+}
+
+extern:
+{
+    wifiService.daemon.le_wifiAp
+    wifiService.daemon.le_wifiClient
+}

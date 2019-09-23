@@ -1,0 +1,34 @@
+provides:
+{
+    api:
+    {
+        le_pm.api
+        le_ulpm.api
+        le_bootReason.api
+    }
+}
+
+requires:
+{
+    component:
+    {
+        $LEGATO_ROOT/components/watchdogChain
+    }
+
+    api:
+    {
+        le_framework.api
+    }
+}
+
+cflags:
+{
+    -I$LEGATO_ROOT/components/watchdogChain
+}
+
+sources:
+{
+    le_pm.c
+    le_ulpm.c
+    le_bootReason.c
+}

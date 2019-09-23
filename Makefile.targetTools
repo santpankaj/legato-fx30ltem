@@ -1,0 +1,205 @@
+# --------------------------------------------------------------------------------------------------
+# Makefile used to build the Legato framework on-target tools.
+#
+# Build output is placed under $(LEGATO_ROOT)/build/$(TARGET)/framework/bin (and lib).
+#
+# This Makefile is intended to run as part of a larger build system.  The following variables
+# should be set by that system:
+#
+# - TARGET = e.g., localhost, ar7, wp85, raspi, etc.
+# - CC = path to the appropriate C compiler for the target.
+# - STRIP = path to the appropriate debug symbol stripper for the target.
+# - READELF = path to the appropriate ELF file info extractor for the target.
+# - OBJCOPY = path to the appropriate object file copier/translator utility for the target.
+#
+# Copyright (C) Sierra Wireless Inc.
+# --------------------------------------------------------------------------------------------------
+
+BUILD_PRODUCTS = 	config		\
+					log		\
+					sdir	\
+					gdbCfg	\
+					straceCfg	\
+					inspect	\
+					xattr	\
+					appStopClient	\
+					app \
+					update \
+					sbtrace \
+					scripts \
+					devMode
+
+# Create a list of all proprietary apps, then add them as product to build
+ifneq ($(findstring $(TARGET), wp750x wp85 wp76xx wp77xx),)
+  APPS_PROPRIETARY_SRC_DIR = $(LEGATO_ROOT)/apps/proprietary
+  ifneq ($(wildcard $(APPS_PROPRIETARY_SRC_DIR)/atAirVantage/src/atAirVantage.adef),)
+    PROPRIETARY_APPS += atAirVantage
+  endif
+  ifneq ($(wildcard $(APPS_PROPRIETARY_SRC_DIR)/atQmiLinker/src/atQmiLinker.adef),)
+    PROPRIETARY_APPS += atQmiLinker
+  endif
+endif
+ifneq ($(findstring $(TARGET), wp76xx wp77xx),)
+  ifneq ($(wildcard $(APPS_PROPRIETARY_SRC_DIR)/qmiAirVantage/src/qmiAirVantage.adef),)
+    PROPRIETARY_APPS += qmiAirVantage
+  endif
+endif
+BUILD_PRODUCTS += ${PROPRIETARY_APPS}
+
+.PHONY: all $(BUILD_PRODUCTS)
+all: $(BUILD_PRODUCTS)
+
+# Make sure required variables are set.
+ifndef TARGET
+  $(error TARGET is not set)
+endif
+ifndef CC
+  $(error CC is not set)
+endif
+ifndef STRIP
+  $(error STRIP is not set)
+endif
+ifndef OBJCOPY
+  $(error OBJCOPY is not set)
+endif
+ifndef READELF
+  $(error READELF is not set)
+endif
+
+export LEGATO_ROOT ?= $(CURDIR)
+export LEGATO_TARGET := $(TARGET)
+
+BUILD_DIR := $(LEGATO_ROOT)/build/$(TARGET)/framework
+BUILD_APP_DIR := $(LEGATO_ROOT)/build/$(TARGET)/apps
+BIN_DIR := $(BUILD_DIR)/bin
+APP_DIR := $(LEGATO_ROOT)/build/$(TARGET)/tools
+LIB_DIR := $(BUILD_DIR)/lib
+
+LOCAL_MKTOOLS_FLAGS = -t $(TARGET)
+
+ifneq ($(STRIP_STAGING_TREE),0)
+  LOCAL_MKTOOLS_FLAGS += -d $(LEGATO_ROOT)/build/$(TARGET)/debug
+endif
+
+ifneq ($(DEBUG),yes)
+  LOCAL_MKTOOLS_FLAGS += --cflags=" -O2 -fno-omit-frame-pointer"
+endif
+
+# Do not be verbose by default.
+VERBOSE ?= 0
+ifeq ($(VERBOSE),1)
+  LOCAL_MKTOOLS_FLAGS += -v
+endif
+
+ifneq ($(LEGATO_JOBS),)
+  LOCAL_MKTOOLS_FLAGS += -j $(LEGATO_JOBS)
+endif
+
+LOCAL_MKEXE_FLAGS = $(MKEXE_FLAGS) -l $(LIB_DIR) -w $(BUILD_DIR)/tools/$@ $(LOCAL_MKTOOLS_FLAGS)
+LOCAL_MKAPP_FLAGS = $(MKAPP_FLAGS) -o $(APP_DIR) -w $(BUILD_APP_DIR)/tools/$@ $(LOCAL_MKTOOLS_FLAGS)
+LOCAL_PROPRIETARY_APPS_FLAGS = $(LOCAL_MKTOOLS_FLAGS)
+
+ifeq ($(ENABLE_IMA),1)
+  LOCAL_MKAPP_FLAGS += -S
+  LOCAL_PROPRIETARY_APPS_FLAGS += -S
+endif
+
+# Add the framework's bin directory to the PATH environment variable.
+export PATH := $(PATH):$(LEGATO_ROOT)/bin
+
+JANSSON_INC_DIR = $(LEGATO_ROOT)/build/$(TARGET)/framework/libjansson/include/
+TOOLS_SRC_DIR = $(LEGATO_ROOT)/framework/tools/target/linux
+APP_TOOLS_SRC_DIR = $(LEGATO_ROOT)/apps/tools
+LIBLEGATO_SRC_DIR = $(LEGATO_ROOT)/framework/liblegato
+DAEMON_SRC_DIR = $(LEGATO_ROOT)/framework/daemons/linux
+LEGATO_INTERFACES_DIR = $(LEGATO_ROOT)/interfaces
+
+config:
+	mkexe -o $(BIN_DIR)/$@ $(TOOLS_SRC_DIR)/config \
+			-i $(JANSSON_INC_DIR) \
+			-i $(LIBLEGATO_SRC_DIR) \
+			--ldflags=-L$(LIB_DIR) \
+			--ldflags=-ljansson \
+			$(LOCAL_MKEXE_FLAGS)
+
+log:
+	mkexe -o $(BIN_DIR)/$@ \
+			$(TOOLS_SRC_DIR)/logTool/logTool.c \
+			-i $(LIBLEGATO_SRC_DIR) \
+			-i $(DAEMON_SRC_DIR)/logDaemon \
+			$(LOCAL_MKEXE_FLAGS)
+
+sdir:
+	mkexe -o $(BIN_DIR)/$@ \
+			$(TOOLS_SRC_DIR)/sdirTool \
+			-i $(LIBLEGATO_SRC_DIR) \
+			-i $(LIBLEGATO_SRC_DIR)/linux \
+			-i $(DAEMON_SRC_DIR)/serviceDirectory \
+			$(LOCAL_MKEXE_FLAGS)
+
+gdbCfg:
+	ln -sf debugCfg $(BIN_DIR)/gdbCfg
+
+straceCfg:
+	ln -sf debugCfg $(BIN_DIR)/straceCfg
+
+inspect:
+	mkexe -o $(BIN_DIR)/$@ \
+			$(TOOLS_SRC_DIR)/inspect/inspect.c \
+			--cflags=-DLE_SVCDIR_SERVER_SOCKET_NAME="$(LE_SVCDIR_SERVER_SOCKET_NAME)" \
+			--cflags=-DLE_SVCDIR_CLIENT_SOCKET_NAME="$(LE_SVCDIR_CLIENT_SOCKET_NAME)" \
+			-i $(LIBLEGATO_SRC_DIR) \
+			-i $(LIBLEGATO_SRC_DIR)/linux \
+			-i $(DAEMON_SRC_DIR) \
+			$(LOCAL_MKEXE_FLAGS)
+
+xattr:
+	mkexe -o $(BIN_DIR)/$@ \
+			$(TOOLS_SRC_DIR)/xattr/xattr.c \
+			-i $(LIBLEGATO_SRC_DIR) \
+			$(LOCAL_MKEXE_FLAGS)
+
+appStopClient:
+	mkexe -o $(BIN_DIR)/_$@ \
+			$(TOOLS_SRC_DIR)/appStopClient/appStopClient.c \
+			--cflags=-DLE_RUNTIME_DIR='"$(LE_RUNTIME_DIR)"' \
+			-i $(LIBLEGATO_SRC_DIR) \
+			$(LOCAL_MKEXE_FLAGS)
+
+app:
+	mkexe -o $(BIN_DIR)/$@ \
+			$(TOOLS_SRC_DIR)/appCtrl \
+			-i $(LEGATO_INTERFACES_DIR)/supervisor \
+			-i $(LIBLEGATO_SRC_DIR) \
+			-i $(LIBLEGATO_SRC_DIR)/linux \
+			$(LOCAL_MKEXE_FLAGS)
+
+update:
+	mkexe -o $(BIN_DIR)/$@ \
+			$(TOOLS_SRC_DIR)/$@ \
+			$(LOCAL_MKEXE_FLAGS)
+
+sbtrace:
+	mkexe -o $(BIN_DIR)/$@ \
+			$(TOOLS_SRC_DIR)/$@ \
+			-i $(LIBLEGATO_SRC_DIR)/linux \
+			$(LOCAL_MKEXE_FLAGS)
+
+scripts:
+	cp -u -P --preserve=all $(wildcard framework/tools/target/linux/bin/*) $(BIN_DIR)
+
+devMode:
+	mkapp $(APP_TOOLS_SRC_DIR)/$@.adef \
+			-i $(LIBLEGATO_SRC_DIR) \
+			$(LOCAL_MKAPP_FLAGS)
+
+# Rule to bundle proprietary apps
+${PROPRIETARY_APPS}: export LEGATO_PROPRIETARY_QCT_DIR=${LEGATO_ROOT}/proprietary/qct/${LEGATO_TARGET}
+${PROPRIETARY_APPS}:
+	mkapp $(APPS_PROPRIETARY_SRC_DIR)/$@/src/$@.adef \
+			-b \
+			-i $(LEGATO_ROOT)/interfaces/modemServices \
+			-t $(TARGET) \
+			-o $(LEGATO_ROOT)/build/$(TARGET)/proprietary/$@ \
+			-w $(LEGATO_ROOT)/build/$(TARGET)/apps/proprietary/$@ \
+			$(LOCAL_PROPRIETARY_APPS_FLAGS)

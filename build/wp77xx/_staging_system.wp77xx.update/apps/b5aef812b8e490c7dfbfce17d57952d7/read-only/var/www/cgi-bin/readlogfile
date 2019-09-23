@@ -1,0 +1,25 @@
+#!/bin/sh
+
+source wifiexport
+
+#reads the logfile and shows the events on the webpage.
+echo -en "HTTP/1.1 200 OK\r\n"
+echo -en "Content-Type: text/html; charset=utf-8\r\n"
+echo -en "Cache-Control: no-cache\r\n"
+echo -en "Connection: close\r\n"
+echo -en "\r\n"
+echo -en "You are coming from ${REMOTE_ADDR}<br /><br />\r\n"
+
+
+
+
+#todo: use the a generated logfile (in the same directory?)
+#InputFile="/tmp/wifi_http.log"
+#InputFile="/legato/systems/current/apps/wifiWebAp/read-only/tmp/wifi_http.log"
+
+while IFS= read -r line <&3; do
+  echo -en "<font size=\"2\" color=\"green\" > ${line}</font>\r\n"
+done 3< "${LOG_MSG_FILE}";
+
+echo -en "<font size=\"2\"> ... </font></br>\r\n"
+

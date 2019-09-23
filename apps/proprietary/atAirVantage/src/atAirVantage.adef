@@ -1,0 +1,28 @@
+executables:
+{
+    atAirVantage = (atAirVantage)
+}
+
+processes:
+{
+    run:
+    {
+        (atAirVantage)
+    }
+    faultAction: restart
+}
+
+bindings:
+{
+    atAirVantage.atAirVantage.le_atServer -> atService.le_atServer
+    atAirVantage.atAirVantage.le_avc -> avcService.le_avc
+    atAirVantage.atAirVantage.le_mdc -> modemService.le_mdc
+    atAirVantage.atAirVantage.le_data -> dataConnectionService.le_data
+    atAirVantage.atAirVantage.le_mrc -> modemService.le_mrc
+}
+
+sandboxed: false
+
+#if ${LEGATO_SERVICE_AVC_COMPAT_START} = 0
+    start: manual
+#endif

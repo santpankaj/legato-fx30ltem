@@ -1,0 +1,11 @@
+# ninja log v5
+0	137	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/tools/sbtrace/obj/sbtrace/_main.c.o	2b472793d46cd2d7
+0	157	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/tools/sbtrace/component/d3f70674d0230235c7a07291c9246a92/obj/_componentMain.c.o	ac0468212c984a8
+0	279	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/tools/sbtrace/api/45eaf0d718b1cd816adf04250e307575/client/le_limit_interface.h	7fa5796d1296693b
+0	390	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/tools/sbtrace/api/c3097288baa975e4903fef432f21ddee/client/le_appCtrl_client.c	24205679f78d74e6
+0	390	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/tools/sbtrace/api/c3097288baa975e4903fef432f21ddee/client/le_appCtrl_interface.h	24205679f78d74e6
+0	390	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/tools/sbtrace/api/c3097288baa975e4903fef432f21ddee/client/le_appCtrl_messages.h	24205679f78d74e6
+390	678	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/tools/sbtrace/api/c3097288baa975e4903fef432f21ddee/client/le_appCtrl_client.c.o	87752a5cbb5bd834
+390	782	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/tools/sbtrace/component/d3f70674d0230235c7a07291c9246a92/obj/31b1929dca667f5135da63597cffc123.o	f9c9537cdef39ec8
+782	822	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib/libComponent_sbtrace.so	7d8c81bfe20c69ea
+822	863	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/bin/sbtrace	4e43afdd1bc2c07

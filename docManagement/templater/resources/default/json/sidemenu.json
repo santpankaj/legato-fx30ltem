@@ -1,0 +1,14 @@
+{
+     "links": [
+          {
+               "title": "Default Section",
+               "href": "/",
+               "check": true,
+               "children": [
+
+               ]
+          }
+     ],
+     "innerHTML": "<a href=\"{0}\"{1}>{2}</a>",
+     "template": "sidemenu.html"
+}

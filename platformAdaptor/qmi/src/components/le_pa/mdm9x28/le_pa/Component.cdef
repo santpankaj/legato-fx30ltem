@@ -1,0 +1,58 @@
+sources:
+{
+    $LEGATO_QMI_MODEM_PA_SRC_FILES/pa_info_qmi.c
+    $LEGATO_QMI_MODEM_PA_SRC_FILES/pa_mcc_qmi.c
+    $LEGATO_QMI_MODEM_PA_SRC_FILES/pa_mdc_qmi.c
+    $LEGATO_QMI_MODEM_PA_SRC_FILES/pa_mrc_qmi.c
+    $LEGATO_QMI_MODEM_PA_SRC_FILES/pa_qmi.c
+    $LEGATO_QMI_MODEM_PA_SRC_FILES/pa_sim_qmi.c
+    $LEGATO_QMI_MODEM_PA_SRC_FILES/pa_sms_qmi.c
+    $LEGATO_QMI_MODEM_PA_SRC_FILES/pa_ips_qmi.c
+    $LEGATO_QMI_MODEM_PA_SRC_FILES/pa_temp_qmi.c
+    $LEGATO_QMI_MODEM_PA_SRC_FILES/pa_antenna_qmi.c
+    $LEGATO_QMI_MODEM_PA_SRC_FILES/pa_riPin_qmi.c
+    $LEGATO_QMI_MODEM_PA_SRC_FILES/pa_adc_qmi.c
+    $LEGATO_QMI_MODEM_PA_SRC_FILES/pa_rtc_qmi.c
+    $LEGATO_QMI_MODEM_PA_SRC_FILES/pa_lpt_qmi.c
+    $LEGATO_QMI_MODEM_PA_SRC_FILES/pa_mdmCfg_qmi.c
+}
+
+cflags:
+{
+    -I$LEGATO_ROOT/components/modemServices/platformAdaptor/inc
+    -I$LEGATO_QMI_UTIL_SRC_FILES
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc/framework
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc/services
+    -I$LEGATO_ROOT/components/modemServices/modemDaemon
+    -I${LEGATO_ROOT}/components/watchdogChain
+    -I${LEGATO_ROOT}/framework/liblegato/linux
+    -I${LEGATO_ROOT}/framework/liblegato
+}
+
+requires:
+{
+    api:
+    {
+        le_sms.api      [types-only]
+        le_mrc.api      [types-only]
+        le_mdc.api      [types-only]
+        le_sim.api      [types-only]
+        le_mcc.api      [types-only]
+        le_info.api     [types-only]
+        le_ips.api      [types-only]
+        le_temp.api     [types-only]
+        le_antenna.api  [types-only]
+        le_adc.api      [types-only]
+        le_rtc.api      [types-only]
+        le_lpt.api      [types-only]
+        le_mdmCfg.api   [types-only]
+    }
+
+    component:
+    {
+        $LEGATO_UTIL_PA
+        ${LEGATO_ROOT}/components/watchdogChain
+    }
+}
+

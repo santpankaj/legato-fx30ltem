@@ -1,0 +1,4 @@
+# ninja log v5
+1	90	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/tools/appStopClient/obj/882319e7f665b57940b6526f7535175a.o	169b297e4659f02a
+1	129	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/tools/appStopClient/obj/appStopClient/_main.c.o	4e30d72e403e458c
+129	169	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/bin/_appStopClient	f57a8d97ad38fb77

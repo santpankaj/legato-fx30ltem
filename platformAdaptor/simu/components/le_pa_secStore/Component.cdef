@@ -1,0 +1,27 @@
+sources:
+{
+    pa_secStore_simu.c
+}
+
+cflags:
+{
+    -I$LEGATO_ROOT/components/secStore/platformAdaptor/inc
+    -I$LEGATO_ROOT/platformAdaptor/simu/components/simuConfig
+}
+
+requires:
+{
+    component:
+    {
+        $LEGATO_UTIL_PA
+    }
+
+    api:
+    {
+        le_secStore.api                 [types-only]
+        secureStorage/secStoreAdmin.api [types-only]
+        le_limit.api                    [types-only]
+        le_appInfo.api                  [types-only]
+        le_update.api                   [types-only]
+    }
+}

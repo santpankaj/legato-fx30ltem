@@ -1,0 +1,32 @@
+{
+     "links": [
+          {
+               "title": "Introduction",
+               "href": "/",
+               "check": false
+          },
+          {
+               "title": "Build Apps",
+               "href": "build_apps_main.html",
+               "check": true,
+               "children": [
+
+               ]
+          },
+          {
+               "title": "Build Platform",
+               "href": "build_platform_main.html",
+               "check": true,
+               "children": [
+
+               ]
+          },
+          {
+               "title": "About",
+               "check": true,
+               "href": "about_main.html"
+          }
+     ],
+     "innerHTML": "<a href=\"{0}\"{1}>{2}</a>",
+     "template": "sidemenu.html"
+}

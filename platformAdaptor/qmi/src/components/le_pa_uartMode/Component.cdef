@@ -1,0 +1,21 @@
+sources:
+{
+    pa_uartMode_qmi.c
+}
+
+cflags:
+{
+    -I$LEGATO_ROOT/components/uartMode/platformAdaptor/inc
+    -I$LEGATO_QMI_UTIL_SRC_FILES
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc/framework
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc/services
+}
+
+requires:
+{
+    component:
+    {
+        $LEGATO_UTIL_PA
+    }
+}

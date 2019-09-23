@@ -1,0 +1,433 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc 
+Build flags: -DSIERRA;-O2;-pipe;-g;-feliminate-unused-debug-types;
+Id flags: 
+
+The output was:
+1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/real-ld: cannot find crt1.o: No such file or directory
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/real-ld: cannot find crti.o: No such file or directory
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/real-ld: cannot find crtbegin.o: No such file or directory
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/real-ld: cannot find -lgcc
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/real-ld: cannot find -lgcc_s
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/real-ld: cannot find -lc
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/real-ld: cannot find -lgcc
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/real-ld: cannot find -lgcc_s
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/real-ld: cannot find crtend.o: No such file or directory
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/libexec/arm-poky-linux-gnueabi/gcc/arm-poky-linux-gnueabi/6.2.0/real-ld: cannot find crtn.o: No such file or directory
+collect2: error: ld returned 1 exit status
+
+
+Determining size of __int64 failed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_12fb8/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_12fb8.dir/build.make CMakeFiles/cmTC_12fb8.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_12fb8.dir/__INT64.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_12fb8.dir/__INT64.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__INT64.c
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__INT64.c:17:22: error: ‘__int64’ undeclared here (not in a function)
+ #define SIZE (sizeof(__int64))
+                      ^
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__INT64.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^~~~
+CMakeFiles/cmTC_12fb8.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_12fb8.dir/__INT64.c.o' failed
+make[3]: *** [CMakeFiles/cmTC_12fb8.dir/__INT64.c.o] Error 1
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_12fb8/fast' failed
+make[2]: *** [cmTC_12fb8/fast] Error 2
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__INT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__int64))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __int32 failed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c0cc6/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c0cc6.dir/build.make CMakeFiles/cmTC_c0cc6.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c0cc6.dir/__INT32.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_c0cc6.dir/__INT32.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__INT32.c
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__INT32.c:17:22: error: ‘__int32’ undeclared here (not in a function)
+ #define SIZE (sizeof(__int32))
+                      ^
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__INT32.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^~~~
+CMakeFiles/cmTC_c0cc6.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_c0cc6.dir/__INT32.c.o' failed
+make[3]: *** [CMakeFiles/cmTC_c0cc6.dir/__INT32.c.o] Error 1
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c0cc6/fast' failed
+make[2]: *** [cmTC_c0cc6/fast] Error 2
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__INT32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__int32))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __uint32 failed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_93d87/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_93d87.dir/build.make CMakeFiles/cmTC_93d87.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_93d87.dir/__UINT32.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_93d87.dir/__UINT32.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT32.c
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT32.c:17:22: error: ‘__uint32’ undeclared here (not in a function)
+ #define SIZE (sizeof(__uint32))
+                      ^
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT32.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^~~~
+CMakeFiles/cmTC_93d87.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_93d87.dir/__UINT32.c.o' failed
+make[3]: *** [CMakeFiles/cmTC_93d87.dir/__UINT32.c.o] Error 1
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_93d87/fast' failed
+make[2]: *** [cmTC_93d87/fast] Error 2
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__uint32))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __uint16 failed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3b651/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_3b651.dir/build.make CMakeFiles/cmTC_3b651.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3b651.dir/__UINT16.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_3b651.dir/__UINT16.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT16.c
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT16.c:17:22: error: ‘__uint16’ undeclared here (not in a function)
+ #define SIZE (sizeof(__uint16))
+                      ^
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT16.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^~~~
+CMakeFiles/cmTC_3b651.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_3b651.dir/__UINT16.c.o' failed
+make[3]: *** [CMakeFiles/cmTC_3b651.dir/__UINT16.c.o] Error 1
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3b651/fast' failed
+make[2]: *** [cmTC_3b651/fast] Error 2
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT16.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__uint16))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of __uint8 failed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d446e/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_d446e.dir/build.make CMakeFiles/cmTC_d446e.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d446e.dir/__UINT8.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_d446e.dir/__UINT8.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT8.c
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT8.c:17:22: error: ‘__uint8’ undeclared here (not in a function)
+ #define SIZE (sizeof(__uint8))
+                      ^
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT8.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^~~~
+CMakeFiles/cmTC_d446e.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_d446e.dir/__UINT8.c.o' failed
+make[3]: *** [CMakeFiles/cmTC_d446e.dir/__UINT8.c.o] Error 1
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_d446e/fast' failed
+make[2]: *** [cmTC_d446e/fast] Error 2
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/__UINT8.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__uint8))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of SSIZE_T failed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1aaef/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_1aaef.dir/build.make CMakeFiles/cmTC_1aaef.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1aaef.dir/UPPERCASE_SSIZE_T.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_1aaef.dir/UPPERCASE_SSIZE_T.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/UPPERCASE_SSIZE_T.c
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/UPPERCASE_SSIZE_T.c:17:22: error: ‘SSIZE_T’ undeclared here (not in a function)
+ #define SIZE (sizeof(SSIZE_T))
+                      ^
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/UPPERCASE_SSIZE_T.c:19:12: note: in expansion of macro ‘SIZE’
+   ('0' + ((SIZE / 10000)%10)),
+            ^~~~
+CMakeFiles/cmTC_1aaef.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_1aaef.dir/UPPERCASE_SSIZE_T.c.o' failed
+make[3]: *** [CMakeFiles/cmTC_1aaef.dir/UPPERCASE_SSIZE_T.c.o] Error 1
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1aaef/fast' failed
+make[2]: *** [cmTC_1aaef/fast] Error 2
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CheckTypeSize/UPPERCASE_SSIZE_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(SSIZE_T))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function _strtoi64 exists failed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_934b0/fast"
+make[2]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_934b0.dir/build.make CMakeFiles/cmTC_934b0.dir/build
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_934b0.dir/CheckFunctionExists.c.o
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=_strtoi64 --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi   --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -o CMakeFiles/cmTC_934b0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_934b0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_934b0.dir/link.txt --verbose=1
+/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=_strtoi64 --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi  CMakeFiles/cmTC_934b0.dir/CheckFunctionExists.c.o  -o cmTC_934b0 -rdynamic 
+CMakeFiles/cmTC_934b0.dir/CheckFunctionExists.c.o: In function `main':
+/usr/share/cmake-3.5/Modules/CheckFunctionExists.c:14: undefined reference to `_strtoi64'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_934b0.dir/build.make:97: recipe for target 'cmTC_934b0' failed
+make[3]: *** [cmTC_934b0] Error 1
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_934b0/fast' failed
+make[2]: *** [cmTC_934b0/fast] Error 2
+make[2]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/libjansson/CMakeFiles/CMakeTmp'
+
+

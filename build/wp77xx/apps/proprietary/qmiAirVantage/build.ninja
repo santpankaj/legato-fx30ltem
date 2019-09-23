@@ -1,0 +1,224 @@
+# Build script for application 'qmiAirVantage'
+
+# == Auto-generated file.  Do not edit. ==
+
+builddir =/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/qmiAirVantage
+
+cFlags =  -O2 -fno-omit-frame-pointer -I /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/qmiAirVantage -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/include -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/modemServices -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/qmiAirVantage/src
+
+cxxFlags = -I /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/qmiAirVantage -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/include -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/modemServices -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/qmiAirVantage/src
+
+ldFlags =
+
+target = wp77xx
+
+ifgenFlags =  --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/include --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/modemServices --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/qmiAirVantage/src
+
+rule CompileC
+  description = Compiling C source
+  depfile = $out.d
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -MMD -MF $out.d -c $in -o $out -DLE_FILENAME=`basename $in` -Wall -fPIC -Werror -fvisibility=hidden -DMK_TOOLS_BUILD  -DLEGATO_EMBEDDED -g $cFlags
+
+rule CompileCxx
+  description = Compiling C++ source
+  depfile = $out.d
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++ --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -MMD -MF $out.d -c $in -o $out -DLE_FILENAME=`basename $in` -Wall -fPIC -Werror -fvisibility=hidden  -DMK_TOOLS_BUILD  -DLEGATO_EMBEDDED -g $cxxFlags
+
+rule LinkCLib
+  description = Linking C library
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -Wl,--build-id -g -shared -o $out $in $ldFlags $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug $out
+
+rule LinkCxxLib
+  description = Linking C++ library
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++ --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -Wl,--build-id -g -shared -o $out $in $ldFlags $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug $out
+
+rule LinkCExe
+  description = Linking C executable
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -Wl,--build-id -g -fPIE -pie -o $out $in $ldFlags -g $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug $out
+
+rule LinkCxxExe
+  description = Linking C++ executable
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++ --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -Wl,--build-id -g -fPIE -pie -o $out $in $ldFlags -g $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug $out
+
+rule CompileJava
+  description = Compiling Java source
+  command = javac -cp $classPath -d `dirname $out` $in && touch $out
+
+rule MakeJar
+  description = Making JAR file
+  command = INDIR=`dirname $in`; find $$INDIR -name '*.class' -printf "-C $$INDIR\n%P\n"|xargs jar -cf $out
+
+rule MakeKernelModule
+  description = Build kernel driver module
+  depfile = $out.d
+  command = make -C $in
+
+rule BuildExternal
+  description = Running external build step
+  command = cd $builddir/$workingdir && $
+            export CFLAGS="--sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi $cFlags" $
+            CXXFLAGS="--sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi $cxxFlags" $
+            LDFLAGS="--sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi $ldFlags" $
+            PATH="$${LEGATO_ROOT}/bin:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/bin:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/sbin:$$PATH" $
+            && $
+            $externalCommand
+
+rule GenInterfaceCode
+  description = Generating IPC interface code
+  command = ifgen --output-dir $outputDir $ifgenFlags $in
+
+rule GenPyApiCExtension
+  description = Generating Python API C Extension
+  command = cextgenerator.py $in -o $workDir > /dev/null
+rule CopyFile
+  description = Copying file
+  command = cp -d -f -T $in $out
+
+rule RegenNinjaScript
+  description = Regenerating build script
+  generator = 1
+  command = mkapp --dont-run-ninja "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/qmiAirVantage/src/qmiAirVantage.adef" "-b" "-i" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/modemServices" "-t" "wp77xx" "-o" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/proprietary/qmiAirVantage" "-w" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/qmiAirVantage" "-t" "wp77xx" "-d" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug" "--cflags= -O2 -fno-omit-frame-pointer"
+
+rule BundleFile
+  description = Bundling file
+  command = legato-install -m $modeFlags $in $out
+
+rule MakeAppInfoProperties
+  description = Creating info.properties
+  command = rm -f $out && $
+            md5=$$( ( cd $workingDir/staging && $
+                      find -P -print0 |LC_ALL=C sort -z && $
+                      find -P -type f -print0 |LC_ALL=C sort -z |xargs -0 md5sum && $
+                      find -P -type l -print0 |LC_ALL=C sort -z |xargs -0 -r -n 1 readlink $
+                    ) | md5sum) && $
+            md5=$${md5%% *} && $
+            ( echo "app.name=$name" && $
+              echo "app.md5=$$md5" && $
+              echo "app.version=$version" && $
+              echo "legato.version=`cat $$LEGATO_ROOT/version`" $
+            ) > $out
+
+rule PackApp
+  description = Packaging app
+  command = $
+            mtime=`stat -c %Y $adefPath` && $
+            find $workingDir/staging -exec touch --no-dereference --date=@$$mtime {} \; && $
+            (cd $workingDir/staging && find . -print0 | LC_ALL=C sort -z |tar --no-recursion --null -T - -cjf - ) > $workingDir/$name.$target && $
+            tarballSize=`stat -c '%s' $workingDir/$name.$target` && $
+            md5=`grep '^app.md5=' $in | sed 's/^app.md5=//'` && $
+            ( printf '{\n' && $
+              printf '"command":"updateApp",\n' && $
+              printf '"name":"$name",\n' && $
+              printf '"version":"$version",\n' && $
+              printf '"md5":"%s",\n' "$$md5" && $
+              printf '"size":%s\n' "$$tarballSize" && $
+              printf '}' && $
+              cat $workingDir/$name.$target $
+            ) > $out
+
+rule BinPackApp
+  description = Packaging app for distribution.
+  command = cp -r $stagingDir/* $workingDir/ && $
+            rm $workingDir/info.properties $workingDir/root.cfg && $
+            mtime=`stat -c %Y $adefPath` && $
+            find $workingDir -exec touch  --no-dereference --date=@$$mtime {} \; && $
+            (cd $workingDir/ && find . -print0 |LC_ALL=C sort -z  |tar --no-recursion --null -T - -cjf - ) > $out
+
+build $builddir/api/cd0abb758f50c21eeb3affdc0c409fc4/client/le_atDefs_interface.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/atServices/le_atDefs.api |
+  outputDir = $builddir/api/cd0abb758f50c21eeb3affdc0c409fc4/client
+  ifgenFlags = --gen-interface $ifgenFlags
+
+build $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client/le_mdc_interface.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/modemServices/le_mdc.api |
+  outputDir = $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client
+  ifgenFlags = --gen-interface $ifgenFlags
+
+build $builddir/api/45eaf0d718b1cd816adf04250e307575/client/le_limit_interface.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_limit.api |
+  outputDir = $builddir/api/45eaf0d718b1cd816adf04250e307575/client
+  ifgenFlags = --gen-interface $ifgenFlags
+
+build $builddir/api/a0c8212ef66c2331640bb803eafe97d8/client/le_atServer_client.c.o: CompileC $builddir/api/a0c8212ef66c2331640bb803eafe97d8/client/le_atServer_client.c | $builddir/api/a0c8212ef66c2331640bb803eafe97d8/client/le_atServer_messages.h $builddir/api/a0c8212ef66c2331640bb803eafe97d8/client/le_atServer_interface.h $builddir/api/cd0abb758f50c21eeb3affdc0c409fc4/client/le_atDefs_interface.h
+  cFlags = $cFlags -I$builddir/api/cd0abb758f50c21eeb3affdc0c409fc4/client
+
+build $builddir/api/a0c8212ef66c2331640bb803eafe97d8/client/le_atServer_client.c $builddir/api/a0c8212ef66c2331640bb803eafe97d8/client/le_atServer_interface.h $builddir/api/a0c8212ef66c2331640bb803eafe97d8/client/le_atServer_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/atServices/le_atServer.api | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/atServices/le_atDefs.api
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix le_atServer $ifgenFlags
+  outputDir = $builddir/api/a0c8212ef66c2331640bb803eafe97d8/client
+
+build $builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client/le_avc_client.c.o: CompileC $builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client/le_avc_client.c | $builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client/le_avc_messages.h $builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client/le_avc_interface.h $builddir/api/45eaf0d718b1cd816adf04250e307575/client/le_limit_interface.h
+  cFlags = $cFlags -I$builddir/api/45eaf0d718b1cd816adf04250e307575/client
+
+build $builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client/le_avc_client.c $builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client/le_avc_interface.h $builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client/le_avc_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/airVantage/le_avc.api | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_limit.api
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix le_avc $ifgenFlags
+  outputDir = $builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client
+
+build $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client/le_mdc_client.c.o: CompileC $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client/le_mdc_client.c | $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client/le_mdc_messages.h $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client/le_mdc_interface.h
+  cFlags = $cFlags
+
+build $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client/le_mdc_client.c $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client/le_mdc_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/modemServices/le_mdc.api |
+  ifgenFlags = --gen-client --gen-local --name-prefix le_mdc $ifgenFlags
+  outputDir = $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client
+
+build $builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client/le_data_client.c.o: CompileC $builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client/le_data_client.c | $builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client/le_data_messages.h $builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client/le_data_interface.h $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client/le_mdc_interface.h
+  cFlags = $cFlags -I$builddir/api/c775d2fe7198075703457a9e5d9ab96c/client
+
+build $builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client/le_data_client.c $builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client/le_data_interface.h $builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client/le_data_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_data.api | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/modemServices/le_mdc.api
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix le_data $ifgenFlags
+  outputDir = $builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/qmiAirVantage/staging/read-only/lib/libComponent_qmiAirVantage.so: LinkCLib $builddir/component/5ebd06af042e81989e10f0633e7ccae1/obj/c0f4047775536eebc5aa788691b1c55e.o $builddir/component/5ebd06af042e81989e10f0633e7ccae1/obj/33e2d5af01f8f8d4622adbe1df175c4b.o $builddir/api/a0c8212ef66c2331640bb803eafe97d8/client/le_atServer_client.c.o $builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client/le_avc_client.c.o $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client/le_mdc_client.c.o $builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client/le_data_client.c.o $builddir/component/5ebd06af042e81989e10f0633e7ccae1/obj/_componentMain.c.o | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib/liblegato.so
+  ldFlags =  -lqmi -lqmi_csi -lqmi_sap -L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/qmiAirVantage/staging/read-only/lib -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib" "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -lm
+
+build $builddir/component/5ebd06af042e81989e10f0633e7ccae1/obj/c0f4047775536eebc5aa788691b1c55e.o: CompileC /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/qmiAirVantage/src/qmiAirVantage/qmiAirVantage.c || $builddir/api/a0c8212ef66c2331640bb803eafe97d8/client/le_atServer_interface.h $builddir/api/a0c8212ef66c2331640bb803eafe97d8/client/le_atServer_messages.h $builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client/le_avc_interface.h $builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client/le_avc_messages.h $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client/le_mdc_interface.h $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client/le_mdc_messages.h $builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client/le_data_interface.h $builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client/le_data_messages.h $builddir/api/cd0abb758f50c21eeb3affdc0c409fc4/client/le_atDefs_interface.h $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client/le_mdc_interface.h $builddir/api/45eaf0d718b1cd816adf04250e307575/client/le_limit_interface.h 
+  cFlags = $cFlags -I$builddir/component/5ebd06af042e81989e10f0633e7ccae1/src -I$builddir/api/a0c8212ef66c2331640bb803eafe97d8/client -I$builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client -I$builddir/api/c775d2fe7198075703457a9e5d9ab96c/client -I$builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client -I$builddir/api/cd0abb758f50c21eeb3affdc0c409fc4/client -I$builddir/api/c775d2fe7198075703457a9e5d9ab96c/client -I$builddir/api/45eaf0d718b1cd816adf04250e307575/client -DLE_COMPONENT_NAME=qmiAirVantage -DLE_LOG_SESSION=qmiAirVantage_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=qmiAirVantage_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _qmiAirVantage_COMPONENT_INIT()" -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/qmiAirVantage/src/qmiAirVantage -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/inc -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/inc/framework -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/inc/services
+
+build $builddir/component/5ebd06af042e81989e10f0633e7ccae1/obj/33e2d5af01f8f8d4622adbe1df175c4b.o: CompileC /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/qmiAirVantage/src/qmiAirVantage/swi_legato_service_v01.c || $builddir/api/a0c8212ef66c2331640bb803eafe97d8/client/le_atServer_interface.h $builddir/api/a0c8212ef66c2331640bb803eafe97d8/client/le_atServer_messages.h $builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client/le_avc_interface.h $builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client/le_avc_messages.h $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client/le_mdc_interface.h $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client/le_mdc_messages.h $builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client/le_data_interface.h $builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client/le_data_messages.h $builddir/api/cd0abb758f50c21eeb3affdc0c409fc4/client/le_atDefs_interface.h $builddir/api/c775d2fe7198075703457a9e5d9ab96c/client/le_mdc_interface.h $builddir/api/45eaf0d718b1cd816adf04250e307575/client/le_limit_interface.h 
+  cFlags = $cFlags -I$builddir/component/5ebd06af042e81989e10f0633e7ccae1/src -I$builddir/api/a0c8212ef66c2331640bb803eafe97d8/client -I$builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client -I$builddir/api/c775d2fe7198075703457a9e5d9ab96c/client -I$builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client -I$builddir/api/cd0abb758f50c21eeb3affdc0c409fc4/client -I$builddir/api/c775d2fe7198075703457a9e5d9ab96c/client -I$builddir/api/45eaf0d718b1cd816adf04250e307575/client -DLE_COMPONENT_NAME=qmiAirVantage -DLE_LOG_SESSION=qmiAirVantage_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=qmiAirVantage_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _qmiAirVantage_COMPONENT_INIT()" -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/qmiAirVantage/src/qmiAirVantage -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/inc -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/inc/framework -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/inc/services
+
+build $builddir/component/5ebd06af042e81989e10f0633e7ccae1/obj/_componentMain.c.o: CompileC $builddir/component/5ebd06af042e81989e10f0633e7ccae1/src/_componentMain.c
+  cFlags = $cFlags -I$builddir/component/5ebd06af042e81989e10f0633e7ccae1/src -I$builddir/api/a0c8212ef66c2331640bb803eafe97d8/client -I$builddir/api/b463a605c0076b893e6cfb9f6c1fe2c9/client -I$builddir/api/c775d2fe7198075703457a9e5d9ab96c/client -I$builddir/api/0f2ff6ecb969b97d7ecb4bafc024f48b/client -I$builddir/api/cd0abb758f50c21eeb3affdc0c409fc4/client -I$builddir/api/c775d2fe7198075703457a9e5d9ab96c/client -I$builddir/api/45eaf0d718b1cd816adf04250e307575/client -DLE_COMPONENT_NAME=qmiAirVantage -DLE_LOG_SESSION=qmiAirVantage_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=qmiAirVantage_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _qmiAirVantage_COMPONENT_INIT()"
+
+build $builddir/app/qmiAirVantage/obj/qmiAirVantage/_main.c.o: CompileC /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/qmiAirVantage/app/qmiAirVantage/src/qmiAirVantage/_main.c
+  cFlags = $cFlags -DLE_COMPONENT_NAME=qmiAirVantage_exe -DLE_LOG_SESSION=qmiAirVantage_exe_LogSession -DLE_LOG_LEVEL_FILTER_PTR=qmiAirVantage_exe_LogLevelFilterPtr 
+
+build $builddir/app/qmiAirVantage/obj/qmiAirVantage/qmiAirVantage: LinkCExe $builddir/app/qmiAirVantage/obj/qmiAirVantage/_main.c.o | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/qmiAirVantage/staging/read-only/lib/libComponent_qmiAirVantage.so /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib/liblegato.so /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/$target/framework/lib/liblegato.so
+  ldFlags = -rdynamic -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib" -L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/qmiAirVantage/staging/read-only/lib "-L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/qmiAirVantage/staging/read-only/lib" -lComponent_qmiAirVantage -lqmi -lqmi_csi -lqmi_sap "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -ldl -lm $ldFlags
+
+build $builddir/app/qmiAirVantage/staging/read-only/lib/libComponent_qmiAirVantage.so : BundleFile /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/qmiAirVantage/staging/read-only/lib/libComponent_qmiAirVantage.so
+  modeFlags = u+rw+x,g+r+x,o+x+r-w
+
+build $builddir/app/qmiAirVantage/staging/read-only/bin/qmiAirVantage : BundleFile $builddir/app/qmiAirVantage/obj/qmiAirVantage/qmiAirVantage
+  modeFlags = u+rw+x,g+r+x,o+x+r-w
+
+build $builddir/app/qmiAirVantage/staging/info.properties : MakeAppInfoProperties | $builddir/app/qmiAirVantage/staging/read-only/lib/libComponent_qmiAirVantage.so $builddir/app/qmiAirVantage/staging/read-only/bin/qmiAirVantage $builddir/app/qmiAirVantage/staging/root.cfg
+  name = qmiAirVantage
+  version = 
+  workingDir = $builddir/app/qmiAirVantage
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/proprietary/qmiAirVantage/qmiAirVantage.$target.update: PackApp $builddir/app/qmiAirVantage/staging/info.properties
+  name = qmiAirVantage
+  adefPath = /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/qmiAirVantage/src/qmiAirVantage.adef
+  version = 
+  workingDir = $builddir/app/qmiAirVantage
+
+build $builddir/qmiAirVantage/interfaces/le_avc.api: CopyFile /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/airVantage/le_avc.api
+
+build $builddir/qmiAirVantage/interfaces/le_atDefs.api: CopyFile /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/atServices/le_atDefs.api
+
+build $builddir/qmiAirVantage/interfaces/le_atServer.api: CopyFile /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/atServices/le_atServer.api
+
+build $builddir/qmiAirVantage/interfaces/le_data.api: CopyFile /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_data.api
+
+build $builddir/qmiAirVantage/interfaces/le_limit.api: CopyFile /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_limit.api
+
+build $builddir/qmiAirVantage/interfaces/le_mdc.api: CopyFile /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/modemServices/le_mdc.api
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/proprietary/qmiAirVantage/qmiAirVantage.$target.app: BinPackApp $builddir/app/qmiAirVantage/staging/info.properties || $builddir/qmiAirVantage/interfaces/le_avc.api $builddir/qmiAirVantage/interfaces/le_atDefs.api $builddir/qmiAirVantage/interfaces/le_atServer.api $builddir/qmiAirVantage/interfaces/le_data.api $builddir/qmiAirVantage/interfaces/le_limit.api $builddir/qmiAirVantage/interfaces/le_mdc.api
+  adefPath = /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/qmiAirVantage/src/qmiAirVantage.adef
+  stagingDir = $builddir/app/qmiAirVantage/staging
+  workingDir = $builddir/qmiAirVantage
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/qmiAirVantage/build.ninja: RegenNinjaScript | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/qmiAirVantage/src/qmiAirVantage/Component.cdef /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/airVantage/le_avc.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/atServices/le_atDefs.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/atServices/le_atServer.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_data.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_limit.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/modemServices/le_mdc.api
+

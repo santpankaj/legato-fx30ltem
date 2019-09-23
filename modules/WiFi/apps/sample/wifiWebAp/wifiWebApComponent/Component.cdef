@@ -1,0 +1,45 @@
+sources:
+{
+    wifiWebAp.c
+}
+
+requires:
+{
+    api:
+    {
+        ${LEGATO_ROOT}/interfaces/wifi/le_wifiAp.api
+    }
+}
+
+bundles:
+{
+    file:
+    {
+        // HTML start page
+        www/index.html  /var/www/index.html
+
+        // Javascript
+        www/scripts/hmi.js    /var/www/scripts/hmi.js
+        www/scripts/ip.js     /var/www/scripts/ip.js
+        www/scripts/log.js    /var/www/scripts/log.js
+
+        // CSS
+        www/css/style.css    /var/www/css/style.css
+
+        // Images
+        www/image/legato_logo.png     /var/www/image/legato_logo.png
+        www/image/raspbian.png        /var/www/image/raspbian.png
+        www/image/mangoh.png          /var/www/image/mangoh.png
+
+        // cgi bin stuff
+        [rx] www/cgi-bin/readlogfile    /var/www/cgi-bin/readlogfile
+        [x] www/cgi-bin/startwifiap     /var/www/cgi-bin/startwifiap
+        [x] www/cgi-bin/stopwifiap      /var/www/cgi-bin/stopwifiap
+        [x] www/cgi-bin/wifiexport      /var/www/cgi-bin/wifiexport
+        [x] www/cgi-bin/hardinfo        /var/www/cgi-bin/hardinfo
+
+        // debug logfile
+        [r] www/cgi-bin/logfile.log      /tmp/wifi_http.log
+
+    }
+}

@@ -1,0 +1,20 @@
+# Beginning of the file
+# Creation of local IMA certification authority (CA).
+# It consist of private and public key certificate which are used
+# to sign and verify other keys.
+[ req ]
+default_bits = 2048
+distinguished_name = req_distinguished_name
+prompt = no
+string_mask = utf8only
+x509_extensions = v3_usr
+[ req_distinguished_name ]
+organizationName = Acme Corporation
+commonName = www.example.com
+emailAddress = ca@example.com
+[ v3_usr ]
+basicConstraints=critical,CA:FALSE
+keyUsage=digitalSignature
+subjectKeyIdentifier=hash
+authorityKeyIdentifier=keyid
+# EOF

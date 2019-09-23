@@ -1,0 +1,1 @@
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types    --sysroot= CMakeFiles/legacy.dir/main.c.o  -o ../../../../samples/bin/legacy -rdynamic 

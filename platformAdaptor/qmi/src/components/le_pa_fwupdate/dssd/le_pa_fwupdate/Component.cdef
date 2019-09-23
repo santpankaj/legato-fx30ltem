@@ -1,0 +1,31 @@
+
+requires:
+{
+    api:
+    {
+        le_fwupdate.api  [types-only]
+        le_dualsys.api  [types-only]
+    }
+
+    component:
+    {
+        $LEGATO_UTIL_PA
+    }
+}
+
+sources:
+{
+    pa_fwupdate_qmi.c
+    ../../pa_fwupdate_qmi_common.c
+}
+
+cflags:
+{
+    -I$LEGATO_ROOT/components/fwupdate/platformAdaptor/inc
+    -I$LEGATO_QMI_UTIL_SRC_FILES
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc/framework
+    -I$LEGATO_PROPRIETARY_QCT_DIR/inc/services
+    -I$LEGATO_ROOT/platformAdaptor/fwupdate/mdm9x40/le_pa_fwupdate_dualsys
+    -I${LEGATO_ROOT}/platformAdaptor/qmi/src/components/le_pa_fwupdate
+}

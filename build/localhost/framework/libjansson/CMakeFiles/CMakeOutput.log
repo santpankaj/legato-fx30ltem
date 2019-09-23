@@ -1,0 +1,824 @@
+The target system is: Linux - 1 - 
+The host system is: Linux - 4.15.0-62-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin//gcc 
+Build flags: -DSIERRA;-O2;-pipe;-g;-feliminate-unused-debug-types;
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/3.5.1/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fb052/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_fb052.dir/build.make CMakeFiles/cmTC_fb052.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fb052.dir/testCCompiler.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types      --sysroot= -o CMakeFiles/cmTC_fb052.dir/testCCompiler.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_fb052
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb052.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types     --sysroot=  CMakeFiles/cmTC_fb052.dir/testCCompiler.c.o  -o cmTC_fb052 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8e6cf/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_8e6cf.dir/build.make CMakeFiles/cmTC_8e6cf.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8e6cf.dir/CMakeCCompilerABI.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types      --sysroot= -o CMakeFiles/cmTC_8e6cf.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_8e6cf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e6cf.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types     --sysroot= -v CMakeFiles/cmTC_8e6cf.dir/CMakeCCompilerABI.c.o  -o cmTC_8e6cf -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin//gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.11' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-D' 'SIERRA' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_8e6cf' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKcfyiJ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot= --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_8e6cf /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_8e6cf.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_8e6cf/fast"]
+  ignore line: [make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_8e6cf.dir/build.make CMakeFiles/cmTC_8e6cf.dir/build]
+  ignore line: [make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_8e6cf.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types      --sysroot= -o CMakeFiles/cmTC_8e6cf.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_8e6cf]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e6cf.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types     --sysroot= -v CMakeFiles/cmTC_8e6cf.dir/CMakeCCompilerABI.c.o  -o cmTC_8e6cf -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin//gcc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.11' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.11) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' 'SIERRA' '-O2' '-pipe' '-g' '-feliminate-unused-debug-types' '-v' '-o' 'cmTC_8e6cf' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKcfyiJ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot= --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_8e6cf /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_8e6cf.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccKcfyiJ.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_8e6cf] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
+    arg [CMakeFiles/cmTC_8e6cf.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5] ==> [/usr/lib/gcc/x86_64-linux-gnu/5]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/5;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_170ff/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_170ff.dir/build.make CMakeFiles/cmTC_170ff.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_170ff.dir/feature_tests.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types      --sysroot= -std=c11 -o CMakeFiles/cmTC_170ff.dir/feature_tests.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/feature_tests.c
+Linking C executable cmTC_170ff
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_170ff.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types     --sysroot=  CMakeFiles/cmTC_170ff.dir/feature_tests.c.o  -o cmTC_170ff -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5cb28/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_5cb28.dir/build.make CMakeFiles/cmTC_5cb28.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5cb28.dir/feature_tests.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types      --sysroot= -std=c99 -o CMakeFiles/cmTC_5cb28.dir/feature_tests.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/feature_tests.c
+Linking C executable cmTC_5cb28
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5cb28.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types     --sysroot=  CMakeFiles/cmTC_5cb28.dir/feature_tests.c.o  -o cmTC_5cb28 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_55d74/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_55d74.dir/build.make CMakeFiles/cmTC_55d74.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_55d74.dir/feature_tests.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types      --sysroot= -std=c90 -o CMakeFiles/cmTC_55d74.dir/feature_tests.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/feature_tests.c
+Linking C executable cmTC_55d74
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55d74.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types     --sysroot=  CMakeFiles/cmTC_55d74.dir/feature_tests.c.o  -o cmTC_55d74 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if files endian.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_287be/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_287be.dir/build.make CMakeFiles/cmTC_287be.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_287be.dir/CheckIncludeFiles.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_287be.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_287be
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_287be.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_287be.dir/CheckIncludeFiles.c.o  -o cmTC_287be -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a4ebc/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a4ebc.dir/build.make CMakeFiles/cmTC_a4ebc.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a4ebc.dir/CheckIncludeFiles.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_a4ebc.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_a4ebc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4ebc.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_a4ebc.dir/CheckIncludeFiles.c.o  -o cmTC_a4ebc -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files sched.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c2ae7/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c2ae7.dir/build.make CMakeFiles/cmTC_c2ae7.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c2ae7.dir/CheckIncludeFiles.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_c2ae7.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_c2ae7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2ae7.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_c2ae7.dir/CheckIncludeFiles.c.o  -o cmTC_c2ae7 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files unistd.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0a130/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_0a130.dir/build.make CMakeFiles/cmTC_0a130.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0a130.dir/CheckIncludeFiles.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_0a130.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_0a130
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a130.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_0a130.dir/CheckIncludeFiles.c.o  -o cmTC_0a130 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/param.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c025f/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_c025f.dir/build.make CMakeFiles/cmTC_c025f.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c025f.dir/CheckIncludeFiles.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_c025f.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_c025f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c025f.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_c025f.dir/CheckIncludeFiles.c.o  -o cmTC_c025f -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/stat.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8967f/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_8967f.dir/build.make CMakeFiles/cmTC_8967f.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8967f.dir/CheckIncludeFiles.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_8967f.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_8967f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8967f.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_8967f.dir/CheckIncludeFiles.c.o  -o cmTC_8967f -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/time.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f2a2a/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f2a2a.dir/build.make CMakeFiles/cmTC_f2a2a.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f2a2a.dir/CheckIncludeFiles.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_f2a2a.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_f2a2a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f2a2a.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_f2a2a.dir/CheckIncludeFiles.c.o  -o cmTC_f2a2a -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/time.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_de966/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_de966.dir/build.make CMakeFiles/cmTC_de966.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_de966.dir/CheckIncludeFiles.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_de966.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_de966
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_de966.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_de966.dir/CheckIncludeFiles.c.o  -o cmTC_de966 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function close exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6f116/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_6f116.dir/build.make CMakeFiles/cmTC_6f116.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6f116.dir/CheckFunctionExists.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=close --sysroot=   --sysroot= -o CMakeFiles/cmTC_6f116.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6f116
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6f116.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=close --sysroot=  --sysroot=  CMakeFiles/cmTC_6f116.dir/CheckFunctionExists.c.o  -o cmTC_6f116 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function getpid exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d535d/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_d535d.dir/build.make CMakeFiles/cmTC_d535d.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d535d.dir/CheckFunctionExists.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=getpid --sysroot=   --sysroot= -o CMakeFiles/cmTC_d535d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d535d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d535d.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=getpid --sysroot=  --sysroot=  CMakeFiles/cmTC_d535d.dir/CheckFunctionExists.c.o  -o cmTC_d535d -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function gettimeofday exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5127e/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_5127e.dir/build.make CMakeFiles/cmTC_5127e.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5127e.dir/CheckFunctionExists.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=gettimeofday --sysroot=   --sysroot= -o CMakeFiles/cmTC_5127e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5127e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5127e.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=gettimeofday --sysroot=  --sysroot=  CMakeFiles/cmTC_5127e.dir/CheckFunctionExists.c.o  -o cmTC_5127e -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function open exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d2ebf/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_d2ebf.dir/build.make CMakeFiles/cmTC_d2ebf.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d2ebf.dir/CheckFunctionExists.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=open --sysroot=   --sysroot= -o CMakeFiles/cmTC_d2ebf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d2ebf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2ebf.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=open --sysroot=  --sysroot=  CMakeFiles/cmTC_d2ebf.dir/CheckFunctionExists.c.o  -o cmTC_d2ebf -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function read exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a3c7f/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_a3c7f.dir/build.make CMakeFiles/cmTC_a3c7f.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a3c7f.dir/CheckFunctionExists.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=read --sysroot=   --sysroot= -o CMakeFiles/cmTC_a3c7f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a3c7f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3c7f.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=read --sysroot=  --sysroot=  CMakeFiles/cmTC_a3c7f.dir/CheckFunctionExists.c.o  -o cmTC_a3c7f -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function sched_yield exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_73394/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_73394.dir/build.make CMakeFiles/cmTC_73394.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_73394.dir/CheckFunctionExists.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=sched_yield --sysroot=   --sysroot= -o CMakeFiles/cmTC_73394.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_73394
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73394.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=sched_yield --sysroot=  --sysroot=  CMakeFiles/cmTC_73394.dir/CheckFunctionExists.c.o  -o cmTC_73394 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files stdint.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e96ed/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_e96ed.dir/build.make CMakeFiles/cmTC_e96ed.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e96ed.dir/CheckIncludeFiles.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_e96ed.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_e96ed
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e96ed.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_e96ed.dir/CheckIncludeFiles.c.o  -o cmTC_e96ed -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e6928/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_e6928.dir/build.make CMakeFiles/cmTC_e6928.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e6928.dir/CheckIncludeFile.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_e6928.dir/CheckIncludeFile.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e6928
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6928.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_e6928.dir/CheckIncludeFile.c.o  -o cmTC_e6928 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of int64_t passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9ced2/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_9ced2.dir/build.make CMakeFiles/cmTC_9ced2.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9ced2.dir/INT64_T.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_9ced2.dir/INT64_T.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/INT64_T.c
+Linking C executable cmTC_9ced2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ced2.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_9ced2.dir/INT64_T.c.o  -o cmTC_9ced2 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of long long passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fe94f/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_fe94f.dir/build.make CMakeFiles/cmTC_fe94f.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fe94f.dir/LONG_LONG_INT.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_fe94f.dir/LONG_LONG_INT.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/LONG_LONG_INT.c
+Linking C executable cmTC_fe94f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe94f.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_fe94f.dir/LONG_LONG_INT.c.o  -o cmTC_fe94f -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of int32_t passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b152d/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_b152d.dir/build.make CMakeFiles/cmTC_b152d.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b152d.dir/INT32_T.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_b152d.dir/INT32_T.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/INT32_T.c
+Linking C executable cmTC_b152d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b152d.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_b152d.dir/INT32_T.c.o  -o cmTC_b152d -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of long passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e7d61/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_e7d61.dir/build.make CMakeFiles/cmTC_e7d61.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e7d61.dir/LONG_INT.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_e7d61.dir/LONG_INT.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/LONG_INT.c
+Linking C executable cmTC_e7d61
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7d61.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_e7d61.dir/LONG_INT.c.o  -o cmTC_e7d61 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of int passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1e3e7/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_1e3e7.dir/build.make CMakeFiles/cmTC_1e3e7.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1e3e7.dir/INT.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_1e3e7.dir/INT.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/INT.c
+Linking C executable cmTC_1e3e7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e3e7.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_1e3e7.dir/INT.c.o  -o cmTC_1e3e7 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned long passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_74159/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_74159.dir/build.make CMakeFiles/cmTC_74159.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_74159.dir/UNSIGNED_LONG_INT.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_74159.dir/UNSIGNED_LONG_INT.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/UNSIGNED_LONG_INT.c
+Linking C executable cmTC_74159
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74159.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_74159.dir/UNSIGNED_LONG_INT.c.o  -o cmTC_74159 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned int passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_932e7/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_932e7.dir/build.make CMakeFiles/cmTC_932e7.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_932e7.dir/UNSIGNED_INT.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_932e7.dir/UNSIGNED_INT.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/UNSIGNED_INT.c
+Linking C executable cmTC_932e7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_932e7.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_932e7.dir/UNSIGNED_INT.c.o  -o cmTC_932e7 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ff632/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_ff632.dir/build.make CMakeFiles/cmTC_ff632.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ff632.dir/UNSIGNED_SHORT.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_ff632.dir/UNSIGNED_SHORT.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/UNSIGNED_SHORT.c
+Linking C executable cmTC_ff632
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff632.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_ff632.dir/UNSIGNED_SHORT.c.o  -o cmTC_ff632 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint32_t passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_af92b/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_af92b.dir/build.make CMakeFiles/cmTC_af92b.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_af92b.dir/UINT32_T.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_af92b.dir/UINT32_T.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/UINT32_T.c
+Linking C executable cmTC_af92b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af92b.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_af92b.dir/UINT32_T.c.o  -o cmTC_af92b -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint16_t passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cd04e/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_cd04e.dir/build.make CMakeFiles/cmTC_cd04e.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cd04e.dir/UINT16_T.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_cd04e.dir/UINT16_T.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/UINT16_T.c
+Linking C executable cmTC_cd04e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd04e.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_cd04e.dir/UINT16_T.c.o  -o cmTC_cd04e -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of uint8_t passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_64086/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_64086.dir/build.make CMakeFiles/cmTC_64086.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_64086.dir/UINT8_T.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_64086.dir/UINT8_T.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/UINT8_T.c
+Linking C executable cmTC_64086
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64086.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_64086.dir/UINT8_T.c.o  -o cmTC_64086 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining size of ssize_t passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b3864/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_b3864.dir/build.make CMakeFiles/cmTC_b3864.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b3864.dir/SSIZE_T.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_b3864.dir/SSIZE_T.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CheckTypeSize/SSIZE_T.c
+Linking C executable cmTC_b3864
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3864.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_b3864.dir/SSIZE_T.c.o  -o cmTC_b3864 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strtoll exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5f0a5/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_5f0a5.dir/build.make CMakeFiles/cmTC_5f0a5.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5f0a5.dir/CheckFunctionExists.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=strtoll --sysroot=   --sysroot= -o CMakeFiles/cmTC_5f0a5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_5f0a5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5f0a5.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=strtoll --sysroot=  --sysroot=  CMakeFiles/cmTC_5f0a5.dir/CheckFunctionExists.c.o  -o cmTC_5f0a5 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strtoq exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bb707/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_bb707.dir/build.make CMakeFiles/cmTC_bb707.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bb707.dir/CheckFunctionExists.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=strtoq --sysroot=   --sysroot= -o CMakeFiles/cmTC_bb707.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_bb707
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb707.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=strtoq --sysroot=  --sysroot=  CMakeFiles/cmTC_bb707.dir/CheckFunctionExists.c.o  -o cmTC_bb707 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if files locale.h exist passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0b942/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_0b942.dir/build.make CMakeFiles/cmTC_0b942.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0b942.dir/CheckIncludeFiles.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=   --sysroot= -o CMakeFiles/cmTC_0b942.dir/CheckIncludeFiles.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_0b942
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0b942.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   --sysroot=  --sysroot=  CMakeFiles/cmTC_0b942.dir/CheckIncludeFiles.c.o  -o cmTC_0b942 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function localeconv exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_80608/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_80608.dir/build.make CMakeFiles/cmTC_80608.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_80608.dir/CheckFunctionExists.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=localeconv --sysroot=   --sysroot= -o CMakeFiles/cmTC_80608.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_80608
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_80608.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=localeconv --sysroot=  --sysroot=  CMakeFiles/cmTC_80608.dir/CheckFunctionExists.c.o  -o cmTC_80608 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Determining if the function setlocale exists passed with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_33f37/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_33f37.dir/build.make CMakeFiles/cmTC_33f37.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_33f37.dir/CheckFunctionExists.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=setlocale --sysroot=   --sysroot= -o CMakeFiles/cmTC_33f37.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_33f37
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33f37.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DCHECK_FUNCTION_EXISTS=setlocale --sysroot=  --sysroot=  CMakeFiles/cmTC_33f37.dir/CheckFunctionExists.c.o  -o cmTC_33f37 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test HAVE_INLINE succeeded with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0bf83/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_0bf83.dir/build.make CMakeFiles/cmTC_0bf83.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0bf83.dir/src.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE_INLINE --sysroot=   --sysroot= -o CMakeFiles/cmTC_0bf83.dir/src.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_0bf83
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0bf83.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE_INLINE --sysroot=  --sysroot=  CMakeFiles/cmTC_0bf83.dir/src.c.o  -o cmTC_0bf83 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+Source file was:
+inline void func(); void func() { } int main() { func(); return 0; }
+Performing C SOURCE FILE Test HAVE___INLINE succeeded with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_37325/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_37325.dir/build.make CMakeFiles/cmTC_37325.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_37325.dir/src.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE___INLINE --sysroot=   --sysroot= -o CMakeFiles/cmTC_37325.dir/src.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_37325
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37325.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE___INLINE --sysroot=  --sysroot=  CMakeFiles/cmTC_37325.dir/src.c.o  -o cmTC_37325 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+Source file was:
+__inline void func(); void func() { } int main() { func(); return 0; }
+Performing C SOURCE FILE Test HAVE___INLINE__ succeeded with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_02241/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_02241.dir/build.make CMakeFiles/cmTC_02241.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_02241.dir/src.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE___INLINE__ --sysroot=   --sysroot= -o CMakeFiles/cmTC_02241.dir/src.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_02241
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02241.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE___INLINE__ --sysroot=  --sysroot=  CMakeFiles/cmTC_02241.dir/src.c.o  -o cmTC_02241 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+Source file was:
+__inline__ void func(); void func() { } int main() { func(); return 0; }
+Performing C SOURCE FILE Test HAVE_SYNC_BUILTINS succeeded with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_374c5/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_374c5.dir/build.make CMakeFiles/cmTC_374c5.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_374c5.dir/src.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE_SYNC_BUILTINS --sysroot=   --sysroot= -o CMakeFiles/cmTC_374c5.dir/src.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_374c5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_374c5.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE_SYNC_BUILTINS --sysroot=  --sysroot=  CMakeFiles/cmTC_374c5.dir/src.c.o  -o cmTC_374c5 -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { unsigned long val; __sync_bool_compare_and_swap(&val, 0, 1); return 0; } 
+Performing C SOURCE FILE Test HAVE_ATOMIC_BUILTINS succeeded with the following output:
+Change Dir: /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1adee/fast"
+make[3]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_1adee.dir/build.make CMakeFiles/cmTC_1adee.dir/build
+make[4]: Entering directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1adee.dir/src.c.o
+/usr/bin//gcc    -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE_ATOMIC_BUILTINS --sysroot=   --sysroot= -o CMakeFiles/cmTC_1adee.dir/src.c.o   -c /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_1adee
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1adee.dir/link.txt --verbose=1
+/usr/bin//gcc  -DSIERRA -O2 -pipe -g -feliminate-unused-debug-types   -DHAVE_ATOMIC_BUILTINS --sysroot=  --sysroot=  CMakeFiles/cmTC_1adee.dir/src.c.o  -o cmTC_1adee -rdynamic 
+make[4]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+make[3]: Leaving directory '/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/libjansson/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { char l; unsigned long v; __atomic_test_and_set(&l, __ATOMIC_RELAXED); __atomic_store_n(&v, 1, __ATOMIC_RELEASE); __atomic_load_n(&v, __ATOMIC_ACQUIRE); return 0; }

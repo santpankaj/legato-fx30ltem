@@ -1,0 +1,14 @@
+# Target labels
+ cunit
+# Source files and their labels
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/test/framework/hex/CMakeFiles/cunit
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/test/framework/hex/CMakeFiles/cunit.rule
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/apps/test/framework/hex/CMakeFiles/cunit-complete.rule
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/CUnit/src/cunit-stamp/cunit-install.rule
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/CUnit/src/cunit-stamp/cunit-mkdir.rule
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/CUnit/src/cunit-stamp/cunit-download.rule
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/CUnit/src/cunit-stamp/cunit-update.rule
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/CUnit/src/cunit-stamp/cunit-patch.rule
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/CUnit/src/cunit-stamp/cunit-configure.rule
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/CUnit/src/cunit-stamp/cunit-build.rule
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/CUnit/src/cunit-stamp/cunit-comment.rule

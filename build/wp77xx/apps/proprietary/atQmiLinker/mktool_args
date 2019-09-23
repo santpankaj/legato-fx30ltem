@@ -1,0 +1,16 @@
+mkapp
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/atQmiLinker/src/atQmiLinker.adef
+-b
+-i
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/modemServices
+-t
+wp77xx
+-o
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/proprietary/atQmiLinker
+-w
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/atQmiLinker
+-t
+wp77xx
+-d
+/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug
+--cflags= -O2 -fno-omit-frame-pointer

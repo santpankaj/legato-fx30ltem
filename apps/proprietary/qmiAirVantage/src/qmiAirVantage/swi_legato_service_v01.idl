@@ -1,0 +1,809 @@
+/**************************************************************************
+@FILE swi_legato_service_v01.idl
+@BRIEF Sierra Legato Service Message Definitions for the QMI IDL
+@DESCRIPTION
+
+@COPYRIGHT Copyright (c) 2017 Sierra Wireless, Inc.
+All rights reserved.
+Confidential and Proprietary - Sierra Wireless, Inc.
+**************************************************************************/
+include "common_v01.idl";
+
+const QMI_SERVICE_SWI_LEGATO_ID = 0xFD;
+
+revision 1;
+
+//=======================================================================
+/** @COMMAND QMI_SWI_LEGATO_TEST
+     @CMD_VERSION 1.1
+     @BRIEF This is a message for testing client to service communication
+*/
+//=======================================================================
+
+//! @MSG QMI_SWI_LEGATO_TEST_REQ
+//! @TYPE Request
+//! @SENDER Control Point
+//----------------------------------------------------------------------------
+message
+{
+  //! Ping
+  //! @VERSION 1.1
+} swi_legato_test_req_msg;
+
+//! @MSG     QMI_SWI_LEGATO_TEST_RESP
+//! @TYPE    Response
+//! @SENDER  Service
+//------------------------------------------------------------------------------
+message
+{
+  //! Result Code
+  //! @VERSION 1.0
+  mandatory qmi_response_type resp; //!< Standard response type.
+} swi_legato_test_resp_msg;
+
+//============================================================================
+/** @COMMAND QMI_SWI_LEGATO_AVMS_SESSION_START
+    @BRIEF Perform an OMA-DM AVMS session with the AVMS server
+  @CMD_VERSION 1.0
+*/
+//============================================================================
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_SESSION_START_REQ
+//! @TYPE    Request
+//! @SENDER  Control point
+//----------------------------------------------------------------------------
+message
+{
+  //! SESSION START
+  //! @VERSION 1.0
+  mandatory uint8 session_type;  /**<
+                                     0x01 ¨C FOTA, to check availability of FW Update
+                                     */
+}swi_legato_avms_session_start_req_msg;
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_SESSION_START_RESP
+//! @TYPE    Response
+//! @SENDER  Service
+//----------------------------------------------------------------------------
+message
+{
+  //! Result Code
+  //! @VERSION 1.0
+  mandatory uint32 start_session_rsp;   /**<
+                                  32-bit enum of supported responses:
+                                  0x00000001 - Available.
+                                  0x00000002 -  Not Available
+                                  0x00000003 - Check Timed Out
+                                  */
+  mandatory qmi_response_type resp;    //!< Standard response type
+}swi_legato_avms_session_start_resp_msg;
+
+//============================================================================
+/** @COMMAND QMI_SWI_LEGATO_AVMS_SESSION_STOP
+    @BRIEF This message requests the device to cancel an ongoing OMA-DM AVMS session
+  @CMD_VERSION 1.0
+*/
+//============================================================================
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_SESSION_STOP_REQ
+//! @TYPE    Request
+//! @SENDER  Control point
+//----------------------------------------------------------------------------
+message
+{
+  //! SESSION STOP
+  //! @VERSION 1.0
+  mandatory uint8 session_type;  /**<
+                                 0x01 ¨C FOTA, to suspend FOTA session
+                                 0xFF ¨C Suspend ongoing FOTA session
+                                        or stop any other active OMADM AVMS session.
+                                 */
+}swi_legato_avms_session_stop_req_msg;
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_SESSION_STOP_RESP
+//! @TYPE    Response
+//! @SENDER  Service
+//----------------------------------------------------------------------------
+message
+{
+  //! Result Code
+  //! @VERSION 1.0
+  mandatory qmi_response_type resp;    //!< Standard response type
+  //! SESSION STOP
+  //! @VERSION 1.0
+  optional uint8 session_type;   /**<
+                                  0x01 ¨C FOTA
+                                  */
+}swi_legato_avms_session_stop_resp_msg;
+
+//============================================================================
+/** @COMMAND QMI_SWI_LEGATO_AVMS_SESSION_GETINFO
+    @BRIEF This message requests the device to cancel an ongoing OMA-DM AVMS session
+  @CMD_VERSION 1.0
+*/
+//============================================================================
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_SESSION_GETINFO_REQ
+//! @TYPE    Request
+//! @SENDER  Control point
+//----------------------------------------------------------------------------
+message
+{
+  //! SESSION GETINFO
+  //! @VERSION 1.0
+}swi_legato_avms_session_getinfo_req_msg;
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_SESSION_GETINFO_RESP
+//! @TYPE    Response
+//! @SENDER  Service
+//----------------------------------------------------------------------------
+const SOURCE_MAX_LEN  = 0x80;
+const PACKAGE_MAX_LEN = 0x80;
+const PACKAGE_DESCRIPTION_MAX_LEN = 0x400;
+const TIME_MAX_LEN  = 0x80;
+const DATE_MAX_LEN = 0x80;
+const VERSION_MAX_LEN = 0x80;
+
+struct
+{
+  //! @VERSION 1.0
+  uint8     binary_type;    /**<
+                            0x01 ¨C FW
+                            0x02 ¨C User app
+                            0x03 ¨C Legato
+                            */
+  //! @VERSION 1.0
+  uint8     status;         /**<
+                            0x01 ¨C No Firmware available
+                            0x02 ¨CQuery Firmware Download
+                            0x03 ¨C Firmware Downloading
+                            0x04 ¨C Firmware downloaded
+                            0x05 ¨CQuery Firmware Update
+                            0x06 ¨C Firmware updating
+                            0x07 ¨C Firmware updated
+                             */
+  //! @VERSION 1.0
+  uint8     user_input_req; /**<
+                            Bit mask of available user inputs.
+                            0x00 ¨C No user input required. Informational indication
+                            0x01 ¨C Accept
+                            0x02 ¨C Reject
+                            */
+  //! @VERSION 1.0
+  uint16    user_input_timeout;   /**<
+                                  Timeout for user input in minutes.
+                                  A value of 0 means no time-out
+                                  */
+  //! @VERSION 1.0
+  uint32   fw_dload_size;   /**<
+                            The size (in bytes) of the firmware update package
+                            */
+  //! @VERSION 1.0
+  uint32   fw_dload_complete;   /**<
+                                The number of bytes downloaded.
+                                */
+  //! @VERSION 1.0
+  uint16   update_complete_status;  /**<
+                                    See table of session completion codes below.
+                                    This field should be looked at only when the OMA-DM AVMS session is complete.
+                                    */
+  //! @VERSION 1.0
+  uint8   severity;                 /**<
+                                    0x01 ¨C Mandatory
+                                    0x02 - Optional
+                                    */
+  //! @VERSION 1.0
+  uint16   version_name_len;    /**<
+                                Length of FW Version string in bytes
+                                */
+  //! @VERSION 1.0
+  char     version_name[VERSION_MAX_LEN];    /**<
+                                        version Name in ASCII
+                                        */
+  //! @VERSION 1.0
+  uint16   package_name_len;/**<
+                            Length of Package Name string in bytes
+                            */
+  //! @VERSION 1.0
+  char     package_name[PACKAGE_MAX_LEN];   /**<
+                                            Package Name in ASCII
+                                            */
+  //! @VERSION 1.0
+  uint16   package_description_len; /**<
+                                    Length of Package Description string in bytes
+                                    */
+  //! @VERSION 1.0
+  char     package_description[PACKAGE_DESCRIPTION_MAX_LEN];    /**<
+                                                                Package Description in ASCII
+                                                                */
+}avms_session_info_type;
+
+const ALER_MAX_LEN = 0xC8;
+
+struct
+{
+  //! @VERSION 1.0
+  uint8     state;          /**<
+                            0x01 ¨C OMA-DM AVMS Read Request
+                            0x02 ¨C OMA-DM AVMS Change Request
+                            0x03 ¨C OMA-DM AVMS Config Complete
+                            */
+  //! @VERSION 1.0
+  uint8     user_input_req; /**<
+                            Bit mask of available user inputs.
+                            0x00 ¨C No user input required. Informational indication
+                            0x01 ¨C Accept
+                            0x02 ¨C Reject
+                            */
+  //! @VERSION 1.0
+  uint16    user_input_timeout;   /**<
+                                  Timeout for user input in minutes.
+                                  A value of 0 means no time-out
+                                  */
+  //! @VERSION 1.0
+  uint16   alertmsglength;  /**<
+                            Length of Alert message string in bytes
+                            */
+  //! @VERSION 1.0
+  char     alertmsg[ALER_MAX_LEN];  /**<
+                                    Alert message in UCS2
+                                    */
+}avms_config_info_type;
+
+struct
+{
+  //! SESSION GETINFO
+  //! @VERSION 1.0
+  uint8      notification;  /**<
+                            0x12 ¨C Module starts sending data to server
+                            0x13 ¨C Authentication with the server
+                            0x14 ¨C session with the server is ended
+                            */
+  //! SESSION GETINFO
+  //! @VERSION 1.0
+  uint16     session_status;    /**<
+                                This field will set to the session status for notifications that occur
+                                at the end of a session, zero for all other notifications
+                                (see Session Completion Code table below for a summary of session_status codes)
+                                */
+}avms_notifications_type;
+
+struct
+{
+  //! SESSION GETINFO
+  //! @VERSION 1.0
+  uint8      user_input_req; /**<
+                             Bit mask of available user inputs.
+                             0x00 ¨C No user input required. Informational indication
+                             0x01 ¨C Accept
+                             0x02 ¨C Reject
+                             */
+  //! SESSION GETINFO
+  //! @VERSION 1.0
+  uint16     user_input_timeout;    /**<
+                                    Timeout for user input in minutes. A value of 0 means no time-out
+                                    */
+}avms_connection_request_type;
+
+struct
+{
+  //! @VERSION 1.0
+  uint8      notif_type; /**< Notification type
+                                     0: Data session closed
+                                     1: Data session activated
+                                     2: Data session error
+                                     */
+  //! Data session error code.
+  //! @VERSION 1.1
+  uint16     err_code; /**< Session error code :
+                                     0x0000: none
+                                     Else see table above.
+                                     */
+}avms_data_session_type;
+
+message
+{
+  //! Result Code
+  //! @VERSION 1.0
+  mandatory qmi_response_type resp;    //!< Standard response type
+  //! SESSION INFO
+  //! @VERSION 1.1
+  optional avms_session_info_type avms_session_info; /**< OMA-DM AVMS FOTA Session information */
+  //! OMA-DM AVMS Config
+  //! @VERSION 1.1
+  optional avms_config_info_type  avms_config_info;  /**< OMA-DM AVMS Config information */
+  //! OMA-DM AVMS Notification
+  //! @VERSION 1.1
+  optional avms_notifications_type  avms_notifications;  /**< OMA-DM AVMS Notifications */
+}swi_legato_avms_session_getinfo_resp_msg;
+
+//============================================================================
+/** @COMMAND QMI_SWI_LEGATO_AVMS_EVENT_IND
+    @BRIEF This unsolicited message is sent by the service to
+	a control point that registers for QMI_SWI_LEGATO_AVMS_SET_EVENT_REPORT when any information in the TLV
+  @CMD_VERSION 1.0
+*/
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_EVENT_IND
+//! @TYPE    Indication
+//! @SENDER  Service
+//! @SCOPE
+//----------------------------------------------------------------------------
+
+message {
+  //! OMA-DM AVMS FOTA Session information
+  //! @VERSION 1.1
+  optional avms_session_info_type avms_session_info; /**< OMA-DM AVMS FOTA Session information */
+  //! OMA-DM AVMS Config
+  //! @VERSION 1.1
+  optional avms_config_info_type  avms_config_info;  /**< OMA-DM AVMS Config information */
+  //! OMA-DM AVMS Notification
+  //! @VERSION 1.1
+  optional avms_notifications_type  avms_notifications;  /**< OMA-DM AVMS Notifications */
+  //! AVMS Connection Request
+  //! @VERSION 1.1
+  optional avms_connection_request_type avms_connection_request; /**< AVMS Connection Request */
+  //! OMA-DM WASM parameters changed.
+  //! @VERSION 1.1
+  optional uint32 wams_changed_mask; /**< Mask of WAMS parameters changed. By default set to 0xFF for all changes.
+                                     0x1 - device_login
+                                     0x2 - device_MD5_key
+                                     0x4 - server_login
+                                     0x8 - server_MD5_key
+                                     0x10 - server_URL
+                                     0x20 ¨C Nonce
+                                     0x40 ¨C Application key
+                                     */
+  //! Package ID (relevant to Application binary package).
+  //! @VERSION 1.1
+  optional uint8 package_ID; /**< Package ID of the application binary that this AVMS_EVENT_ID notification is for */
+  //! LWM2M Registration status.
+  //! @VERSION 1.1
+  optional uint8 reg_status; /**<
+                                     0: Need Bootstrap
+                                     1: Bootstrap made
+                                     2: Register made
+                                     3: Update made
+                                     */
+  //! Data session status.
+  //! @VERSION 1.1
+  optional avms_data_session_type avms_data_session; /**< data session status*/
+  //! LWM2M session type.
+  //! @VERSION 1.1
+  optional uint8 session_type; /**<
+                                     0: Bootstrap session
+                                     1: DM session
+                                     */
+} swi_legato_avms_event_ind_msg;
+
+//============================================================================
+/** @COMMAND QMI_SWI_LEGATO_AVMS_SELECTION
+    @BRIEF This message is used to make a selection after the host has received QMI_SWI_LEGATO_AVMS_EVENT_IND.
+  @CMD_VERSION 1.0
+*/
+//============================================================================
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_SELECTION_REQ
+//! @TYPE    Request
+//! @SENDER  Control point
+//----------------------------------------------------------------------------
+message
+{
+  //! User selection
+  //! @VERSION 1.0
+  mandatory uint8 user_input;   /**<
+                                0x01 ¨C Accept
+                                0x02 ¨C Reject
+                                0x03 ¨C Defer
+                                */
+  //! Defer time
+  //! @VERSION 1.0
+  optional uint32 defer_time;   /**<
+                                Defer time in minutes. A value of 0 will cause the prompt to be resent immediately.
+                                */
+  //! Client operation flag after accept
+  //! @VERSION 1.0
+  optional uint8 client_perform_operation_flag;   /**<
+                                                   0: if modem performs the operation (download or update)
+                                                   1: if client performs the operation (download or update)
+                                                   */
+  //! Package ID (relevant to Application binary package)
+  //! @VERSION 1.0
+  optional uint8 package_ID;       /**<
+                                    Package ID of the application binary that the client is referring to for its selection.
+                                    If this field is absent,
+                                    the modem will assume the package of the most recent AVMS_EVENT_ID notification
+                                    */
+  //! Reject reason
+  //! @VERSION 1.0
+  optional uint16 reject_reason;       /**< Reject reason */
+}swi_legato_avms_selection_req_msg;
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_SELECTION_RESP
+//! @TYPE    Response
+//! @SENDER  Service
+//----------------------------------------------------------------------------
+message
+{
+  //! Result Code
+  //! @VERSION 1.0
+  mandatory qmi_response_type resp;    //!< Standard response type
+}swi_legato_avms_selection_resp_msg;
+
+//============================================================================
+/** @COMMAND QMI_SWI_LEGATO_AVMS_GET_SETTINGS
+    @BRIEF This message gets settings related to OMA DM AVMS
+  @CMD_VERSION 1.0
+*/
+//============================================================================
+
+const APN_MAX_LEN = 49;
+const UNAME_MAX_LEN = 29;
+const PWD_MAX_LEN = 29;
+
+struct
+{
+  //! @VERSION 1.0
+  uint8   apn_len;               /**< Length of APN string in bytes */
+  //! @VERSION 1.0
+  char     apn[APN_MAX_LEN];     /**< APN in ASCII */
+  //! @VERSION 1.0
+  uint8   uname_len;             /**< Length of Username string in bytes */
+  //! @VERSION 1.0
+  char     uname[UNAME_MAX_LEN]; /**< Username in ASCII */
+  //! @VERSION 1.0
+  uint8   pwd_len;               /**< Length of Username string in bytes */
+  //! @VERSION 1.0
+  char     pwd[PWD_MAX_LEN];    /**< Username in ASCII */
+}apn_config_type;
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_GET_SETTINGS_REQ
+//! @TYPE    Request
+//! @SENDER  Control point
+//----------------------------------------------------------------------------
+message
+{
+  //! GET_SETTINGS
+  //! @VERSION 1.0
+}swi_legato_avms_get_setting_req_msg;
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_GET_SETTINGS_RESP
+//! @TYPE    Response
+//! @SENDER  Service
+//----------------------------------------------------------------------------
+message
+{
+  //! OMA-DM Enabled
+  //! @VERSION 1.0
+  mandatory uint32 enabled;     /**<
+                                32-bit bitmask of supported sessions:
+                                0x00000010: Client Initiated FUMO (CIFUMO)
+                                0x00000020: Network Initiated  FUMO (NIFUMO)
+                                */
+  //! Result Code
+  //! @VERSION 1.0
+  mandatory qmi_response_type resp;    //!< Standard response type
+  //! FOTA Automatic Download
+  //! @VERSION 1.0
+  mandatory uint8 fw_autodload; /**<
+                                0x00 ¨C FALSE
+                                0x01 ¨C TRUE
+                                */
+  //! FOTA Automatic Update
+  //! @VERSION 1.0
+  mandatory uint8 fw_autoupdate;/**<
+                                0x00 ¨C FALSE
+                                0x01 ¨C TRUE
+                                */
+  //! OMA Automatic UI Alert Response
+  //! @VERSION 1.0
+  mandatory uint8 fw_autosdm;   /**<
+                                0x00 ¨C DISABLED
+                                0x01 ¨C ENABLED ACCEPT
+                                0x02 ¨C ENABLED REJECT
+                                */
+  //! Automatic Connect
+  //! @VERSION 1.0
+  mandatory uint8 autoconnect;    /**<
+                                  0x00 ¨C FALSE
+                                  0x01 ¨C TRUE
+                                  */
+  //! Polling Timer
+  //! @VERSION 1.0
+  optional uint32 polling_timer;   /**<0-525600 minutes; 0: disabled */
+
+  //! Connection Retry Timer
+  //! @VERSION 1.0
+  optional uint16 retry_timer[8];   /**<0-20160 minutes; retry_timer[0]=0 to disable */
+  //! APN Configuration
+  //! @VERSION 1.0
+  optional apn_config_type apn_config; /**< APN Configuration */
+}swi_legato_avms_get_setting_resp_msg;
+
+//============================================================================
+/** @COMMAND QMI_SWI_LEGATO_AVMS_SET_SETTINGS
+    @BRIEF This message gets settings related to OMA DM AVMS
+  @CMD_VERSION 1.0
+*/
+//============================================================================
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_SET_SETTINGS_REQ
+//! @TYPE    Request
+//! @SENDER  Control point
+//----------------------------------------------------------------------------
+message
+{
+  //! FOTA Automatic Download
+  //! @VERSION 1.0
+  mandatory uint8 fw_autodload;  /**<
+                                0x00 ¨C FALSE
+                                0x01 ¨C TRUE
+                                */
+  //! FOTA Automatic Update
+  //! @VERSION 1.0
+  mandatory uint8 fw_autoupdate;/**<
+                                0x00 ¨C FALSE
+                                0x01 ¨C TRUE
+                                */
+  //! Automatic Connect
+  //! @VERSION 1.0
+  mandatory uint8 autoconnect;  /**<
+                                0x00 ¨C FALSE
+                                0x01 ¨C TRUE
+                                */
+  //! OMA Automatic UI Alert Response
+  //! @VERSION 1.0
+  optional uint8 fw_autosdm;   /**<
+                                0x00 ¨C DISABLED
+                                0x01 ¨C ENABLED ACCEPT
+                                0x02 ¨C ENABLED REJECT
+                                */
+  //! Polling Timer
+  //! @VERSION 1.0
+  optional uint32 polling_timer;   /**<0-525600 minutes; 0: disabled */
+
+  //! Connection Retry Timer
+  //! @VERSION 1.0
+  optional uint16 retry_timer[8];   /**<0-20160 minutes; retry_timer[0]=0 to disable */
+  //! APN Configuration
+  //! @VERSION 1.0
+  optional apn_config_type apn_config; /**< APN Configuration */
+}swi_legato_avms_set_setting_req_msg;
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_SET_SETTINGS_RESP
+//! @TYPE    Response
+//! @SENDER  Service
+//----------------------------------------------------------------------------
+message
+{
+  //! Result Code
+  //! @VERSION 1.0
+  mandatory qmi_response_type resp;    //!< Standard response type
+}swi_legato_avms_set_setting_resp_msg;
+
+//============================================================================
+/** @COMMAND QMI_SWI_LEGATO_AVMS_SET_EVENT_REPORT
+    @BRIEF This message is used to register for the QMI_SWI_LEGATO_AVMS_EVENT_IND
+  @CMD_VERSION 1.0
+*/
+//============================================================================
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_SET_EVENT_REPORT_REQ
+//! @TYPE    Request
+//! @SENDER  Control point
+//----------------------------------------------------------------------------
+message
+{
+  //! FOTA Automatic Download
+  //! @VERSION 1.0
+}swi_legato_avms_set_event_report_req_msg;
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_SET_EVENT_REPORT_RESP
+//! @TYPE    Response
+//! @SENDER  Service
+//----------------------------------------------------------------------------
+message
+{
+  //! Result Code
+  //! @VERSION 1.0
+  mandatory qmi_response_type resp;    //!< Standard response type
+}swi_legato_avms_set_event_report_resp_msg;
+
+//============================================================================
+/** @COMMAND QMI_SWI_LEGATO_AVMS_GET_WAMS
+    @BRIEF This message is retrieves only those that are used by the application processor
+  @CMD_VERSION 1.0
+*/
+//============================================================================
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_GET_WAMS_REQ
+//! @TYPE    Request
+//! @SENDER  Control point
+//----------------------------------------------------------------------------
+message
+{
+  //! WAMS parameters are pre-programmed with AT+WAMS at the factory
+  //! @VERSION 1.0
+}swi_legato_avms_get_wams_req_msg;
+
+struct
+{
+  //! Device login. ID specific to each device
+  //! @VERSION 1.0
+  uint8 device_login[16];
+  //! Device MD5 key (password)
+  //! @VERSION 1.0
+  uint8 device_MD5_key[16];
+  //! Server login
+  //! @VERSION 1.0
+  uint8 server_login[16];
+  //! Server password
+  //! @VERSION 1.0
+  uint8 server_MD5_key[16];
+  //! ASCII string of the AVMS server URL
+  //! @VERSION 1.0
+  uint8 server_URL[80];
+  //! Complete Nonce value to be used for next authentication
+  //! @VERSION 1.0
+  uint8 Nonce[16];
+}wams_service_type;
+
+struct
+{
+  //! Number of parameter sets that follow
+  //! @VERSION 1.0
+  uint8 Num_instance;
+  //! Index of the key
+  //! @VERSION 1.0
+  uint8 key_index;
+  //! Version of the key
+  //! @VERSION 1.0
+  uint8 key_version;
+  //! Length of the key
+  //! @VERSION 1.0
+  uint16 key_length;
+  //! Key data
+  //! @VERSION 1.0
+  uint8 key_data[294];
+  //! Spare meta data
+  //! @VERSION 1.0
+  uint8 key_meta_data[8];
+}wams_key_type;
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_GET_WAMS_RESP
+//! @TYPE    Response
+//! @SENDER  Service
+//----------------------------------------------------------------------------
+message
+{
+  //! WAMS parameters
+  //! @VERSION 1.0
+  mandatory wams_service_type wams_service;  /**<
+                                             WAMS parameters relevant to the application processor side
+                                             */
+  //! Result Code
+  //! @VERSION 1.0
+  mandatory qmi_response_type resp;    //!< Standard response type
+  //! Application public key
+  //! @VERSION 1.0
+  mandatory wams_key_type wams_key;  /**<
+                                        Application public key
+                                      */
+}swi_legato_avms_get_wams_resp_msg;
+
+//============================================================================
+/** @COMMAND QMI_SWI_LEGATO_AVMS_OPEN_NONCE
+    @BRIEF This message informs the modem that the application side is
+     about to enter the authentication phase
+  @CMD_VERSION 1.0
+*/
+//============================================================================
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_OPEN_NONCE_REQ
+//! @TYPE    Request
+//! @SENDER  Control point
+//----------------------------------------------------------------------------
+message
+{
+  //! Open nonce procedure
+  //! @VERSION 1.0
+}swi_legato_avms_open_nonce_req_msg;
+
+struct
+{
+  //! The delta binary of the nonce value
+  //! @VERSION 1.0
+  uint8 delta_nonce[16];
+  //! CRC of the actual nonce (for comparison¡¯s purpose)
+  //! @VERSION 1.0
+  uint32 crc_actual_nonce;
+}Delta_nonce_value;
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_OPEN_NONCE_RESP
+//! @TYPE    Response
+//! @SENDER  Service
+//----------------------------------------------------------------------------
+message
+{
+  //! Delta binary and CRC
+  //! @VERSION 1.0
+  mandatory Delta_nonce_value Delta_nonce;  /**<
+                                             Delta binary and CRC
+                                             */
+  //! Result Code
+  //! @VERSION 1.0
+  mandatory qmi_response_type resp;    //!< Standard response type
+}swi_legato_avms_open_nonce_resp_msg;
+
+//============================================================================
+/** @COMMAND QMI_SWI_LEGATO_AVMS_CLOSE_NONCE
+    @BRIEF This message informs the modem that the application side is
+     about to enter the authentication phase
+  @CMD_VERSION 1.0
+*/
+//============================================================================
+const NONCE_LEN = 0x10;
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_CLOSE_NONCE_REQ
+//! @TYPE    Request
+//! @SENDER  Control point
+//----------------------------------------------------------------------------
+message
+{
+  //! The delta binary of the nonce value
+  //! @VERSION 1.0
+  mandatory uint8 delta_nonce[NONCE_LEN];
+}swi_legato_avms_close_nonce_req_msg;
+
+//! @MSG     QMI_SWI_LEGATO_AVMS_CLOSE_NONCE_RESP
+//! @TYPE    Response
+//! @SENDER  Service
+//----------------------------------------------------------------------------
+message
+{
+  //! Result Code
+  //! @VERSION 1.0
+  mandatory qmi_response_type resp;    //!< Standard response type
+}swi_legato_avms_close_nonce_resp_msg;
+
+//====================================================================
+// Service definition
+//====================================================================
+service swi_legato {
+  //! @ID QMI_SWI_LEGATO_TEST
+  swi_legato_test_req_msg                   QMI_SWI_LEGATO_TEST_REQ,
+  swi_legato_test_resp_msg                  QMI_SWI_LEGATO_TEST_RESP = 0x0001;
+  //! @ID QMI_SWI_LEGATO_AVMS_SESSION_START
+  swi_legato_avms_session_start_req_msg QMI_SWI_LEGATO_AVMS_SESSION_START_REQ,
+  swi_legato_avms_session_start_resp_msg QMI_SWI_LEGATO_AVMS_SESSION_START_RESP=0x00A0;
+  //! @ID QMI_SWI_LEGATO_AVMS_SESSION_STOP
+  swi_legato_avms_session_stop_req_msg QMI_SWI_LEGATO_AVMS_SESSION_STOP_REQ,
+  swi_legato_avms_session_stop_resp_msg QMI_SWI_LEGATO_AVMS_SESSION_STOP_RESP;
+  //! @ID QMI_SWI_LEGATO_AVMS_SESSION_GETINFO
+  swi_legato_avms_session_getinfo_req_msg QMI_SWI_LEGATO_AVMS_SESSION_GETINFO_REQ,
+  swi_legato_avms_session_getinfo_resp_msg QMI_SWI_LEGATO_AVMS_SESSION_GETINFO_RESP;
+  //! @ID QMI_SWI_LEGATO_AVMS_EVENT_IND
+  swi_legato_avms_event_ind_msg QMI_SWI_LEGATO_AVMS_EVENT_IND;
+  //! @ID QMI_SWI_LEGATO_AVMS_SELECTION
+  swi_legato_avms_selection_req_msg QMI_SWI_LEGATO_AVMS_SELECTION_REQ,
+  swi_legato_avms_selection_resp_msg QMI_SWI_LEGATO_AVMS_SELECTION_RESP;
+  //! @ID QMI_SWI_LEGATO_AVMS_SET_SETTINGS
+  swi_legato_avms_set_setting_req_msg QMI_SWI_LEGATO_AVMS_SET_SETTINGS_REQ,
+  swi_legato_avms_set_setting_resp_msg QMI_SWI_LEGATO_AVMS_SET_SETTINGS_RESP;
+  //! @ID QMI_SWI_LEGATO_AVMS_GET_SETTINGS
+  swi_legato_avms_get_setting_req_msg QMI_SWI_LEGATO_AVMS_GET_SETTINGS_REQ,
+  swi_legato_avms_get_setting_resp_msg QMI_SWI_LEGATO_AVMS_GET_SETTINGS_RESP;
+  //! @ID QMI_SWI_LEGATO_AVMS_SET_EVENT_REPORT
+  swi_legato_avms_set_event_report_req_msg QMI_SWI_LEGATO_AVMS_SET_EVENT_REPORT_REQ,
+  swi_legato_avms_set_event_report_resp_msg QMI_SWI_LEGATO_AVMS_SET_EVENT_REPORT_RESP;
+  //! @ID QMI_SWI_LEGATO_AVMS_GET_WAMS
+  swi_legato_avms_get_wams_req_msg QMI_SWI_LEGATO_AVMS_GET_WAMS_REQ,
+  swi_legato_avms_get_wams_resp_msg QMI_SWI_LEGATO_AVMS_GET_WAMS_RESP;
+  //! @ID QMI_SWI_LEGATO_AVMS_OPEN_NONCE
+  swi_legato_avms_open_nonce_req_msg QMI_SWI_LEGATO_AVMS_OPEN_NONCE_REQ,
+  swi_legato_avms_open_nonce_resp_msg QMI_SWI_LEGATO_AVMS_OPEN_NONCE_RESP;
+  //! @ID QMI_SWI_LEGATO_AVMS_CLOSE_NONCE
+  swi_legato_avms_close_nonce_req_msg QMI_SWI_LEGATO_AVMS_CLOSE_NONCE_REQ,
+  swi_legato_avms_close_nonce_resp_msg QMI_SWI_LEGATO_AVMS_CLOSE_NONCE_RESP;
+} = QMI_SERVICE_SWI_LEGATO_ID;
+

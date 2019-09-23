@@ -1,0 +1,175 @@
+# Build script for application 'atQmiLinker'
+
+# == Auto-generated file.  Do not edit. ==
+
+builddir =/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/atQmiLinker
+
+cFlags =  -O2 -fno-omit-frame-pointer -I /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/atQmiLinker -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/include -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/modemServices -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/atQmiLinker/src
+
+cxxFlags = -I /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/atQmiLinker -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/include -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/modemServices -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/atQmiLinker/src
+
+ldFlags =
+
+target = wp77xx
+
+ifgenFlags =  --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/include --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/modemServices --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/atQmiLinker/src
+
+rule CompileC
+  description = Compiling C source
+  depfile = $out.d
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -MMD -MF $out.d -c $in -o $out -DLE_FILENAME=`basename $in` -Wall -fPIC -Werror -fvisibility=hidden -DMK_TOOLS_BUILD  -DLEGATO_EMBEDDED -g $cFlags
+
+rule CompileCxx
+  description = Compiling C++ source
+  depfile = $out.d
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++ --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -MMD -MF $out.d -c $in -o $out -DLE_FILENAME=`basename $in` -Wall -fPIC -Werror -fvisibility=hidden  -DMK_TOOLS_BUILD  -DLEGATO_EMBEDDED -g $cxxFlags
+
+rule LinkCLib
+  description = Linking C library
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -Wl,--build-id -g -shared -o $out $in $ldFlags $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug $out
+
+rule LinkCxxLib
+  description = Linking C++ library
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++ --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -Wl,--build-id -g -shared -o $out $in $ldFlags $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug $out
+
+rule LinkCExe
+  description = Linking C executable
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gcc --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -Wl,--build-id -g -fPIE -pie -o $out $in $ldFlags -g $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug $out
+
+rule LinkCxxExe
+  description = Linking C++ executable
+  command =  /opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-g++ --sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi -Wl,--build-id -g -fPIE -pie -o $out $in $ldFlags -g $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug $out
+
+rule CompileJava
+  description = Compiling Java source
+  command = javac -cp $classPath -d `dirname $out` $in && touch $out
+
+rule MakeJar
+  description = Making JAR file
+  command = INDIR=`dirname $in`; find $$INDIR -name '*.class' -printf "-C $$INDIR\n%P\n"|xargs jar -cf $out
+
+rule MakeKernelModule
+  description = Build kernel driver module
+  depfile = $out.d
+  command = make -C $in
+
+rule BuildExternal
+  description = Running external build step
+  command = cd $builddir/$workingdir && $
+            export CFLAGS="--sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi $cFlags" $
+            CXXFLAGS="--sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi $cxxFlags" $
+            LDFLAGS="--sysroot=/opt/swi/SWI9X07Y_02.25.02.01/sysroots/armv7a-neon-poky-linux-gnueabi $ldFlags" $
+            PATH="$${LEGATO_ROOT}/bin:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/usr/bin:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/bin:/opt/swi/SWI9X07Y_02.25.02.01/sysroots/x86_64-pokysdk-linux/sbin:$$PATH" $
+            && $
+            $externalCommand
+
+rule GenInterfaceCode
+  description = Generating IPC interface code
+  command = ifgen --output-dir $outputDir $ifgenFlags $in
+
+rule GenPyApiCExtension
+  description = Generating Python API C Extension
+  command = cextgenerator.py $in -o $workDir > /dev/null
+rule CopyFile
+  description = Copying file
+  command = cp -d -f -T $in $out
+
+rule RegenNinjaScript
+  description = Regenerating build script
+  generator = 1
+  command = mkapp --dont-run-ninja "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/atQmiLinker/src/atQmiLinker.adef" "-b" "-i" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/modemServices" "-t" "wp77xx" "-o" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/proprietary/atQmiLinker" "-w" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/atQmiLinker" "-t" "wp77xx" "-d" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/debug" "--cflags= -O2 -fno-omit-frame-pointer"
+
+rule BundleFile
+  description = Bundling file
+  command = legato-install -m $modeFlags $in $out
+
+rule MakeAppInfoProperties
+  description = Creating info.properties
+  command = rm -f $out && $
+            md5=$$( ( cd $workingDir/staging && $
+                      find -P -print0 |LC_ALL=C sort -z && $
+                      find -P -type f -print0 |LC_ALL=C sort -z |xargs -0 md5sum && $
+                      find -P -type l -print0 |LC_ALL=C sort -z |xargs -0 -r -n 1 readlink $
+                    ) | md5sum) && $
+            md5=$${md5%% *} && $
+            ( echo "app.name=$name" && $
+              echo "app.md5=$$md5" && $
+              echo "app.version=$version" && $
+              echo "legato.version=`cat $$LEGATO_ROOT/version`" $
+            ) > $out
+
+rule PackApp
+  description = Packaging app
+  command = $
+            mtime=`stat -c %Y $adefPath` && $
+            find $workingDir/staging -exec touch --no-dereference --date=@$$mtime {} \; && $
+            (cd $workingDir/staging && find . -print0 | LC_ALL=C sort -z |tar --no-recursion --null -T - -cjf - ) > $workingDir/$name.$target && $
+            tarballSize=`stat -c '%s' $workingDir/$name.$target` && $
+            md5=`grep '^app.md5=' $in | sed 's/^app.md5=//'` && $
+            ( printf '{\n' && $
+              printf '"command":"updateApp",\n' && $
+              printf '"name":"$name",\n' && $
+              printf '"version":"$version",\n' && $
+              printf '"md5":"%s",\n' "$$md5" && $
+              printf '"size":%s\n' "$$tarballSize" && $
+              printf '}' && $
+              cat $workingDir/$name.$target $
+            ) > $out
+
+rule BinPackApp
+  description = Packaging app for distribution.
+  command = cp -r $stagingDir/* $workingDir/ && $
+            rm $workingDir/info.properties $workingDir/root.cfg && $
+            mtime=`stat -c %Y $adefPath` && $
+            find $workingDir -exec touch  --no-dereference --date=@$$mtime {} \; && $
+            (cd $workingDir/ && find . -print0 |LC_ALL=C sort -z  |tar --no-recursion --null -T - -cjf - ) > $out
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/atQmiLinker/staging/read-only/lib/libComponent_atQmiLinker.so: LinkCLib $builddir/component/7b0be02362d2ba400ba22821116e2f4e/obj/bee15e3769403c8f02e7465faecba906.o $builddir/component/7b0be02362d2ba400ba22821116e2f4e/obj/500118f3bbef0e7e747da6f20b8ee228.o $builddir/component/7b0be02362d2ba400ba22821116e2f4e/obj/5e628431a58fb9c375b32d951ad94d05.o $builddir/component/7b0be02362d2ba400ba22821116e2f4e/obj/_componentMain.c.o | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib/liblegato.so
+  ldFlags =  -lqmi -lqmi_client_qmux /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/lib/libqmiservices.a /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/lib/libqmi_cci.a -L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/atQmiLinker/staging/read-only/lib -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib" "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -lm
+
+build $builddir/component/7b0be02362d2ba400ba22821116e2f4e/obj/bee15e3769403c8f02e7465faecba906.o: CompileC /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/atQmiLinker/src/atQmiLinker/utils/utils.c
+  cFlags = $cFlags -I$builddir/component/7b0be02362d2ba400ba22821116e2f4e/src -DLE_COMPONENT_NAME=atQmiLinker -DLE_LOG_SESSION=atQmiLinker_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=atQmiLinker_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _atQmiLinker_COMPONENT_INIT()" -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/atQmiLinker/src/atQmiLinker -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/inc -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/inc/framework -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/inc/services
+
+build $builddir/component/7b0be02362d2ba400ba22821116e2f4e/obj/500118f3bbef0e7e747da6f20b8ee228.o: CompileC /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/atQmiLinker/src/atQmiLinker/wp77xx/atForward.c
+  cFlags = $cFlags -I$builddir/component/7b0be02362d2ba400ba22821116e2f4e/src -DLE_COMPONENT_NAME=atQmiLinker -DLE_LOG_SESSION=atQmiLinker_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=atQmiLinker_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _atQmiLinker_COMPONENT_INIT()" -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/atQmiLinker/src/atQmiLinker -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/inc -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/inc/framework -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/inc/services
+
+build $builddir/component/7b0be02362d2ba400ba22821116e2f4e/obj/5e628431a58fb9c375b32d951ad94d05.o: CompileC /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/atQmiLinker/src/atQmiLinker/atLinker.c
+  cFlags = $cFlags -I$builddir/component/7b0be02362d2ba400ba22821116e2f4e/src -DLE_COMPONENT_NAME=atQmiLinker -DLE_LOG_SESSION=atQmiLinker_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=atQmiLinker_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _atQmiLinker_COMPONENT_INIT()" -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/atQmiLinker/src/atQmiLinker -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/inc -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/inc/framework -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/inc/services
+
+build $builddir/component/7b0be02362d2ba400ba22821116e2f4e/obj/_componentMain.c.o: CompileC $builddir/component/7b0be02362d2ba400ba22821116e2f4e/src/_componentMain.c
+  cFlags = $cFlags -I$builddir/component/7b0be02362d2ba400ba22821116e2f4e/src -DLE_COMPONENT_NAME=atQmiLinker -DLE_LOG_SESSION=atQmiLinker_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=atQmiLinker_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _atQmiLinker_COMPONENT_INIT()"
+
+build $builddir/app/atQmiLinker/obj/atQmiLinker/_main.c.o: CompileC /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/atQmiLinker/app/atQmiLinker/src/atQmiLinker/_main.c
+  cFlags = $cFlags -DLE_COMPONENT_NAME=atQmiLinker_exe -DLE_LOG_SESSION=atQmiLinker_exe_LogSession -DLE_LOG_LEVEL_FILTER_PTR=atQmiLinker_exe_LogLevelFilterPtr 
+
+build $builddir/app/atQmiLinker/obj/atQmiLinker/atQmiLinker: LinkCExe $builddir/app/atQmiLinker/obj/atQmiLinker/_main.c.o | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/atQmiLinker/staging/read-only/lib/libComponent_atQmiLinker.so /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/framework/lib/liblegato.so /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/$target/framework/lib/liblegato.so
+  ldFlags = -rdynamic -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib" -L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/atQmiLinker/staging/read-only/lib "-L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/atQmiLinker/staging/read-only/lib" -lComponent_atQmiLinker -lqmi -lqmi_client_qmux /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/lib/libqmiservices.a /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/proprietary/qct/wp77xx/lib/libqmi_cci.a "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -ldl -lm $ldFlags
+
+build $builddir/app/atQmiLinker/staging/read-only/lib/libComponent_atQmiLinker.so : BundleFile /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/atQmiLinker/staging/read-only/lib/libComponent_atQmiLinker.so
+  modeFlags = u+rw+x,g+r+x,o+x+r-w
+
+build $builddir/app/atQmiLinker/staging/read-only/bin/atQmiLinker : BundleFile $builddir/app/atQmiLinker/obj/atQmiLinker/atQmiLinker
+  modeFlags = u+rw+x,g+r+x,o+x+r-w
+
+build $builddir/app/atQmiLinker/staging/info.properties : MakeAppInfoProperties | $builddir/app/atQmiLinker/staging/read-only/lib/libComponent_atQmiLinker.so $builddir/app/atQmiLinker/staging/read-only/bin/atQmiLinker $builddir/app/atQmiLinker/staging/root.cfg
+  name = atQmiLinker
+  version = 
+  workingDir = $builddir/app/atQmiLinker
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/proprietary/atQmiLinker/atQmiLinker.$target.update: PackApp $builddir/app/atQmiLinker/staging/info.properties
+  name = atQmiLinker
+  adefPath = /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/atQmiLinker/src/atQmiLinker.adef
+  version = 
+  workingDir = $builddir/app/atQmiLinker
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/proprietary/atQmiLinker/atQmiLinker.$target.app: BinPackApp $builddir/app/atQmiLinker/staging/info.properties
+  adefPath = /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/atQmiLinker/src/atQmiLinker.adef
+  stagingDir = $builddir/app/atQmiLinker/staging
+  workingDir = $builddir/atQmiLinker
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/apps/proprietary/atQmiLinker/build.ninja: RegenNinjaScript | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/apps/proprietary/atQmiLinker/src/atQmiLinker/Component.cdef
+

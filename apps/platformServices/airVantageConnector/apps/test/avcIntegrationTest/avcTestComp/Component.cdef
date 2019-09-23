@@ -1,0 +1,12 @@
+requires:
+{
+    api:
+    {
+        airVantage/le_avc.api
+    }
+}
+
+sources:
+{
+    avcTest.c
+}

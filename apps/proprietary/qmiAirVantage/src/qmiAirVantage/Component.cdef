@@ -1,0 +1,31 @@
+requires:
+{
+    api:
+    {
+        atServices/le_atServer.api
+        airVantage/le_avc.api
+        modemServices/le_mdc.api
+        le_data.api
+    }
+}
+
+sources:
+{
+    qmiAirVantage.c
+    swi_legato_service_v01.c
+}
+
+cflags:
+{
+    -I${CURDIR}
+    -I${LEGATO_PROPRIETARY_QCT_DIR}/inc
+    -I${LEGATO_PROPRIETARY_QCT_DIR}/inc/framework
+    -I${LEGATO_PROPRIETARY_QCT_DIR}/inc/services
+}
+
+ldflags:
+{
+    -lqmi
+    -lqmi_csi
+    -lqmi_sap
+}

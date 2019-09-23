@@ -1,0 +1,4 @@
+# ninja log v5
+0	92	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/tools/xattr/obj/1e615f4f2b9d1bf98bed18df9043fb2c.o	420cf5d415068f7f
+0	119	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/tools/xattr/obj/xattr/_main.c.o	af9c1cfe8ecf4e5
+119	148	0	/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/bin/xattr	a9f94d4fb9e275a

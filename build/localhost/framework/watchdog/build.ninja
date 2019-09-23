@@ -1,0 +1,178 @@
+# Build script for executable 'watchdog'
+
+# == Auto-generated file.  Do not edit. ==
+
+builddir = /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/watchdog
+
+cFlags =  -I /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/watchdog -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/include -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato/linux -I.
+
+cxxFlags =  -I /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/watchdog -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/include -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato/linux -I.
+
+ldFlags = 
+
+target = localhost
+
+ifgenFlags =  --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/include --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato --import-dir /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato/linux --import-dir .
+
+rule CompileC
+  description = Compiling C source
+  depfile = $out.d
+  command =  /usr/bin//gcc --sysroot=/ -MMD -MF $out.d -c $in -o $out -DLE_FILENAME=`basename $in` -Wall -fPIC -Werror -fvisibility=hidden -DMK_TOOLS_BUILD -g $cFlags
+
+rule CompileCxx
+  description = Compiling C++ source
+  depfile = $out.d
+  command =  /usr/bin//g++ --sysroot=/ -MMD -MF $out.d -c $in -o $out -DLE_FILENAME=`basename $in` -Wall -fPIC -Werror -fvisibility=hidden  -DMK_TOOLS_BUILD -g $cxxFlags
+
+rule LinkCLib
+  description = Linking C library
+  command =  /usr/bin//gcc --sysroot=/ -Wl,--build-id -g -shared -o $out $in $ldFlags $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/debug $out
+
+rule LinkCxxLib
+  description = Linking C++ library
+  command =  /usr/bin//g++ --sysroot=/ -Wl,--build-id -g -shared -o $out $in $ldFlags $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/debug $out
+
+rule LinkCExe
+  description = Linking C executable
+  command =  /usr/bin//gcc --sysroot=/ -Wl,--build-id -g -fPIE -pie -o $out $in $ldFlags -g $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/debug $out
+
+rule LinkCxxExe
+  description = Linking C++ executable
+  command =  /usr/bin//g++ --sysroot=/ -Wl,--build-id -g -fPIE -pie -o $out $in $ldFlags -g $
+      && splitdebug -d /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/debug $out
+
+rule CompileJava
+  description = Compiling Java source
+  command = javac -cp $classPath -d `dirname $out` $in && touch $out
+
+rule MakeJar
+  description = Making JAR file
+  command = INDIR=`dirname $in`; find $$INDIR -name '*.class' -printf "-C $$INDIR\n%P\n"|xargs jar -cf $out
+
+rule MakeKernelModule
+  description = Build kernel driver module
+  depfile = $out.d
+  command = make -C $in
+
+rule BuildExternal
+  description = Running external build step
+  command = cd $builddir/$workingdir && $
+            export CFLAGS="--sysroot=/ $cFlags" $
+            CXXFLAGS="--sysroot=/ $cxxFlags" $
+            LDFLAGS="--sysroot=/ $ldFlags" $
+            PATH="$${LEGATO_ROOT}/bin:/usr/bin/:$$PATH" $
+            && $
+            $externalCommand
+
+rule GenInterfaceCode
+  description = Generating IPC interface code
+  command = ifgen --output-dir $outputDir $ifgenFlags $in
+
+rule GenPyApiCExtension
+  description = Generating Python API C Extension
+  command = cextgenerator.py $in -o $workDir > /dev/null
+rule CopyFile
+  description = Copying file
+  command = cp -d -f -T $in $out
+
+rule RegenNinjaScript
+  description = Regenerating build script
+  generator = 1
+  command = mkexe --dont-run-ninja "-o" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/bin/watchdog" "-t" "localhost" "-w" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/watchdog" "-l" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib" "-d" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/debug" "-i" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato" "-i" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/liblegato/linux" "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/daemons/linux/watchdog/watchdogDaemon"
+
+build $builddir/obj/watchdog/_main.c.o: CompileC /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/watchdog/src/watchdog/_main.c
+  cFlags = $cFlags -DLE_COMPONENT_NAME=watchdog_exe -DLE_LOG_SESSION=watchdog_exe_LogSession -DLE_LOG_LEVEL_FILTER_PTR=watchdog_exe_LogLevelFilterPtr 
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/bin/watchdog: LinkCExe $builddir/obj/watchdog/_main.c.o | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib/libComponent_le_pa_wdog.so /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib/liblegato.so /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib/libComponent_watchdogDaemon.so /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib/liblegato.so /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/$target/framework/lib/liblegato.so
+  ldFlags = -rdynamic -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib:$$LEGATO_BUILD/framework/lib" -L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib "-L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib" -lComponent_watchdogDaemon "-L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib" -lComponent_le_pa_wdog "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -ldl -lm $ldFlags
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib/libComponent_le_pa_wdog.so: LinkCLib $builddir/component/3d79f1b021de97554e24f09747710e5a/obj/3b9946137c56cbd6f7956613f4752df5.o $builddir/component/3d79f1b021de97554e24f09747710e5a/obj/_componentMain.c.o | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib/liblegato.so
+  ldFlags =  -L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib:$$LEGATO_BUILD/framework/lib" "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -lm
+
+build $builddir/component/3d79f1b021de97554e24f09747710e5a/obj/3b9946137c56cbd6f7956613f4752df5.o: CompileC /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/platformAdaptor/wdog/linux/components/le_pa_wdog/pa_wdog.c
+  cFlags = $cFlags -I$builddir/component/3d79f1b021de97554e24f09747710e5a/src -DLE_COMPONENT_NAME=le_pa_wdog -DLE_LOG_SESSION=le_pa_wdog_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=le_pa_wdog_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _le_pa_wdog_COMPONENT_INIT()" -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/daemons/linux/watchdog/inc
+
+build $builddir/component/3d79f1b021de97554e24f09747710e5a/obj/_componentMain.c.o: CompileC $builddir/component/3d79f1b021de97554e24f09747710e5a/src/_componentMain.c
+  cFlags = $cFlags -I$builddir/component/3d79f1b021de97554e24f09747710e5a/src -DLE_COMPONENT_NAME=le_pa_wdog -DLE_LOG_SESSION=le_pa_wdog_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=le_pa_wdog_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _le_pa_wdog_COMPONENT_INIT()"
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib/libComponent_watchdogDaemon.so: LinkCLib $builddir/component/b6f9eaed663e04cf41785cb141e2760e/obj/d2d78831bb8d4005360d5d858cd11d49.o $builddir/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_client.c.o $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_client.c.o $builddir/api/66a22b4697d3209215670cccbbabc881/client/le_appInfo_client.c.o $builddir/api/37f6a7c6edbe6720bebf241146796263/client/configTreeWdog_client.c.o $builddir/api/37f6a7c6edbe6720bebf241146796263/client/logDaemonWdog_client.c.o $builddir/api/37f6a7c6edbe6720bebf241146796263/client/updateDaemonWdog_client.c.o $builddir/api/af61cb3ebebd051744971bf7c9dd3f20/client/wdog_client.c.o $builddir/api/37f6a7c6edbe6720bebf241146796263/client/supervisorWdog_client.c.o $builddir/api/596bab2c1882dc11d0034f6fa66fdefc/server/le_wdog_server.o $builddir/component/b6f9eaed663e04cf41785cb141e2760e/obj/_componentMain.c.o | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib/liblegato.so /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib/libComponent_le_pa_wdog.so /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib/liblegato.so
+  ldFlags =  -L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib -Wl,--enable-new-dtags,-rpath="\$$ORIGIN/../lib:$$LEGATO_BUILD/framework/lib" "-L/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/lib" -lComponent_le_pa_wdog "-L$$LEGATO_BUILD/framework/lib" -llegato -lpthread -lrt -lm
+
+build $builddir/component/b6f9eaed663e04cf41785cb141e2760e/obj/d2d78831bb8d4005360d5d858cd11d49.o: CompileC /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/daemons/linux/watchdog/watchdogDaemon/watchdog.c || $builddir/api/596bab2c1882dc11d0034f6fa66fdefc/server/le_wdog_server.h $builddir/api/596bab2c1882dc11d0034f6fa66fdefc/server/le_wdog_messages.h $builddir/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_interface.h $builddir/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_messages.h $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_interface.h $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_messages.h $builddir/api/66a22b4697d3209215670cccbbabc881/client/le_appInfo_interface.h $builddir/api/66a22b4697d3209215670cccbbabc881/client/le_appInfo_messages.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/configTreeWdog_interface.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/configTreeWdog_messages.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/logDaemonWdog_interface.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/logDaemonWdog_messages.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/updateDaemonWdog_interface.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/updateDaemonWdog_messages.h $builddir/api/af61cb3ebebd051744971bf7c9dd3f20/client/wdog_interface.h $builddir/api/af61cb3ebebd051744971bf7c9dd3f20/client/wdog_messages.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/supervisorWdog_interface.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/supervisorWdog_messages.h $builddir/api/45eaf0d718b1cd816adf04250e307575/client/le_limit_interface.h 
+  cFlags = $cFlags -I$builddir/component/b6f9eaed663e04cf41785cb141e2760e/src -I$builddir/api/596bab2c1882dc11d0034f6fa66fdefc/server -I$builddir/api/0256e50967e8b0c6ce627684edc3c8d5/client -I$builddir/api/b4da49502a09c3a97191d210f2aaee06/client -I$builddir/api/66a22b4697d3209215670cccbbabc881/client -I$builddir/api/37f6a7c6edbe6720bebf241146796263/client -I$builddir/api/37f6a7c6edbe6720bebf241146796263/client -I$builddir/api/37f6a7c6edbe6720bebf241146796263/client -I$builddir/api/af61cb3ebebd051744971bf7c9dd3f20/client -I$builddir/api/37f6a7c6edbe6720bebf241146796263/client -I$builddir/api/45eaf0d718b1cd816adf04250e307575/client -DLE_COMPONENT_NAME=watchdogDaemon -DLE_LOG_SESSION=watchdogDaemon_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=watchdogDaemon_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _watchdogDaemon_COMPONENT_INIT()" -I/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/daemons/linux/watchdog/inc
+
+build $builddir/component/b6f9eaed663e04cf41785cb141e2760e/obj/_componentMain.c.o: CompileC $builddir/component/b6f9eaed663e04cf41785cb141e2760e/src/_componentMain.c
+  cFlags = $cFlags -I$builddir/component/b6f9eaed663e04cf41785cb141e2760e/src -I$builddir/api/596bab2c1882dc11d0034f6fa66fdefc/server -I$builddir/api/0256e50967e8b0c6ce627684edc3c8d5/client -I$builddir/api/b4da49502a09c3a97191d210f2aaee06/client -I$builddir/api/66a22b4697d3209215670cccbbabc881/client -I$builddir/api/37f6a7c6edbe6720bebf241146796263/client -I$builddir/api/37f6a7c6edbe6720bebf241146796263/client -I$builddir/api/37f6a7c6edbe6720bebf241146796263/client -I$builddir/api/af61cb3ebebd051744971bf7c9dd3f20/client -I$builddir/api/37f6a7c6edbe6720bebf241146796263/client -I$builddir/api/45eaf0d718b1cd816adf04250e307575/client -DLE_COMPONENT_NAME=watchdogDaemon -DLE_LOG_SESSION=watchdogDaemon_LogSession  -DLE_LOG_LEVEL_FILTER_PTR=watchdogDaemon_LogLevelFilterPtr  "-DCOMPONENT_INIT=LE_CI_LINKAGE LE_SHARED void _watchdogDaemon_COMPONENT_INIT()"
+
+build $builddir/api/45eaf0d718b1cd816adf04250e307575/client/le_limit_interface.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_limit.api |
+  outputDir = $builddir/api/45eaf0d718b1cd816adf04250e307575/client
+  ifgenFlags = --gen-interface $ifgenFlags
+
+build $builddir/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_client.c.o: CompileC $builddir/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_client.c | $builddir/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_messages.h $builddir/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_interface.h
+  cFlags = $cFlags
+
+build $builddir/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_client.c $builddir/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_interface.h $builddir/api/0256e50967e8b0c6ce627684edc3c8d5/client/le_cfg_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_cfg.api |
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix le_cfg $ifgenFlags
+  outputDir = $builddir/api/0256e50967e8b0c6ce627684edc3c8d5/client
+
+build $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_client.c.o: CompileC $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_client.c | $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_messages.h $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_interface.h $builddir/api/45eaf0d718b1cd816adf04250e307575/client/le_limit_interface.h
+  cFlags = $cFlags -I$builddir/api/45eaf0d718b1cd816adf04250e307575/client
+
+build $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_client.c $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_interface.h $builddir/api/b4da49502a09c3a97191d210f2aaee06/client/le_instStat_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_instStat.api | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_limit.api
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix le_instStat $ifgenFlags
+  outputDir = $builddir/api/b4da49502a09c3a97191d210f2aaee06/client
+
+build $builddir/api/66a22b4697d3209215670cccbbabc881/client/le_appInfo_client.c.o: CompileC $builddir/api/66a22b4697d3209215670cccbbabc881/client/le_appInfo_client.c | $builddir/api/66a22b4697d3209215670cccbbabc881/client/le_appInfo_messages.h $builddir/api/66a22b4697d3209215670cccbbabc881/client/le_appInfo_interface.h $builddir/api/45eaf0d718b1cd816adf04250e307575/client/le_limit_interface.h
+  cFlags = $cFlags -I$builddir/api/45eaf0d718b1cd816adf04250e307575/client
+
+build $builddir/api/66a22b4697d3209215670cccbbabc881/client/le_appInfo_client.c $builddir/api/66a22b4697d3209215670cccbbabc881/client/le_appInfo_interface.h $builddir/api/66a22b4697d3209215670cccbbabc881/client/le_appInfo_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_appInfo.api | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_limit.api
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix le_appInfo $ifgenFlags
+  outputDir = $builddir/api/66a22b4697d3209215670cccbbabc881/client
+
+build $builddir/api/37f6a7c6edbe6720bebf241146796263/client/configTreeWdog_client.c.o: CompileC $builddir/api/37f6a7c6edbe6720bebf241146796263/client/configTreeWdog_client.c | $builddir/api/37f6a7c6edbe6720bebf241146796263/client/configTreeWdog_messages.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/configTreeWdog_interface.h
+  cFlags = $cFlags
+
+build $builddir/api/37f6a7c6edbe6720bebf241146796263/client/configTreeWdog_client.c $builddir/api/37f6a7c6edbe6720bebf241146796263/client/configTreeWdog_interface.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/configTreeWdog_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/watchdog/frameworkWdog.api |
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix configTreeWdog $ifgenFlags
+  outputDir = $builddir/api/37f6a7c6edbe6720bebf241146796263/client
+
+build $builddir/api/37f6a7c6edbe6720bebf241146796263/client/logDaemonWdog_client.c.o: CompileC $builddir/api/37f6a7c6edbe6720bebf241146796263/client/logDaemonWdog_client.c | $builddir/api/37f6a7c6edbe6720bebf241146796263/client/logDaemonWdog_messages.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/logDaemonWdog_interface.h
+  cFlags = $cFlags
+
+build $builddir/api/37f6a7c6edbe6720bebf241146796263/client/logDaemonWdog_client.c $builddir/api/37f6a7c6edbe6720bebf241146796263/client/logDaemonWdog_interface.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/logDaemonWdog_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/watchdog/frameworkWdog.api |
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix logDaemonWdog $ifgenFlags
+  outputDir = $builddir/api/37f6a7c6edbe6720bebf241146796263/client
+
+build $builddir/api/37f6a7c6edbe6720bebf241146796263/client/updateDaemonWdog_client.c.o: CompileC $builddir/api/37f6a7c6edbe6720bebf241146796263/client/updateDaemonWdog_client.c | $builddir/api/37f6a7c6edbe6720bebf241146796263/client/updateDaemonWdog_messages.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/updateDaemonWdog_interface.h
+  cFlags = $cFlags
+
+build $builddir/api/37f6a7c6edbe6720bebf241146796263/client/updateDaemonWdog_client.c $builddir/api/37f6a7c6edbe6720bebf241146796263/client/updateDaemonWdog_interface.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/updateDaemonWdog_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/watchdog/frameworkWdog.api |
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix updateDaemonWdog $ifgenFlags
+  outputDir = $builddir/api/37f6a7c6edbe6720bebf241146796263/client
+
+build $builddir/api/af61cb3ebebd051744971bf7c9dd3f20/client/wdog_client.c.o: CompileC $builddir/api/af61cb3ebebd051744971bf7c9dd3f20/client/wdog_client.c | $builddir/api/af61cb3ebebd051744971bf7c9dd3f20/client/wdog_messages.h $builddir/api/af61cb3ebebd051744971bf7c9dd3f20/client/wdog_interface.h
+  cFlags = $cFlags
+
+build $builddir/api/af61cb3ebebd051744971bf7c9dd3f20/client/wdog_client.c $builddir/api/af61cb3ebebd051744971bf7c9dd3f20/client/wdog_interface.h $builddir/api/af61cb3ebebd051744971bf7c9dd3f20/client/wdog_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/supervisor/wdog.api |
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix wdog $ifgenFlags
+  outputDir = $builddir/api/af61cb3ebebd051744971bf7c9dd3f20/client
+
+build $builddir/api/37f6a7c6edbe6720bebf241146796263/client/supervisorWdog_client.c.o: CompileC $builddir/api/37f6a7c6edbe6720bebf241146796263/client/supervisorWdog_client.c | $builddir/api/37f6a7c6edbe6720bebf241146796263/client/supervisorWdog_messages.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/supervisorWdog_interface.h
+  cFlags = $cFlags
+
+build $builddir/api/37f6a7c6edbe6720bebf241146796263/client/supervisorWdog_client.c $builddir/api/37f6a7c6edbe6720bebf241146796263/client/supervisorWdog_interface.h $builddir/api/37f6a7c6edbe6720bebf241146796263/client/supervisorWdog_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/watchdog/frameworkWdog.api |
+  ifgenFlags = --gen-client --gen-interface --gen-local --name-prefix supervisorWdog $ifgenFlags
+  outputDir = $builddir/api/37f6a7c6edbe6720bebf241146796263/client
+
+build $builddir/api/596bab2c1882dc11d0034f6fa66fdefc/server/le_wdog_server.o: CompileC $builddir/api/596bab2c1882dc11d0034f6fa66fdefc/server/le_wdog_server.c | $builddir/api/596bab2c1882dc11d0034f6fa66fdefc/server/le_wdog_messages.h $builddir/api/596bab2c1882dc11d0034f6fa66fdefc/server/le_wdog_server.h
+  cFlags = $cFlags
+
+build $builddir/api/596bab2c1882dc11d0034f6fa66fdefc/server/le_wdog_server.c $builddir/api/596bab2c1882dc11d0034f6fa66fdefc/server/le_wdog_server.h $builddir/api/596bab2c1882dc11d0034f6fa66fdefc/server/le_wdog_messages.h: GenInterfaceCode /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_wdog.api |
+  ifgenFlags = --gen-server --gen-server-interface --gen-local --name-prefix le_wdog $ifgenFlags
+  outputDir = $builddir/api/596bab2c1882dc11d0034f6fa66fdefc/server
+
+build /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/localhost/framework/watchdog/build.ninja: RegenNinjaScript | /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/tools/mk /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/framework/daemons/linux/watchdog/watchdogDaemon/Component.cdef /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_appInfo.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_cfg.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_instStat.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_limit.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/le_wdog.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/supervisor/wdog.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/interfaces/watchdog/frameworkWdog.api /home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/platformAdaptor/wdog/linux/components/le_pa_wdog/Component.cdef
+

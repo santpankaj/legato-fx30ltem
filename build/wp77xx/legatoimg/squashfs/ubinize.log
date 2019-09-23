@@ -1,0 +1,3 @@
+ubinize: volume type was not specified in section "legato-volume", assume "dynamic"
+
+ubinize: volume size was not specified in section "legato-volume", assume minimum to fit image "/home/pankaj/Documents/yoctosrc_fx30LTECatM/legato-af_fx30ltem/build/wp77xx/legato.squashfs"3891200 bytes (3.7 MiB)

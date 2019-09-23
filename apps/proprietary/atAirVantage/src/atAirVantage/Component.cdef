@@ -1,0 +1,16 @@
+requires:
+{
+    api:
+    {
+        atServices/le_atServer.api
+        airVantage/le_avc.api
+        modemServices/le_mdc.api
+        modemServices/le_mrc.api
+        le_data.api
+    }
+}
+
+sources:
+{
+    atAirVantage.c
+}
